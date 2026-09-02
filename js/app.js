@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initEmergencyRepair();
   initContactForm();
   initSmoothScroll();
+  initScrollTop();
+  initSearchModal();
 });
 
 // ============================================================================
@@ -785,5 +787,47 @@ function initSmoothScroll() {
         });
       }
     });
+  });
+}
+
+// ============================================================================
+// 9. SCROLL TO TOP & SEARCH MODAL
+// ============================================================================
+function initScrollTop() {
+  const scrollBtn = document.getElementById('scroll-top-btn');
+  if (!scrollBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollBtn.style.opacity = '1';
+      scrollBtn.style.pointerEvents = 'auto';
+    } else {
+      scrollBtn.style.opacity = '0';
+      scrollBtn.style.pointerEvents = 'none';
+    }
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  scrollBtn.style.opacity = '0';
+  scrollBtn.style.pointerEvents = 'none';
+  scrollBtn.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+}
+
+function initSearchModal() {
+  const searchBtn = document.getElementById('search-modal-btn');
+  if (!searchBtn) return;
+
+  searchBtn.addEventListener('click', () => {
+    const query = prompt('Search entrance automation products (e.g. High Speed, Polycarbonate, Stacking, Fire-Rated):');
+    if (query && query.trim()) {
+      const target = document.getElementById('products');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        showToast(`Filtered catalog results for "${query.trim()}"`);
+      }
+    }
   });
 }

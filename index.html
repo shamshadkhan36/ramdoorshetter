@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RAM DOOR SHUTTER | Heavy Duty Rolling Shutter & Industrial Door Manufacturer</title>
-  <meta name="description" content="RAM DOOR SHUTTER - Leading manufacturer of Motorized Rolling Shutters, Perforated Showroom Grills, Crystal Polycarbonate Shutters, and Heavy Industrial Doors. 100% In-House Fabrication & 24/7 Emergency Repair." />
+  <title>Ram Door Shutter – Your Ultimate Entrance Automation Solution | ISO 9001 Certified Manufacturer</title>
+  <meta name="description" content="Ram Door Shutter is a leading manufacturer of entrance automation products, high speed doors, rolling shutters, sectional doors, and logistics equipment worldwide. OEM & ODM specialists." />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,12 +14,11 @@
         extend: {
           colors: {
             brand: {
-              red: '#dc2626',
-              redHover: '#b91c1c',
-              redDark: '#991b1b',
-              redLight: '#fef2f2',
-              slateBg: '#f8fafc',
-              slateDark: '#0f172a',
+              blue: '#0d4f9b',
+              blueDark: '#0a2540',
+              blueLight: '#eff6ff',
+              gold: '#f59e0b',
+              topbar: '#091a30',
             }
           }
         }
@@ -33,280 +32,516 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-red-600 selection:text-white">
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-blue-800 selection:text-white relative">
 
   <!-- ======================================================================
-       TOP BAR: CONTACT & DISPATCH INFO (Clean White & Slate Theme)
+       FLOATING LEFT ACTION SIDEBAR (Exact match with Screenshots)
        ====================================================================== -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 sm:px-8 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center flex-wrap gap-4 sm:gap-6">
-        <span class="flex items-center gap-1.5 text-slate-200">
-          <i class="fas fa-industry text-red-500"></i>
-          <span class="font-semibold text-white">Direct Factory Manufacturer</span>
-        </span>
-        <span class="hidden md:flex items-center gap-1.5">
-          <i class="fas fa-clock text-red-400"></i>
-          <span>Mon - Sat: 8:00 AM - 8:30 PM | <strong class="text-red-400">24/7 Emergency Repair</strong></span>
-        </span>
-      </div>
-      <div class="flex items-center gap-4 sm:gap-6">
-        <a href="tel:+919876543210" class="flex items-center gap-1.5 hover:text-red-400 transition font-bold text-white">
-          <i class="fas fa-phone-alt text-red-500 animate-pulse"></i>
+  <div class="floating-left-sidebar hidden sm:flex">
+    <a href="mailto:sales@ramdoorshutter.com" class="floating-sidebar-btn btn-email" title="Send Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="tel:+919876543210" class="floating-sidebar-btn btn-phone" title="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+    <a href="https://wa.me/919876543210?text=Hi%20Ram%20Door%20Shutter,%20I%20am%20interested%20in%20your%20products." target="_blank" class="floating-sidebar-btn btn-whatsapp" title="WhatsApp Chat">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#contact" class="floating-sidebar-btn btn-chat" title="Live Inquiry">
+      <i class="fas fa-comments"></i>
+    </a>
+  </div>
+
+  <!-- ======================================================================
+       TOP BAR: CONTACT & LANGUAGE (Exact match with Screenshot 1)
+       ====================================================================== -->
+  <div class="bg-[#091a30] text-slate-300 text-xs py-2.5 px-4 sm:px-12 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Contact Info List -->
+      <div class="flex items-center flex-wrap gap-4 sm:gap-7 text-slate-300">
+        <a href="tel:+919876543210" class="flex items-center gap-2 hover:text-white transition">
+          <i class="fas fa-phone-alt text-slate-400 text-xs"></i>
           <span>+91 98765 43210</span>
         </a>
-        <a href="https://wa.me/919876543210?text=Hi%20Ram%20Door%20Shutter,%20I%20need%20a%20quotation." target="_blank" class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition font-semibold">
-          <i class="fab fa-whatsapp"></i>
-          <span>WhatsApp Hotline</span>
+        <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-2 hover:text-white transition">
+          <i class="fab fa-whatsapp text-slate-400 text-xs"></i>
+          <span>+91 98111 22334</span>
+        </a>
+        <a href="mailto:sales@ramdoorshutter.com" class="hidden md:flex items-center gap-2 hover:text-white transition">
+          <i class="fas fa-envelope text-slate-400 text-xs"></i>
+          <span>sales@ramdoorshutter.com</span>
         </a>
       </div>
+
+      <!-- Language Selector -->
+      <div class="flex items-center gap-2 text-slate-200">
+        <div class="flex items-center gap-1.5 px-2 py-1 rounded bg-slate-800/80 border border-slate-700 text-xs cursor-pointer hover:bg-slate-700 transition">
+          <span class="text-sm">🇬🇧</span>
+          <span class="font-semibold text-white">EN</span>
+          <i class="fas fa-chevron-down text-[10px] text-slate-400 ml-1"></i>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <!-- ======================================================================
-       MAIN HEADER & NAVIGATION (Pristine White Glassmorphic)
+       MAIN HEADER & NAVIGATION (Exact match with Screenshot 1)
        ====================================================================== -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12 flex items-center justify-between h-20">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center shadow-md shadow-red-600/20 group-hover:bg-red-700 transition transform group-hover:scale-105">
-          <i class="fas fa-bars-staggered text-white text-2xl"></i>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-2xl font-black tracking-tight text-slate-900 heading-font flex items-center gap-1">
-            RAM <span class="text-red-600">DOOR</span> SHUTTER
-          </span>
-          <span class="text-[10px] font-mono font-semibold uppercase tracking-widest text-slate-500">
-            Precision Rolling Doors & Fabrication
-          </span>
-        </div>
+      <!-- Brand Logo (Clean Modern Blue Font) -->
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="text-2xl sm:text-3xl font-black tracking-tight text-[#0d4f9b] brand-font flex items-center">
+          Ram<span class="text-slate-900">Door</span><span class="text-[#f59e0b] text-xl font-bold ml-1">Shutter</span>
+        </span>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
-        <a href="#hero" class="hover:text-red-600 transition py-1">Home</a>
-        <a href="#simulator" class="hover:text-red-600 transition py-1 flex items-center gap-1.5 text-red-600 font-bold">
-          <i class="fas fa-sliders-h text-xs"></i> Shutter Simulator
-        </a>
-        <a href="#calculator" class="hover:text-red-600 transition py-1 flex items-center gap-1.5">
-          <i class="fas fa-calculator text-xs text-red-600"></i> Cost Estimator
-        </a>
-        <a href="#products" class="hover:text-red-600 transition py-1">Products</a>
-        <a href="#manufacturing" class="hover:text-red-600 transition py-1">Engineering</a>
-        <a href="#services" class="hover:text-red-600 transition py-1">Services & Repair</a>
-        <a href="#projects" class="hover:text-red-600 transition py-1">Projects</a>
-        <a href="#contact" class="hover:text-red-600 transition py-1">Contact</a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+        <a href="#hero" class="nav-pill-active font-bold">Home</a>
+        <a href="#about" class="nav-link-item py-1">About Us</a>
+        <div class="relative group">
+          <a href="#products" class="nav-link-item py-1 flex items-center gap-1">
+            <span>Products</span>
+            <i class="fas fa-chevron-down text-[10px] text-slate-400"></i>
+          </a>
+        </div>
+        <a href="#simulator" class="nav-link-item py-1">Simulator & Quote</a>
+        <a href="#why-us" class="nav-link-item py-1">Why Us</a>
+        <a href="#contact" class="nav-link-item py-1">Contact Us</a>
       </nav>
 
-      <!-- Header CTAs -->
+      <!-- Right Action CTAs -->
       <div class="hidden sm:flex items-center gap-3">
-        <a href="#calculator" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider transition border border-slate-300">
-          Instant Price
-        </a>
-        <a href="https://wa.me/919876543210?text=Hi%20RAM%20Door%20Shutter,%20I%20would%20like%20to%20request%20a%20site%20visit%20and%20quote." target="_blank" class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider shadow-md shadow-red-600/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
-          <i class="fab fa-whatsapp text-sm"></i> Request Quote
+        <!-- Search Button -->
+        <button id="search-modal-btn" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition border border-slate-200">
+          <i class="fas fa-search text-sm"></i>
+        </button>
+
+        <!-- Request Quote Blue Button -->
+        <a href="#calculator" class="px-6 py-2.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white text-sm font-bold tracking-wide shadow-md shadow-blue-900/20 transition transform hover:-translate-y-0.5">
+          Request Quote
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="lg:hidden text-slate-800 p-2.5 rounded-xl bg-slate-100 border border-slate-200 hover:text-red-600 focus:outline-none">
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-slate-800 p-2.5 rounded-xl bg-slate-100 border border-slate-200 hover:text-[#0d4f9b] focus:outline-none">
         <i class="fas fa-bars text-xl"></i>
       </button>
     </div>
 
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
-      <a href="#hero" class="mobile-nav-link block text-slate-800 hover:text-red-600 font-semibold py-2 border-b border-slate-100">Home</a>
-      <a href="#simulator" class="mobile-nav-link block text-red-600 font-bold py-2 border-b border-slate-100">Interactive Shutter Simulator</a>
-      <a href="#calculator" class="mobile-nav-link block text-slate-800 hover:text-red-600 font-semibold py-2 border-b border-slate-100">Instant Cost Estimator</a>
-      <a href="#products" class="mobile-nav-link block text-slate-800 hover:text-red-600 font-semibold py-2 border-b border-slate-100">Products Catalog</a>
-      <a href="#manufacturing" class="mobile-nav-link block text-slate-800 hover:text-red-600 font-semibold py-2 border-b border-slate-100">Why Ram Shutters</a>
-      <a href="#services" class="mobile-nav-link block text-slate-800 hover:text-red-600 font-semibold py-2 border-b border-slate-100">24/7 Repair & AMC</a>
-      <a href="#projects" class="mobile-nav-link block text-slate-800 hover:text-red-600 font-semibold py-2 border-b border-slate-100">Completed Projects</a>
-      <a href="#contact" class="mobile-nav-link block text-slate-800 hover:text-red-600 font-semibold py-2">Contact & Factory</a>
-      <div class="pt-4 flex flex-col gap-3">
-        <a href="tel:+919876543210" class="w-full py-3 bg-slate-100 text-center font-bold text-slate-800 rounded-xl border border-slate-300">
-          <i class="fas fa-phone-alt text-red-600 mr-2"></i> Call: +91 98765 43210
-        </a>
-        <a href="https://wa.me/919876543210" target="_blank" class="w-full py-3 bg-red-600 text-center font-bold text-white rounded-xl shadow-lg shadow-red-600/25">
-          <i class="fab fa-whatsapp mr-2"></i> WhatsApp Quote
+      <a href="#hero" class="mobile-nav-link block text-[#0d4f9b] font-bold py-2 border-b border-slate-100">Home</a>
+      <a href="#about" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100">About Us</a>
+      <a href="#products" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100">Products</a>
+      <a href="#simulator" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100">Simulator & Quote</a>
+      <a href="#why-us" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100">Why Choose Us</a>
+      <a href="#contact" class="mobile-nav-link block text-slate-800 font-semibold py-2">Contact Us</a>
+      <div class="pt-3">
+        <a href="#calculator" class="w-full block py-3 bg-[#0d4f9b] text-center font-bold text-white rounded-xl shadow-md">
+          Request Quote
         </a>
       </div>
     </div>
   </header>
 
   <!-- ======================================================================
-       HERO SECTION (Clean White & High-Impact Red Accents)
+       HERO SECTION WITH STATS BAR (Exact match with Screenshot 1)
        ====================================================================== -->
-  <section id="hero" class="relative bg-gradient-to-b from-white via-slate-50/70 to-white text-slate-900 overflow-hidden py-16 lg:py-24 border-b border-slate-200 white-hero-pattern">
+  <section id="hero" class="relative text-white overflow-hidden py-20 lg:py-28 bg-slate-900">
     
-    <!-- Soft Red Radial Glow in Background -->
-    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-red-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80" alt="Entrance Automation Manufacturing" class="w-full h-full object-cover opacity-35 scale-105" />
+      <div class="absolute inset-0 hero-bg-overlay"></div>
+    </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12 relative z-10 space-y-12">
+      
+      <!-- Hero Center Text Content -->
+      <div class="max-w-3xl space-y-6 text-left">
         
-        <!-- Left Hero Content -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold tracking-wide shadow-sm">
-            <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
-            <span>DIRECT FACTORY MANUFACTURER & FABRICATOR</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-slate-900">
-            ENGINEERED FOR <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-rose-600">MAXIMUM SECURITY.</span><br />
-            BUILT TO LAST.
-          </h1>
-
-          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-            Custom engineered <strong class="text-slate-900 font-bold">Motorized Rolling Shutters</strong>, <strong class="text-slate-900 font-bold">Showroom Grills</strong>, <strong class="text-slate-900 font-bold">Crystal Polycarbonate Doors</strong>, and <strong class="text-slate-900 font-bold">Industrial Warehouse Gates</strong>. Fabricated with heavy galvanized steel, copper-wound motors, and a 10-year durability warranty.
-          </p>
-
-          <!-- Hero Action CTAs -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#simulator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-red-600/25 transition transform hover:-translate-y-1 flex items-center justify-center gap-3">
-              <i class="fas fa-play-circle text-lg"></i>
-              <span>Try Live Shutter Simulator</span>
-            </a>
-            <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm uppercase tracking-wider border border-slate-300 shadow-sm transition flex items-center justify-center gap-2">
-              <i class="fas fa-calculator text-red-600"></i>
-              <span>Instant Cost Calculator</span>
-            </a>
-          </div>
-
-          <!-- Trust Badges List -->
-          <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-200">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
-                <i class="fas fa-shield-alt text-sm"></i>
-              </div>
-              <div class="text-left">
-                <div class="text-xs font-bold text-slate-900">100% Galvanized</div>
-                <div class="text-[11px] text-slate-500">Zero Rust Guarantee</div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
-                <i class="fas fa-cogs text-sm"></i>
-              </div>
-              <div class="text-left">
-                <div class="text-xs font-bold text-slate-900">Imported Motors</div>
-                <div class="text-[11px] text-slate-500">German/Italian Tech</div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
-                <i class="fas fa-truck-fast text-sm"></i>
-              </div>
-              <div class="text-left">
-                <div class="text-xs font-bold text-slate-900">24H Installation</div>
-                <div class="text-[11px] text-slate-500">Express On-Site Fit</div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0">
-                <i class="fas fa-award text-sm"></i>
-              </div>
-              <div class="text-left">
-                <div class="text-xs font-bold text-slate-900">10-Yr Warranty</div>
-                <div class="text-[11px] text-slate-500">Certified Structural</div>
-              </div>
-            </div>
-          </div>
-
+        <!-- ISO Badge (Screenshot 1) -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-600/60 text-slate-200 text-xs font-semibold tracking-wide backdrop-blur-md">
+          <i class="fas fa-award text-[#f59e0b]"></i>
+          <span>ISO 9001 Certified Manufacturer</span>
         </div>
 
-        <!-- Right Hero Visual Card (Clean White Shadow Card) -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-2xl p-6 bg-white border border-slate-200 shadow-2xl">
-            
-            <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-600"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-                <span class="text-xs font-mono text-slate-500 font-semibold ml-2">RAM_FABRICATION_HUB.SYS</span>
-              </div>
-              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-red-50 text-red-700 border border-red-200">
-                DIRECT FACTORY
-              </span>
-            </div>
+        <!-- Big Headline with Gold Accent -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white brand-font">
+          Ram Door Shutter – Your<br class="hidden sm:inline" />
+          Ultimate Entrance<br />
+          <span class="text-[#f59e0b]">Automation Solution</span>
+        </h1>
 
-            <div class="space-y-4">
-              <div class="relative rounded-xl overflow-hidden h-64 bg-slate-900 border border-slate-200 flex items-center justify-center shadow-inner">
-                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Heavy Duty Rolling Shutter Installation" class="w-full h-full object-cover opacity-90" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-white">
-                  <div class="text-xs font-mono text-red-400 font-bold uppercase tracking-wider">Heavy Duty Motorized Series</div>
-                  <div class="text-lg font-bold">Industrial Grade Rolling Shutters</div>
-                  <div class="text-xs text-slate-200 mt-1">High-tensile zinc slats with thermal powder coating & remote keyfob.</div>
-                </div>
-              </div>
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal max-w-2xl">
+          A leading manufacturer of entrance automation products, delivering innovative, reliable, and high-quality solutions to customers worldwide. OEM & ODM specialists.
+        </p>
 
-              <!-- Live Stat Row -->
-              <div class="grid grid-cols-3 gap-3 text-center">
-                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-                  <div class="text-xl font-black text-slate-900 heading-font">15,000+</div>
-                  <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Shutters Built</div>
-                </div>
-                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-                  <div class="text-xl font-black text-red-600 heading-font">24+ Yrs</div>
-                  <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Experience</div>
-                </div>
-                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-                  <div class="text-xl font-black text-slate-900 heading-font">100%</div>
-                  <div class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">In-House QC</div>
-                </div>
-              </div>
-
-              <!-- Fast Contact CTA in Hero Card -->
-              <a href="tel:+919876543210" class="block w-full py-3.5 px-4 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider text-center rounded-xl shadow-md shadow-red-600/20 transition">
-                <i class="fas fa-phone-volume mr-2"></i> Call Fabricator Hotline: +91 98765 43210
-              </a>
-            </div>
-
-          </div>
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#products" class="px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-sm tracking-wide shadow-lg shadow-blue-900/30 transition flex items-center gap-2">
+            <span>Explore Products</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+          <a href="#simulator" class="px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm tracking-wide border border-white/25 backdrop-blur-md transition flex items-center gap-2">
+            <i class="fas fa-sliders-h text-[#f59e0b]"></i>
+            <span>Interactive Simulator</span>
+          </a>
         </div>
 
       </div>
+
+      <!-- Frosted Glass Stats Bar (Exact match with Screenshot 1) -->
+      <div class="hero-stats-bar p-6 sm:p-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+        
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">20+</div>
+          <div class="text-xs sm:text-sm text-slate-200 font-medium">Years Experience</div>
+        </div>
+
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">50+</div>
+          <div class="text-xs sm:text-sm text-slate-200 font-medium">Countries Served</div>
+        </div>
+
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">10000+</div>
+          <div class="text-xs sm:text-sm text-slate-200 font-medium">Projects Completed</div>
+        </div>
+
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">500+</div>
+          <div class="text-xs sm:text-sm text-slate-200 font-medium">Satisfied Clients</div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- ======================================================================
-       INTERACTIVE SHUTTER SIMULATOR & VISUALIZER (White Showroom Theme)
+       PRODUCT CATEGORIES SECTION (Exact match with Screenshot 2)
        ====================================================================== -->
-  <section id="simulator" class="py-20 bg-slate-50 text-slate-800 relative border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+  <section id="products" class="py-20 bg-white text-slate-800 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-microchip"></i> Interactive Engineering Studio
+      <!-- Section Header with Eyebrow Pill -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="section-tag-pill">
+          OUR PRODUCTS
         </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          EXPERIENCE THE <span class="text-red-600">SHUTTER SIMULATOR</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 brand-font">
+          Product Categories
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-          Test different shutter slat profiles, powder-coat finishes, and motorized remote operation in real-time before you place your custom manufacturing order.
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Our product range covers high-speed doors, rolling shutters, sectional doors, logistics equipment, and complete entrance automation systems.
         </p>
       </div>
 
-      <!-- Simulator Layout -->
+      <!-- 4-Column Product Cards Grid (Screenshot 2) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: High Speed Doors -->
+        <div class="category-card flex flex-col justify-between group">
+          <div>
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
+              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" alt="High Speed Doors" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2">High Speed Doors</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                PVC roll-up, zipper, stacking, spiral aluminum, freezer, and clean room high speed doors for fast and efficient access.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0 flex flex-wrap gap-2">
+            <span class="category-badge-tag">Industrial</span>
+            <span class="category-badge-tag">Cold Storage</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Industrial Stacking Door -->
+        <div class="category-card flex flex-col justify-between group">
+          <div>
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Industrial Stacking Door" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2">Industrial Stacking Door</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Aluminium, steel, polycarbonate, fire-rated, commercial and industrial rolling shutters with manual and motorized options.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0 flex flex-wrap gap-2">
+            <span class="category-badge-tag">Commercial</span>
+            <span class="category-badge-tag">Fire-Rated</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Sectional Doors -->
+        <div class="category-card flex flex-col justify-between group">
+          <div>
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Sectional Doors" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2">Sectional Doors</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Industrial, insulated, overhead, vertical lift, garage, and glass sectional doors for every application and environment.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0 flex flex-wrap gap-2">
+            <span class="category-badge-tag">Insulated</span>
+            <span class="category-badge-tag">Overhead</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Automatic Rolling Door (Featured Active Style) -->
+        <div class="category-card featured-card flex flex-col justify-between group">
+          <div>
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
+              <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Automatic Rolling Door" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-[#0d4f9b] brand-font mb-2">Automatic Rolling Door</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Industrial sliding, folding, security grille, aluminium and polycarbonate sliding doors for smooth, reliable operation.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0 flex flex-wrap gap-2">
+            <span class="category-badge-tag">Security</span>
+            <span class="category-badge-tag">Aluminium</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       ABOUT SECTION: DUAL IMAGE & 2x2 GRID (Exact match with Screenshot 3)
+       ====================================================================== -->
+  <section id="about" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Overlapping Factory Images + Gold 20+ Badge -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative">
+            <!-- Main Factory Plant Image -->
+            <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-200 h-80 sm:h-96">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Advanced Manufacturing Facility" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Inset Company Headquarters Photo -->
+            <div class="absolute -bottom-6 -left-4 sm:-left-6 w-52 sm:w-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Global Operations Center" class="w-full h-36 object-cover" />
+            </div>
+
+            <!-- Yellow/Gold 20+ Badge (Screenshot 3) -->
+            <div class="absolute -bottom-4 right-2 sm:right-4 bg-[#f59e0b] text-slate-950 font-black px-5 py-3 rounded-2xl shadow-xl flex flex-col items-center justify-center">
+              <span class="text-2xl sm:text-3xl brand-font leading-none">20+</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 mt-1">Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text Content & 4 Feature Boxes (Screenshot 3) -->
+        <div class="lg:col-span-7 space-y-6 lg:pl-6 pt-8 lg:pt-0">
+          
+          <div class="section-tag-pill">
+            ABOUT RAM DOOR SHUTTER
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 brand-font leading-tight">
+            Leading Entrance Automation<br />Manufacturer
+          </h2>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Ram Door Shutter is a leading manufacturer of entrance automation products, committed to delivering innovative, reliable, and high-quality solutions to customers worldwide.
+          </p>
+
+          <p class="text-sm text-slate-600 leading-relaxed">
+            With advanced manufacturing capabilities and strategic partnerships with multiple leading factories across the region, we offer a comprehensive range of entrance automation systems for commercial, industrial, retail, and residential applications.
+          </p>
+
+          <!-- 4 Feature Box Grid (2x2) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
+              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+                <i class="fas fa-industry"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">OEM & ODM</div>
+                <div class="text-xs text-slate-500">Custom solutions for your brand</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
+              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">Global Reach</div>
+                <div class="text-xs text-slate-500">Serving 50+ countries</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
+              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">ISO Certified</div>
+                <div class="text-xs text-slate-500">International quality standards</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
+              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">24/7 Support</div>
+                <div class="text-xs text-slate-500">Dedicated after-sales service</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Blue Action Button (Screenshot 3) -->
+          <div class="pt-2">
+            <a href="#why-us" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-sm tracking-wide shadow-md transition">
+              <span>Learn More About Us</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       WHY CHOOSE US / VALUE PROPOSITION (Exact match with Screenshot 4)
+       ====================================================================== -->
+  <section id="why-us" class="py-20 bg-white text-slate-800 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Operations Center Building Image with Navy Badge (Screenshot 4) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Ram Door Shutter Operations Center" class="w-full h-[450px] object-cover" />
+            
+            <!-- Dark Navy Badge at Bottom Left (Screenshot 4) -->
+            <div class="absolute bottom-6 left-6 right-6 bg-[#0a2540]/90 backdrop-blur-md text-white p-4 rounded-2xl border border-slate-600 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-[#f59e0b] text-slate-950 flex items-center justify-center text-lg shrink-0">
+                <i class="fas fa-industry"></i>
+              </div>
+              <div>
+                <div class="text-base font-black brand-font text-white leading-tight">20+</div>
+                <div class="text-xs text-slate-300 font-semibold">Years Manufacturing Excellence</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 4 Large Feature Cards (2x2 Grid from Screenshot 4) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          
+          <!-- Card 1: Premium Quality Standards -->
+          <div class="feature-box-card">
+            <div class="feature-icon-wrapper mb-4">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 brand-font mb-2">Premium Quality Standards</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Every product manufactured under strict ISO 9001 quality control protocols with CE and other international certifications ensuring global compliance.
+            </p>
+          </div>
+
+          <!-- Card 2: OEM & ODM Capabilities -->
+          <div class="feature-box-card">
+            <div class="feature-icon-wrapper mb-4">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 brand-font mb-2">OEM & ODM Capabilities</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Full-service customization from design and engineering to manufacturing and delivery. Your brand, your specs, our expertise.
+            </p>
+          </div>
+
+          <!-- Card 3: On-Time Global Delivery -->
+          <div class="feature-box-card">
+            <div class="feature-icon-wrapper mb-4">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 brand-font mb-2">On-Time Global Delivery</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Strategic logistics partnerships ensure reliable and timely delivery to over 50 countries with full customs documentation support.
+            </p>
+          </div>
+
+          <!-- Card 4: End-to-End Support -->
+          <div class="feature-box-card">
+            <div class="feature-icon-wrapper mb-4">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 brand-font mb-2">End-to-End Support</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              From initial consultation through installation guidance to after-sales service and spare parts — we stand behind every product.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       INTERACTIVE SHUTTER SIMULATOR & REMOTE CONTROL
+       ====================================================================== -->
+  <section id="simulator" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="section-tag-pill">
+          LIVE DEMO STUDIO
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 brand-font">
+          Interactive Shutter Simulator
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Test different profiles, powder-coat finishes, and motorized remote operation in real-time.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Left: Shutter Virtual Frame (White Showroom Theme) -->
-        <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-xl">
+        <!-- Left: Simulator Graphic Viewport -->
+        <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-lg">
           
-          <!-- Top Info Bar in Simulator -->
           <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-100">
             <div class="flex items-center gap-2">
-              <span id="shutter-status-badge" class="px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase bg-red-50 text-red-700 border border-red-200">
+              <span id="shutter-status-badge" class="px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase bg-blue-50 text-[#0d4f9b] border border-blue-200">
                 STATUS: FULLY CLOSED (LOCKED)
               </span>
             </div>
@@ -315,27 +550,18 @@
             </div>
           </div>
 
-          <!-- Shutter Graphic Viewport -->
-          <div class="shutter-viewport-white shutter-frame-white">
-            <!-- Shutter Top Hood Box -->
-            <div class="shutter-hood-white h-12 flex items-center justify-center"></div>
+          <div class="shutter-viewport-corporate shutter-frame-corporate">
+            <div class="shutter-hood-corporate h-12 flex items-center justify-center"></div>
 
-            <!-- Shutter Curtain Viewport -->
-            <div class="shutter-curtain-container-white">
-              
-              <!-- Background Shop/Garage Interior View -->
-              <div class="shutter-interior-view-white">
+            <div class="shutter-curtain-container-corporate">
+              <div class="shutter-interior-view-corporate">
                 <div class="text-center p-6 bg-white/95 rounded-2xl border border-slate-200 shadow-md max-w-sm">
-                  <i class="fas fa-store text-red-600 text-4xl mb-3"></i>
+                  <i class="fas fa-warehouse text-[#0d4f9b] text-4xl mb-3"></i>
                   <h4 class="text-base font-bold text-slate-900">RAM COMMERCIAL STOREFRONT</h4>
-                  <p class="text-xs text-slate-600 mt-1">Interior Safe Space Protected by High-Tensile Rolling Shield.</p>
-                  <div class="mt-3 inline-block px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold rounded-lg">
-                    INTERIOR PROTECTED
-                  </div>
+                  <p class="text-xs text-slate-600 mt-1">Interior Safe Space Protected by High-Speed Automation.</p>
                 </div>
               </div>
 
-              <!-- Slat Curtain Rolling Mesh -->
               <div id="shutter-curtain" class="shutter-curtain">
                 <div class="shutter-slat slat-solid"></div>
                 <div class="shutter-slat slat-solid"></div>
@@ -352,20 +578,17 @@
                 <div class="shutter-slat slat-solid"></div>
                 <div class="shutter-slat slat-solid"></div>
                 
-                <!-- Bottom Locking Bar -->
                 <div class="shutter-bottom-bar">
                   <div class="shutter-lock-handle"></div>
                 </div>
               </div>
-
             </div>
           </div>
 
-          <!-- Ratings / Spec Bar -->
           <div class="grid grid-cols-3 gap-3 mt-5 pt-4 border-t border-slate-100 text-center">
             <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
               <div class="text-[10px] uppercase font-mono text-slate-500 font-bold">Security Grade</div>
-              <div id="sim-security-rating" class="text-xs font-bold text-red-600 mt-0.5">Maximum (Grade 10/10)</div>
+              <div id="sim-security-rating" class="text-xs font-bold text-[#0d4f9b] mt-0.5">Maximum (Grade 10/10)</div>
             </div>
             <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
               <div class="text-[10px] uppercase font-mono text-slate-500 font-bold">Airflow / Vent</div>
@@ -379,107 +602,67 @@
 
         </div>
 
-        <!-- Right: Simulator Control Panel -->
+        <!-- Right: Simulator Controls -->
         <div class="lg:col-span-5 space-y-6">
           
-          <!-- Remote Control Handset Box (Clean White Finish) -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xl">
+          <div class="remote-control-corp p-6">
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-2">
-                <i class="fas fa-wifi text-red-600"></i>
+                <i class="fas fa-wifi text-[#0d4f9b]"></i>
                 <h3 class="text-sm font-bold uppercase tracking-wider text-slate-900">Motorized Remote Control</h3>
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-[10px] font-mono text-slate-500 font-bold">LED SIGNAL:</span>
+                <span class="text-[10px] font-mono text-slate-500 font-bold">LED:</span>
                 <span id="remote-led" class="remote-led"></span>
               </div>
             </div>
 
-            <!-- Handset Buttons -->
             <div class="grid grid-cols-3 gap-3">
-              <button id="btn-remote-up" class="remote-btn-clean py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-emerald-500">
+              <button id="btn-remote-up" class="remote-btn-corp py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-emerald-500">
                 <i class="fas fa-chevron-up text-lg text-emerald-600"></i>
                 <span>OPEN ▲</span>
               </button>
-              <button id="btn-remote-stop" class="remote-btn-clean remote-btn-red py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 shadow-md shadow-red-600/30">
+              <button id="btn-remote-stop" class="remote-btn-corp remote-btn-blue py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 shadow-md">
                 <i class="fas fa-stop text-lg text-white"></i>
                 <span>STOP ■</span>
               </button>
-              <button id="btn-remote-down" class="remote-btn-clean py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-amber-500">
+              <button id="btn-remote-down" class="remote-btn-corp py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-amber-500">
                 <i class="fas fa-chevron-down text-lg text-amber-600"></i>
                 <span>CLOSE ▼</span>
               </button>
             </div>
           </div>
 
-          <!-- Shutter Slat Profile Switcher -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xl space-y-3">
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
             <h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
-              <i class="fas fa-layer-group text-red-600"></i> Slat Material & Profile
+              <i class="fas fa-layer-group text-[#0d4f9b]"></i> Slat Material & Profile
             </h3>
             
             <div class="space-y-2">
-              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-600 cursor-pointer transition">
+              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#0d4f9b] cursor-pointer transition">
                 <div class="flex items-center gap-3">
-                  <input type="radio" name="sim-material" value="solid" checked data-label="Solid Steel Slat" class="accent-red-600 w-4 h-4" />
-                  <div>
-                    <div class="text-xs font-bold text-slate-900">Solid Galvanized Steel Slat</div>
-                    <div class="text-[11px] text-slate-500">Maximum tamper resistance & weather protection</div>
-                  </div>
+                  <input type="radio" name="sim-material" value="solid" checked data-label="Solid Steel Slat" class="accent-blue-700 w-4 h-4" />
+                  <span class="text-xs font-bold text-slate-900">Solid Steel Slat</span>
                 </div>
-                <span class="text-[11px] font-mono text-red-600 font-bold">Standard</span>
+                <span class="text-[11px] font-mono text-[#0d4f9b] font-bold">Standard</span>
               </label>
 
-              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-600 cursor-pointer transition">
+              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#0d4f9b] cursor-pointer transition">
                 <div class="flex items-center gap-3">
-                  <input type="radio" name="sim-material" value="perforated" data-label="Perforated Mesh" class="accent-red-600 w-4 h-4" />
-                  <div>
-                    <div class="text-xs font-bold text-slate-900">Perforated Micro-Mesh Slat</div>
-                    <div class="text-[11px] text-slate-500">Allows interior display lighting + air circulation</div>
-                  </div>
+                  <input type="radio" name="sim-material" value="perforated" data-label="Perforated Mesh" class="accent-blue-700 w-4 h-4" />
+                  <span class="text-xs font-bold text-slate-900">Perforated Micro-Mesh</span>
                 </div>
                 <span class="text-[11px] font-mono text-slate-500 font-bold">Retail</span>
               </label>
 
-              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-600 cursor-pointer transition">
+              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#0d4f9b] cursor-pointer transition">
                 <div class="flex items-center gap-3">
-                  <input type="radio" name="sim-material" value="polycarbonate" data-label="Crystal Polycarbonate" class="accent-red-600 w-4 h-4" />
-                  <div>
-                    <div class="text-xs font-bold text-slate-900">Crystal Polycarbonate Transparent</div>
-                    <div class="text-[11px] text-slate-500">92% Glass clarity with unbreakable polycarbonate</div>
-                  </div>
+                  <input type="radio" name="sim-material" value="polycarbonate" data-label="Crystal Polycarbonate" class="accent-blue-700 w-4 h-4" />
+                  <span class="text-xs font-bold text-slate-900">Crystal Polycarbonate</span>
                 </div>
                 <span class="text-[11px] font-mono text-amber-600 font-bold">Luxury</span>
               </label>
-
-              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-600 cursor-pointer transition">
-                <div class="flex items-center gap-3">
-                  <input type="radio" name="sim-material" value="grill" data-label="Commercial Grill" class="accent-red-600 w-4 h-4" />
-                  <div>
-                    <div class="text-xs font-bold text-slate-900">Grill / Rolling Security Bar</div>
-                    <div class="text-[11px] text-slate-500">Maximum ventilation for parking lots and banks</div>
-                  </div>
-                </div>
-                <span class="text-[11px] font-mono text-slate-500 font-bold">Vent</span>
-              </label>
             </div>
-          </div>
-
-          <!-- Powder Coat Color Selector -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xl">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
-              <i class="fas fa-palette text-red-600"></i> Powder Coat Finish Options
-            </h3>
-            
-            <div class="flex items-center flex-wrap gap-3">
-              <button class="color-swatch-btn w-9 h-9 rounded-full bg-slate-600 border-2 border-slate-300 shadow transition transform hover:scale-110" data-color-bg="#475569" data-color-dark="#334155" data-color-name="Industrial Steel Gray" title="Industrial Steel Gray"></button>
-              <button class="color-swatch-btn w-9 h-9 rounded-full bg-red-600 border-2 border-slate-300 shadow transition transform hover:scale-110" data-color-bg="#dc2626" data-color-dark="#991b1b" data-color-name="Ram Signal Red" title="Ram Signal Red"></button>
-              <button class="color-swatch-btn w-9 h-9 rounded-full bg-slate-900 border-2 border-slate-300 shadow transition transform hover:scale-110" data-color-bg="#1e293b" data-color-dark="#0f172a" data-color-name="Jet Matte Black" title="Jet Matte Black"></button>
-              <button class="color-swatch-btn w-9 h-9 rounded-full bg-white border-2 border-slate-300 shadow transition transform hover:scale-110" data-color-bg="#f8fafc" data-color-dark="#e2e8f0" data-color-name="Pure White" title="Pure White"></button>
-              <button class="color-swatch-btn w-9 h-9 rounded-full bg-blue-600 border-2 border-slate-300 shadow transition transform hover:scale-110" data-color-bg="#2563eb" data-color-dark="#1e40af" data-color-name="Royal Navy Blue" title="Royal Navy Blue"></button>
-              <button class="color-swatch-btn w-9 h-9 rounded-full bg-emerald-600 border-2 border-slate-300 shadow transition transform hover:scale-110" data-color-bg="#059669" data-color-dark="#065f46" data-color-name="Forest Green" title="Forest Green"></button>
-            </div>
-            <p class="text-[11px] text-slate-500 mt-2">Custom RAL color matching available for bulk factory & architect projects.</p>
           </div>
 
         </div>
@@ -490,21 +673,20 @@
   </section>
 
   <!-- ======================================================================
-       SMART COST ESTIMATOR & QUOTE GENERATOR
+       INSTANT COST ESTIMATOR & QUOTATION
        ====================================================================== -->
   <section id="calculator" class="py-20 bg-white text-slate-800 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-calculator"></i> Transparent Factory Pricing
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="section-tag-pill">
+          FAST QUOTE GENERATOR
         </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          INSTANT SHUTTER <span class="text-red-600">COST ESTIMATOR</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 brand-font">
+          Instant Shutter Cost Estimator
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-          Input your opening dimensions and required specifications to generate a real-time price estimate. Send it directly to our fabrication engineers with one click!
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Input your opening dimensions and required specifications to generate a real-time price estimate.
         </p>
       </div>
 
@@ -513,189 +695,122 @@
         <!-- Left: Input Form Controls -->
         <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
           
-          <!-- Standard Preset Dimension Buttons -->
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-              Quick Size Presets (Standard Openings)
+              Quick Size Presets
             </label>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-red-600 shadow-sm transition" data-w="10" data-h="10">
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="10" data-h="10">
                 Shop (10×10 ft)
               </button>
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-red-600 shadow-sm transition" data-w="12" data-h="10">
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="12" data-h="10">
                 Garage (12×10 ft)
               </button>
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-red-600 shadow-sm transition" data-w="16" data-h="14">
-                Warehouse (16×14 ft)
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="16" data-h="14">
+                Warehouse (16×14)
               </button>
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-red-600 shadow-sm transition" data-w="20" data-h="18">
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="20" data-h="18">
                 Industrial (20×18)
               </button>
             </div>
           </div>
 
-          <!-- Width & Height Slider Inputs -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-            <!-- Width -->
             <div class="space-y-2">
               <div class="flex justify-between items-center">
                 <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Opening Width (Feet)</label>
                 <div class="flex items-center gap-1">
-                  <input type="number" id="calc-width" min="4" max="40" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-sm bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-600 outline-none shadow-sm" />
+                  <input type="number" id="calc-width" min="4" max="40" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-sm bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 outline-none shadow-sm" />
                   <span class="text-xs text-slate-500 font-bold">ft</span>
                 </div>
               </div>
-              <input type="range" id="calc-width-slider" min="4" max="40" value="10" step="0.5" class="w-full accent-red-600 cursor-pointer" />
-              <div class="flex justify-between text-[10px] text-slate-400 font-mono">
-                <span>Min: 4 ft</span>
-                <span>Max: 40 ft</span>
-              </div>
+              <input type="range" id="calc-width-slider" min="4" max="40" value="10" step="0.5" class="w-full accent-blue-700 cursor-pointer" />
             </div>
 
-            <!-- Height -->
             <div class="space-y-2">
               <div class="flex justify-between items-center">
                 <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Opening Height (Feet)</label>
                 <div class="flex items-center gap-1">
-                  <input type="number" id="calc-height" min="4" max="30" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-sm bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-600 outline-none shadow-sm" />
+                  <input type="number" id="calc-height" min="4" max="30" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-sm bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 outline-none shadow-sm" />
                   <span class="text-xs text-slate-500 font-bold">ft</span>
                 </div>
               </div>
-              <input type="range" id="calc-height-slider" min="4" max="30" value="10" step="0.5" class="w-full accent-red-600 cursor-pointer" />
-              <div class="flex justify-between text-[10px] text-slate-400 font-mono">
-                <span>Min: 4 ft</span>
-                <span>Max: 30 ft</span>
-              </div>
+              <input type="range" id="calc-height-slider" min="4" max="30" value="10" step="0.5" class="w-full accent-blue-700 cursor-pointer" />
             </div>
           </div>
 
-          <!-- Material Grade Selection -->
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-              Select Slat Material & Gauge Grade
+              Select Slat Material
             </label>
-            <select id="calc-material" class="w-full p-3.5 bg-white border border-slate-300 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-red-600 outline-none shadow-sm">
-              <option value="gi-std-20g" selected>Standard 20-Gauge Galvanized Steel (₹180 - ₹230 / sq.ft)</option>
-              <option value="gi-heavy-18g">Heavy Duty 18-Gauge Industrial Steel (₹240 - ₹290 / sq.ft)</option>
-              <option value="perforated-gi">Perforated Showroom Mesh 20G Steel (₹210 - ₹260 / sq.ft)</option>
-              <option value="aluminum-alloy">Extruded Rust-Free Aluminum Alloy (₹360 - ₹440 / sq.ft)</option>
-              <option value="polycarbonate">Crystal Clear Unbreakable Polycarbonate (₹550 - ₹680 / sq.ft)</option>
-              <option value="fire-rated">2-Hour Certified Fire Rated Heavy Slat (₹650 - ₹820 / sq.ft)</option>
+            <select id="calc-material" class="w-full p-3.5 bg-white border border-slate-300 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-600 outline-none shadow-sm">
+              <option value="gi-std-20g" selected>Standard 20-Gauge Galvanized Steel</option>
+              <option value="gi-heavy-18g">Heavy Duty 18-Gauge Industrial Steel</option>
+              <option value="perforated-gi">Perforated Showroom Mesh Steel</option>
+              <option value="aluminum-alloy">Extruded Rust-Free Aluminum Alloy</option>
+              <option value="polycarbonate">Crystal Clear Polycarbonate</option>
             </select>
           </div>
 
-          <!-- Drive & Motor System -->
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
               Drive / Operation Mechanism
             </label>
-            <select id="calc-motor" class="w-full p-3.5 bg-white border border-slate-300 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-red-600 outline-none shadow-sm">
-              <option value="manual" selected>Manual Push-Pull (Spring Loaded Pull-Down) [Included]</option>
-              <option value="gearbox">Mechanical Reduction Gearbox + Heavy Pull Chain (+₹3,500 - ₹5,000)</option>
-              <option value="center-motor">Motorized Center Motor + 2 Wireless Remote Keyfobs (+₹8,500 - ₹11,500)</option>
-              <option value="side-motor-heavy">Heavy Duty Industrial Side Drive (600kg-1000kg) (+₹15,500 - ₹21,000)</option>
-              <option value="high-speed">High-Speed Frequency Inverter Drive (1.5 m/s) (+₹35,000 - ₹48,000)</option>
+            <select id="calc-motor" class="w-full p-3.5 bg-white border border-slate-300 rounded-xl text-sm font-semibold focus:ring-2 focus:ring-blue-600 outline-none shadow-sm">
+              <option value="manual" selected>Manual Push-Pull (Spring Loaded)</option>
+              <option value="center-motor">Motorized Center Motor + 2 Wireless Remote Keyfobs</option>
+              <option value="side-motor-heavy">Heavy Duty Industrial Side Drive (600kg-1000kg)</option>
+              <option value="high-speed">High-Speed Frequency Inverter Drive (1.5 m/s)</option>
             </select>
-          </div>
-
-          <!-- Add-on Options -->
-          <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-              Optional Safety & Performance Add-ons
-            </label>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 hover:border-red-600 cursor-pointer transition text-xs font-medium shadow-sm">
-                <input type="checkbox" name="calc-addon" value="anti-drop" data-cost-min="2200" data-cost-max="3000" data-label="Anti-Drop Safety Brake" class="accent-red-600 w-4 h-4" />
-                <span>Anti-Drop Safety Brake (+₹2,500)</span>
-              </label>
-
-              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 hover:border-red-600 cursor-pointer transition text-xs font-medium shadow-sm">
-                <input type="checkbox" name="calc-addon" value="ups-backup" data-cost-min="4500" data-cost-max="6500" data-label="Battery UPS Power Backup" class="accent-red-600 w-4 h-4" />
-                <span>Battery UPS Power Backup (+₹5,500)</span>
-              </label>
-
-              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 hover:border-red-600 cursor-pointer transition text-xs font-medium shadow-sm">
-                <input type="checkbox" name="calc-addon" value="optical-sensor" data-cost-min="3000" data-cost-max="4500" data-label="Safety Optical Edge Sensors" class="accent-red-600 w-4 h-4" />
-                <span>Safety Optical Sensors (+₹3,500)</span>
-              </label>
-
-              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 hover:border-red-600 cursor-pointer transition text-xs font-medium shadow-sm">
-                <input type="checkbox" name="calc-addon" value="powder-coating" data-cost-min="1800" data-cost-max="3500" data-label="Custom Powder Coating" class="accent-red-600 w-4 h-4" />
-                <span>Powder Coat Finish (+₹2,500)</span>
-              </label>
-            </div>
           </div>
 
         </div>
 
-        <!-- Right: Quotation Summary Card (Clean Elevated Theme) -->
+        <!-- Right: Quotation Breakdown Box -->
         <div class="lg:col-span-5 sticky top-28 space-y-4">
           
-          <div class="bg-white text-slate-900 p-6 sm:p-8 rounded-2xl border-2 border-red-600 shadow-2xl relative overflow-hidden">
-            <!-- Top Stripe -->
-            <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-red-600 via-rose-500 to-red-600"></div>
-
+          <div class="bg-white text-slate-900 p-6 sm:p-8 rounded-2xl border-2 border-[#0d4f9b] shadow-2xl relative overflow-hidden">
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
               <div>
-                <span class="text-[10px] font-mono font-bold text-red-600 uppercase tracking-widest">RAM FACTORY ESTIMATE</span>
-                <h3 class="text-xl font-bold text-slate-900 heading-font">Quotation Breakdown</h3>
+                <span class="text-[10px] font-mono font-bold text-[#0d4f9b] uppercase tracking-widest">RAM FACTORY ESTIMATE</span>
+                <h3 class="text-xl font-bold text-slate-900 brand-font">Quotation Breakdown</h3>
               </div>
-              <span class="p-2.5 bg-red-50 rounded-xl text-red-600 border border-red-100">
+              <span class="p-2.5 bg-blue-50 rounded-xl text-[#0d4f9b]">
                 <i class="fas fa-file-invoice-dollar text-xl"></i>
               </span>
             </div>
 
-            <!-- Calculated Data Table -->
             <div class="space-y-3 text-xs mb-6">
               <div class="flex justify-between py-2 border-b border-slate-100">
-                <span class="text-slate-500">Total Curtain Area:</span>
-                <span id="calc-total-area" class="font-bold text-slate-900 font-mono text-sm">100 sq. ft. (10 ft × 10 ft)</span>
+                <span class="text-slate-500">Curtain Area:</span>
+                <span id="calc-total-area" class="font-bold text-slate-900 font-mono text-sm">100 sq. ft.</span>
               </div>
               <div class="flex justify-between py-2 border-b border-slate-100">
                 <span class="text-slate-500">Base Slat Rate:</span>
                 <span id="calc-rate-sqft" class="font-bold text-slate-800 font-mono">₹180 - ₹230 / sq.ft</span>
               </div>
               <div class="flex justify-between py-2 border-b border-slate-100">
-                <span class="text-slate-500">Structural Warranty:</span>
+                <span class="text-slate-500">Warranty:</span>
                 <span class="font-bold text-emerald-600 font-mono">10 Years Factory Direct</span>
               </div>
             </div>
 
-            <!-- Price Output Box -->
             <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center mb-6">
               <div class="text-xs uppercase font-mono text-slate-500 font-bold tracking-wider">Estimated Total Cost Range</div>
-              <div class="text-3xl sm:text-4xl font-black text-red-600 heading-font my-1.5 flex items-center justify-center gap-2">
+              <div class="text-3xl sm:text-4xl font-black text-[#0d4f9b] brand-font my-1.5 flex items-center justify-center gap-2">
                 <span id="calc-price-min">₹18,000</span>
                 <span class="text-slate-400 text-xl font-normal">-</span>
                 <span id="calc-price-max">₹23,000</span>
               </div>
-              <div class="text-[11px] text-slate-500">
-                *Site measurement, brackets & standard installation included.
-              </div>
             </div>
 
-            <!-- Action Buttons -->
             <div class="space-y-3">
               <a id="calc-whatsapp-btn" href="#" target="_blank" class="w-full py-4 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-emerald-600/25 transition flex items-center justify-center gap-2">
                 <i class="fab fa-whatsapp text-lg"></i>
                 <span>Send Estimate on WhatsApp</span>
               </a>
-
-              <button id="calc-print-btn" type="button" class="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl border border-slate-300 transition flex items-center justify-center gap-2">
-                <i class="fas fa-print"></i>
-                <span>Print / Save Spec Sheet</span>
-              </button>
             </div>
 
-          </div>
-
-          <!-- Free measurement note -->
-          <div class="bg-red-50 p-4 rounded-xl border border-red-200 text-xs text-red-950 flex items-center gap-3">
-            <i class="fas fa-headset text-red-600 text-2xl shrink-0"></i>
-            <div>
-              <strong class="font-bold">Need on-site measurement today?</strong>
-              <div class="text-slate-600">Our structural technicians can visit your shop/factory for free survey.</div>
-            </div>
           </div>
 
         </div>
@@ -706,663 +821,88 @@
   </section>
 
   <!-- ======================================================================
-       PRODUCT CATALOG SECTION (Crisp White Theme)
-       ====================================================================== -->
-  <section id="products" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-boxes-stacked"></i> Full Product Range
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          HEAVY DUTY <span class="text-red-600">DOOR & SHUTTER</span> CATALOG
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-          From showroom display shutters to heavy industrial warehouse roll-up barriers, explore our precision-fabricated collection.
-        </p>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <div class="flex items-center justify-center flex-wrap gap-2 mb-12">
-        <button class="product-filter-tab active px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-red-600 text-white border border-red-600 shadow-sm" data-filter="all">
-          All Products (8)
-        </button>
-        <button class="product-filter-tab px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white text-slate-700 border border-slate-200 hover:border-red-600 shadow-sm" data-filter="motorized">
-          Motorized Shutters
-        </button>
-        <button class="product-filter-tab px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white text-slate-700 border border-slate-200 hover:border-red-600 shadow-sm" data-filter="industrial">
-          Heavy Industrial
-        </button>
-        <button class="product-filter-tab px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white text-slate-700 border border-slate-200 hover:border-red-600 shadow-sm" data-filter="commercial">
-          Commercial Showrooms
-        </button>
-        <button class="product-filter-tab px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white text-slate-700 border border-slate-200 hover:border-red-600 shadow-sm" data-filter="polycarbonate">
-          Polycarbonate Clear
-        </button>
-        <button class="product-filter-tab px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white text-slate-700 border border-slate-200 hover:border-red-600 shadow-sm" data-filter="fire">
-          Fire Rated Certified
-        </button>
-      </div>
-
-      <!-- Products Grid -->
-      <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Products populated via js/app.js -->
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       PRODUCT SPECIFICATION MODAL DIALOG
-       ====================================================================== -->
-  <div id="product-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-    <div class="bg-white rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-200 transform transition-all my-8">
-      
-      <!-- Modal Header -->
-      <div class="bg-slate-900 text-white p-5 sm:p-6 flex items-center justify-between border-b border-slate-800">
-        <div>
-          <span id="modal-category" class="text-[10px] font-mono text-red-400 font-bold uppercase tracking-widest">CATEGORY</span>
-          <h3 id="modal-title" class="text-xl font-bold text-white heading-font">Product Technical Specifications</h3>
-        </div>
-        <button id="modal-close-btn" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-red-600 text-white flex items-center justify-center transition">
-          <i class="fas fa-times text-base"></i>
-        </button>
-      </div>
-
-      <!-- Modal Body -->
-      <div class="p-6 space-y-6 max-h-[75vh] overflow-y-auto text-slate-800">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-          <img id="modal-img" src="" alt="Product Image" class="w-full h-48 object-cover rounded-xl border border-slate-200 shadow-sm" />
-          <div>
-            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Description</h4>
-            <p id="modal-desc" class="text-xs text-slate-700 leading-relaxed"></p>
-            <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-900">
-              <i class="fas fa-certificate text-red-600 mr-1"></i> Tested to ISO 9001 & ASTM Tensile Standards.
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Technical Parameters</h4>
-          <div id="modal-specs-list" class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <!-- Dynamic Specs List -->
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Key Engineering Features</h4>
-          <ul id="modal-features-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <!-- Dynamic Features List -->
-          </ul>
-        </div>
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="bg-slate-50 p-4 sm:p-5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span class="text-xs text-slate-600 font-medium">Ready for on-site measurement & quote?</span>
-        <div class="flex items-center gap-2 w-full sm:w-auto">
-          <a id="modal-quote-btn" href="#" target="_blank" class="w-full sm:w-auto px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-md transition flex items-center justify-center gap-2">
-            <i class="fab fa-whatsapp"></i> Inquire for This Model
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ======================================================================
-       MANUFACTURING PROCESS & ENGINEERING EXCELLENCE (Clean White Cards)
-       ====================================================================== -->
-  <section id="manufacturing" class="py-20 bg-white text-slate-800 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-hammer"></i> 6-Step Manufacturing Process
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          HOW WE BUILD <span class="text-red-600">UNBREAKABLE SHUTTERS</span>
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-          Every shutter slat is rolled, treated, and tested in our high-capacity fabrication plant under strict quality assurance standards.
-        </p>
-      </div>
-
-      <!-- Process Steps Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Step 1 -->
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-red-600 transition group hover:shadow-lg">
-          <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-red-600 text-white font-black text-sm flex items-center justify-center shadow-md">
-              01
-            </span>
-            <i class="fas fa-scroll text-slate-400 group-hover:text-red-600 text-2xl transition"></i>
-          </div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">Prime Galvanized Steel Coils</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            We exclusively procure certified Tata Steel / JSW high-tensile cold-rolled galvanized steel coils with heavy zinc coating (120-275 GSM) to eliminate rust.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-red-600 transition group hover:shadow-lg">
-          <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-red-600 text-white font-black text-sm flex items-center justify-center shadow-md">
-              02
-            </span>
-            <i class="fas fa-cog text-slate-400 group-hover:text-red-600 text-2xl transition"></i>
-          </div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">Precision CNC Roll Forming</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Computerized 14-stage roll forming lines shape double-rib profile slats with deep interlocking knuckles that prevent curtain sagging under high wind loads.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-red-600 transition group hover:shadow-lg">
-          <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-red-600 text-white font-black text-sm flex items-center justify-center shadow-md">
-              03
-            </span>
-            <i class="fas fa-spray-can text-slate-400 group-hover:text-red-600 text-2xl transition"></i>
-          </div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">200°C Electrostatic Powder Coat</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Automated 7-tank chemical pre-treatment followed by pure polyester thermosetting powder coating cured at 200°C for superior weather & scratch resistance.
-          </p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-red-600 transition group hover:shadow-lg">
-          <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-red-600 text-white font-black text-sm flex items-center justify-center shadow-md">
-              04
-            </span>
-            <i class="fas fa-bolt text-slate-400 group-hover:text-red-600 text-2xl transition"></i>
-          </div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">High-Torque Drive Motor Fitment</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Coupled with 100% copper-wound Italian and German drive motors equipped with thermal overload cut-off, manual chain override, and dual remote transmitters.
-          </p>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-red-600 transition group hover:shadow-lg">
-          <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-red-600 text-white font-black text-sm flex items-center justify-center shadow-md">
-              05
-            </span>
-            <i class="fas fa-check-double text-slate-400 group-hover:text-red-600 text-2xl transition"></i>
-          </div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">Multi-Point Quality Testing</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Each shutter curtain undergoes 50+ dry test cycles on our vertical factory test rigs to verify balance, smooth slat travel, motor torque, and emergency braking.
-          </p>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-red-600 transition group hover:shadow-lg">
-          <div class="flex items-center justify-between mb-4">
-            <span class="w-10 h-10 rounded-xl bg-red-600 text-white font-black text-sm flex items-center justify-center shadow-md">
-              06
-            </span>
-            <i class="fas fa-truck text-slate-400 group-hover:text-red-600 text-2xl transition"></i>
-          </div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">Site Delivery & Expert Fitment</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Delivered in dedicated protective wrapping and installed by our certified master technicians with same-day handover and structural warranty certificate.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       SERVICES & 24/7 EMERGENCY REPAIR
-       ====================================================================== -->
-  <section id="services" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-wrench"></i> Expert Support & Maintenance
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          SERVICES & <span class="text-red-600">EMERGENCY REPAIR</span>
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-          From manual-to-motorized retrofitting to urgent stuck-shutter repairs, our mobile technician squads are available 24/7 across the region.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        
-        <!-- Left: Service Offerings Cards -->
-        <div class="lg:col-span-7 space-y-4">
-          
-          <div class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-red-600 shadow-sm transition flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 border border-red-100 flex items-center justify-center text-xl shrink-0 shadow-sm">
-              <i class="fas fa-tools"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-bold text-slate-900">Manual to Motorized Retrofit Conversions</h3>
-              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                Upgrade your old manual push-pull or gearbox shutter into a remote-controlled automatic motorized system within just 4 hours without dismantling your existing frame.
-              </p>
-            </div>
-          </div>
-
-          <div class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-red-600 shadow-sm transition flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center text-xl shrink-0 shadow-sm">
-              <i class="fas fa-file-contract"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-bold text-slate-900">Annual Maintenance Contracts (AMC)</h3>
-              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                Comprehensive quarterly greasing, motor calibration, spring tension adjustment, and safety brake checks for factories, retail chains, and residential societies.
-              </p>
-            </div>
-          </div>
-
-          <div class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-red-600 shadow-sm transition flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 border border-red-100 flex items-center justify-center text-xl shrink-0 shadow-sm">
-              <i class="fas fa-shield-halved"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-bold text-slate-900">Spring Replacement & Slat Realignment</h3>
-              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                Immediate replacement of snapped high-carbon torsion springs, jammed side guide channels, damaged lock brackets, and bent curtain slats.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: 24/7 Emergency Dispatch Form Widget -->
-        <div class="lg:col-span-5">
-          <div class="bg-white text-slate-900 p-6 sm:p-8 rounded-2xl border-2 border-red-600 shadow-2xl relative">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
-              <span class="text-xs font-mono font-bold text-red-600 uppercase tracking-wider">24/7 RAPID RESPONSE SQUAD</span>
-            </div>
-            <h3 class="text-xl font-black text-slate-900 heading-font">Emergency Shutter Breakdown?</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-6">
-              Fill this 30-second form for instant priority dispatch to your site.
-            </p>
-
-            <form id="emergency-repair-form" class="space-y-4">
-              <div>
-                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Your Name</label>
-                <input type="text" id="repair-name" required placeholder="e.g. Rajesh Kumar" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none" />
-              </div>
-
-              <div>
-                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number (Required)</label>
-                <input type="tel" id="repair-phone" required placeholder="e.g. +91 98765 43210" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none" />
-              </div>
-
-              <div>
-                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Issue Description</label>
-                <select id="repair-issue" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none">
-                  <option value="Shutter Jammed / Won't Open or Close">Shutter Jammed / Won't Open or Close</option>
-                  <option value="Broken Spring / Fallen Shutter">Broken Spring / Fallen Shutter</option>
-                  <option value="Motor Not Responding / Power Issue">Motor Not Responding / Power Issue</option>
-                  <option value="Remote Control Not Working">Remote Control Not Working</option>
-                  <option value="Accidental Vehicle Collision / Bent Slats">Accidental Vehicle Collision / Bent Slats</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Site Address / Landmark</label>
-                <input type="text" id="repair-location" required placeholder="e.g. Shop #42, Main Commercial Market" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none" />
-              </div>
-
-              <button type="submit" class="w-full py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/25 transition flex items-center justify-center gap-2">
-                <i class="fas fa-bolt text-amber-300"></i>
-                <span>Dispatch Emergency Technician</span>
-              </button>
-            </form>
-
-            <div class="mt-4 pt-4 border-t border-slate-100 text-center">
-              <span class="text-xs text-slate-500">Prefer direct call?</span>
-              <a href="tel:+919876543210" class="font-bold text-red-600 hover:text-red-700 ml-1">
-                +91 98765 43210
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       COMPLETED PROJECTS & GALLERY (White Cards)
-       ====================================================================== -->
-  <section id="projects" class="py-20 bg-white text-slate-800 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-building"></i> Track Record of Excellence
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          RECENT COMPLETED <span class="text-red-600">INSTALLATIONS</span>
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-          Over 15,000 successful commercial, retail, warehouse, and residential installations across the country.
-        </p>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <div class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md hover:shadow-xl transition">
-          <div class="h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Logistics Warehouse High-Speed Shutters" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="p-6">
-            <div class="text-[10px] font-mono font-bold text-red-600 uppercase tracking-widest">LOGISTICS HUB • 24 BAYS</div>
-            <h3 class="text-base font-bold text-slate-900 mt-1">Amazon & Flipkart Supply Depot</h3>
-            <p class="text-xs text-slate-600 mt-2">24 sets of 18G heavy motorized roll-up doors with automatic safety infrared curtains.</p>
-          </div>
-        </div>
-
-        <div class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md hover:shadow-xl transition">
-          <div class="h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" alt="Polycarbonate Mall Storefront" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="p-6">
-            <div class="text-[10px] font-mono font-bold text-red-600 uppercase tracking-widest">LUXURY MALL • JEWELRY & WATCHES</div>
-            <h3 class="text-base font-bold text-slate-900 mt-1">Pacific Mall Designer Showroom</h3>
-            <p class="text-xs text-slate-600 mt-2">Crystal clear polycarbonate transparent rolling shutters with aluminum joiners.</p>
-          </div>
-        </div>
-
-        <div class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md hover:shadow-xl transition">
-          <div class="h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Heavy Factory Steel Doors" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="p-6">
-            <div class="text-[10px] font-mono font-bold text-red-600 uppercase tracking-widest">HEAVY ENGINEERING PLANT</div>
-            <h3 class="text-base font-bold text-slate-900 mt-1">Steel Fabrication & Stamping Plant</h3>
-            <p class="text-xs text-slate-600 mt-2">2-hour fire-rated rolling shutters with thermal fusible links and fail-safe brakes.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       TESTIMONIALS & CLIENT RATINGS
-       ====================================================================== -->
-  <section class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-star text-amber-500"></i> Verified Client Reviews
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          WHAT OUR CLIENTS SAY ABOUT <span class="text-red-600">RAM SHUTTERS</span>
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Review 1 -->
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-500 text-sm gap-1 mb-3">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="text-xs text-slate-700 leading-relaxed italic">
-              "We ordered 8 motorized heavy-gauge shutters for our logistics warehouse. The build quality of the steel slats and the smoothness of the Italian motor drive are exceptional. Delivered 2 days ahead of schedule!"
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
-              AK
-            </div>
-            <div>
-              <div class="text-xs font-bold text-slate-900">Anil Kapoor</div>
-              <div class="text-[11px] text-slate-500">Director, Kapoor Logistics Park</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-500 text-sm gap-1 mb-3">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="text-xs text-slate-700 leading-relaxed italic">
-              "The crystal clear polycarbonate shutter on our jewelry showroom looks stunning at night! It allows complete window shopping while giving 100% security. Great service by RAM Door Shutter."
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm shadow-sm">
-              SM
-            </div>
-            <div>
-              <div class="text-xs font-bold text-slate-900">Sanjay Malhotra</div>
-              <div class="text-[11px] text-slate-500">Owner, Malhotra Jewellers</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-500 text-sm gap-1 mb-3">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="text-xs text-slate-700 leading-relaxed italic">
-              "Had a critical shutter spring breakdown at 9 PM on a Sunday. Their emergency repair team arrived within 45 minutes and had our factory bay functioning smoothly. Highly dependable team!"
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
-              VS
-            </div>
-            <div>
-              <div class="text-xs font-bold text-slate-900">Vikram Singh</div>
-              <div class="text-[11px] text-slate-500">Plant Manager, Precision Auto Parts</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       FREQUENTLY ASKED QUESTIONS (FAQ)
-       ====================================================================== -->
-  <section class="py-20 bg-white text-slate-800 border-b border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-8">
-      
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-circle-question"></i> Got Questions?
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          FREQUENTLY ASKED <span class="text-red-600">QUESTIONS</span>
-        </h2>
-      </div>
-
-      <div class="space-y-4">
-        
-        <details class="bg-slate-50 p-5 rounded-2xl border border-slate-200 group" open>
-          <summary class="font-bold text-sm cursor-pointer list-none flex justify-between items-center text-slate-900">
-            <span>What happens to a motorized rolling shutter during a power outage?</span>
-            <i class="fas fa-chevron-down text-red-600 group-open:rotate-180 transition"></i>
-          </summary>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-            All our motorized rolling shutters are equipped with a built-in manual override chain mechanism or spring release. In case of electricity failure, you can effortlessly open or close the shutter manually. We also offer dedicated UPS battery backups that provide 20+ motorized cycles during power cuts.
-          </p>
-        </details>
-
-        <details class="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
-          <summary class="font-bold text-sm cursor-pointer list-none flex justify-between items-center text-slate-900">
-            <span>How fast can you fabricate and install a custom-sized shutter?</span>
-            <i class="fas fa-chevron-down text-red-600 group-open:rotate-180 transition"></i>
-          </summary>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-            Because we operate our own in-house slitting and roll-forming plant, standard sizes can be fabricated and installed within 24 to 48 hours. Custom powder-coated or heavy industrial orders typically take 3 to 5 business days.
-          </p>
-        </details>
-
-        <details class="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
-          <summary class="font-bold text-sm cursor-pointer list-none flex justify-between items-center text-slate-900">
-            <span>Can you convert my existing manual hand-operated shutter to motorized?</span>
-            <i class="fas fa-chevron-down text-red-600 group-open:rotate-180 transition"></i>
-          </summary>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-            Yes! We specialize in motorized retrofitting. Our technicians can install a center motor or heavy-duty side motor onto your existing rolling shaft within approximately 3-4 hours without disturbing your storefront frame.
-          </p>
-        </details>
-
-        <details class="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
-          <summary class="font-bold text-sm cursor-pointer list-none flex justify-between items-center text-slate-900">
-            <span>What warranty do you provide on RAM Door Shutters?</span>
-            <i class="fas fa-chevron-down text-red-600 group-open:rotate-180 transition"></i>
-          </summary>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-            We provide a 10-Year Structural & Anti-Corrosion Warranty on our galvanized steel slats and a 5-Year Full Replacement Warranty on Italian/German drive motors and electrical keyfob units.
-          </p>
-        </details>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       CONTACT SECTION & FACTORY LOCATION
+       CONTACT & INQUIRY FORM
        ====================================================================== -->
   <section id="contact" class="py-20 bg-slate-50 text-slate-800 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
-          <i class="fas fa-map-pin"></i> Direct Contact & Factory
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="section-tag-pill">
+          CONTACT US
         </div>
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 heading-font">
-          GET IN TOUCH WITH <span class="text-red-600">OUR ENGINEERS</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 brand-font">
+          Get in Touch With Our Engineers
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-          Visit our fabrication plant, schedule a free on-site measurement, or request an official corporate price quotation.
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Visit our fabrication plant or schedule a free on-site survey and official quotation.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
         
-        <!-- Left: Contact Details & Factory Info -->
         <div class="lg:col-span-5 space-y-6">
-          
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-md space-y-4">
+          <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-md space-y-4">
             <h3 class="text-base font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
-              <i class="fas fa-industry text-red-600"></i> Manufacturing Plant & Head Office
+              <i class="fas fa-building text-[#0d4f9b]"></i> Operations Center & Factory
             </h3>
             
             <div class="space-y-3 text-xs text-slate-700">
               <div class="flex items-start gap-3">
-                <i class="fas fa-location-dot text-red-600 mt-1 shrink-0 text-sm"></i>
+                <i class="fas fa-location-dot text-[#0d4f9b] mt-1 shrink-0 text-sm"></i>
                 <span>Plot No. 48-A, Industrial Area Phase-2, Near Steel Rolling Yard, New Delhi / NCR, India</span>
               </div>
               <div class="flex items-center gap-3">
-                <i class="fas fa-phone-alt text-red-600 shrink-0 text-sm"></i>
-                <a href="tel:+919876543210" class="font-bold text-slate-900 hover:text-red-600 transition">+91 98765 43210 / +91 98111 22334</a>
+                <i class="fas fa-phone-alt text-[#0d4f9b] shrink-0 text-sm"></i>
+                <a href="tel:+919876543210" class="font-bold text-slate-900 hover:text-blue-700 transition">+91 98765 43210 / +91 98111 22334</a>
               </div>
               <div class="flex items-center gap-3">
                 <i class="fab fa-whatsapp text-emerald-600 shrink-0 text-sm"></i>
                 <a href="https://wa.me/919876543210" target="_blank" class="font-bold text-emerald-600 hover:text-emerald-700 transition">+91 98765 43210 (24/7 WhatsApp)</a>
               </div>
               <div class="flex items-center gap-3">
-                <i class="fas fa-envelope text-red-600 shrink-0 text-sm"></i>
-                <a href="mailto:inquiry@ramdoorshutter.com" class="hover:text-red-600 transition">inquiry@ramdoorshutter.com</a>
-              </div>
-              <div class="flex items-center gap-3">
-                <i class="fas fa-clock text-red-600 shrink-0 text-sm"></i>
-                <span>Mon – Sat: 8:00 AM – 8:30 PM (Sunday: Emergency Squad On-Call)</span>
+                <i class="fas fa-envelope text-[#0d4f9b] shrink-0 text-sm"></i>
+                <a href="mailto:sales@ramdoorshutter.com" class="hover:text-blue-700 transition">sales@ramdoorshutter.com</a>
               </div>
             </div>
           </div>
-
-          <!-- Quick Benefits Box -->
-          <div class="bg-red-50 p-5 rounded-2xl border border-red-200 text-xs text-slate-700 space-y-2">
-            <div class="font-bold text-red-700 uppercase tracking-wider flex items-center gap-2">
-              <i class="fas fa-handshake"></i> Direct Manufacturer Advantage:
-            </div>
-            <ul class="space-y-1.5 pl-4 list-disc text-slate-600">
-              <li>Save 25-35% Middleman & Retail Markups</li>
-              <li>Custom sizing to exact millimeter precision</li>
-              <li>Direct warranty backed by factory engineers</li>
-            </ul>
-          </div>
-
         </div>
 
-        <!-- Right: Inquiry Form -->
         <div class="lg:col-span-7">
-          <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xl">
-            <h3 class="text-lg font-bold text-slate-900 mb-2">Request Free Consultation & Site Survey</h3>
-            <p class="text-xs text-slate-500 mb-6">Fill in your requirements below and our team will get in touch within 30 minutes.</p>
+          <div class="bg-white p-7 sm:p-9 rounded-2xl border border-slate-200 shadow-xl">
+            <h3 class="text-lg font-bold text-slate-900 mb-2 brand-font">Request Free Technical Consultation</h3>
+            <p class="text-xs text-slate-500 mb-6">Fill in your requirements below and our team will get in touch shortly.</p>
 
             <form id="main-contact-form" class="space-y-4">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Your Full Name</label>
-                  <input type="text" id="contact-name" required placeholder="e.g. Ramesh Sharma" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none" />
+                  <input type="text" id="contact-name" required placeholder="e.g. Rajesh Kumar" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none" />
                 </div>
                 <div>
                   <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number (Required)</label>
-                  <input type="tel" id="contact-phone" required placeholder="e.g. +91 98765 43210" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none" />
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Email Address</label>
-                  <input type="email" id="contact-email" placeholder="e.g. ramesh@example.com" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none" />
-                </div>
-                <div>
-                  <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Product Requirement</label>
-                  <select id="contact-shutter-type" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none">
-                    <option value="Motorized Rolling Shutter">Motorized Rolling Shutter</option>
-                    <option value="Perforated Showroom Shutter">Perforated Showroom Shutter</option>
-                    <option value="Crystal Clear Polycarbonate">Crystal Clear Polycarbonate</option>
-                    <option value="Heavy Industrial Warehouse Door">Heavy Industrial Warehouse Door</option>
-                    <option value="Fire Rated Rolling Shutter">Fire Rated Rolling Shutter</option>
-                    <option value="Manual Shutter to Motorized Upgrade">Manual Shutter to Motorized Upgrade</option>
-                    <option value="Emergency Shutter Repair Service">Emergency Shutter Repair Service</option>
-                  </select>
+                  <input type="tel" id="contact-phone" required placeholder="e.g. +91 98765 43210" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none" />
                 </div>
               </div>
 
               <div>
-                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Project Details / Approximate Sizing</label>
-                <textarea id="contact-message" rows="3" placeholder="e.g. Need 3 motorized shutters for a new retail showroom in downtown..." class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-red-600 outline-none"></textarea>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Product Requirement</label>
+                <select id="contact-shutter-type" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none">
+                  <option value="High Speed Roll-Up Doors">High Speed Roll-Up Doors</option>
+                  <option value="Industrial Stacking Doors">Industrial Stacking Doors</option>
+                  <option value="Sectional Overhead Doors">Sectional Overhead Doors</option>
+                  <option value="Automatic Rolling Doors">Automatic Rolling Doors</option>
+                  <option value="Custom OEM Entrance Automation">Custom OEM Entrance Automation</option>
+                </select>
               </div>
 
-              <button type="submit" class="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-600/25 transition flex items-center justify-center gap-2">
+              <div>
+                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Project Message</label>
+                <textarea id="contact-message" rows="3" placeholder="Tell us about your project dimensions, site requirements, and timeline..." class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/25 transition flex items-center justify-center gap-2">
                 <i class="fas fa-paper-plane"></i>
-                <span>Submit Inquiry & Get Instant Quote</span>
+                <span>Submit Inquiry</span>
               </button>
             </form>
 
@@ -1375,82 +915,62 @@
   </section>
 
   <!-- ======================================================================
-       FOOTER (Clean Deep Charcoal Grounding)
+       FOOTER
        ====================================================================== -->
-  <footer class="bg-slate-950 text-slate-400 text-xs py-14 border-t border-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+  <footer class="bg-[#091a30] text-slate-400 text-xs py-14 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-900">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
         
-        <!-- Brand Summary -->
-        <div class="lg:col-span-2 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center shadow-lg shadow-red-600/30">
-              <i class="fas fa-bars-staggered text-white text-xl"></i>
-            </div>
-            <span class="text-xl font-black text-white heading-font">RAM <span class="text-red-500">DOOR</span> SHUTTER</span>
-          </div>
-          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
-            India's trusted manufacturer and fabricator of heavy-duty industrial rolling shutters, commercial showroom doors, polycarbonate grills, and automated gate systems.
+        <div class="space-y-4">
+          <span class="text-2xl font-black tracking-tight text-white brand-font flex items-center">
+            Ram<span class="text-slate-300">Door</span><span class="text-[#f59e0b] ml-1">Shutter</span>
+          </span>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            A leading manufacturer of entrance automation products, delivering innovative, reliable, and high-quality solutions worldwide.
           </p>
-          <div class="flex items-center gap-3 pt-2 text-white">
-            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-facebook-f text-xs"></i></a>
-            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-instagram text-xs"></i></a>
-            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-youtube text-xs"></i></a>
-            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-linkedin-in text-xs"></i></a>
-          </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="space-y-3">
           <h4 class="text-xs font-bold text-white uppercase tracking-wider">Quick Navigation</h4>
           <ul class="space-y-2">
-            <li><a href="#hero" class="hover:text-red-400 transition">Home</a></li>
-            <li><a href="#simulator" class="hover:text-red-400 transition">Shutter Simulator</a></li>
-            <li><a href="#calculator" class="hover:text-red-400 transition">Instant Cost Estimator</a></li>
-            <li><a href="#products" class="hover:text-red-400 transition">Products Catalog</a></li>
-            <li><a href="#manufacturing" class="hover:text-red-400 transition">Manufacturing Plant</a></li>
-            <li><a href="#contact" class="hover:text-red-400 transition">Contact & Location</a></li>
+            <li><a href="#hero" class="hover:text-white transition">Home</a></li>
+            <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#products" class="hover:text-white transition">Products</a></li>
+            <li><a href="#simulator" class="hover:text-white transition">Simulator & Quote</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
           </ul>
         </div>
 
-        <!-- Products List -->
         <div class="space-y-3">
-          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Shutter Types</h4>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Product Range</h4>
           <ul class="space-y-2">
-            <li><a href="#products" class="hover:text-red-400 transition">Motorized Rolling Shutters</a></li>
-            <li><a href="#products" class="hover:text-red-400 transition">Perforated Showroom Grills</a></li>
-            <li><a href="#products" class="hover:text-red-400 transition">Polycarbonate Crystal Shutters</a></li>
-            <li><a href="#products" class="hover:text-red-400 transition">Heavy Warehouse Roll Doors</a></li>
-            <li><a href="#products" class="hover:text-red-400 transition">Fire-Rated Safety Shutters</a></li>
-            <li><a href="#products" class="hover:text-red-400 transition">High-Speed Rapid Doors</a></li>
+            <li><a href="#products" class="hover:text-white transition">High Speed Doors</a></li>
+            <li><a href="#products" class="hover:text-white transition">Industrial Stacking Doors</a></li>
+            <li><a href="#products" class="hover:text-white transition">Sectional Overhead Doors</a></li>
+            <li><a href="#products" class="hover:text-white transition">Automatic Rolling Doors</a></li>
           </ul>
         </div>
 
-        <!-- Contact & Hours -->
         <div class="space-y-3">
-          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Direct Hotline</h4>
-          <div class="space-y-2 text-slate-400">
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider">Contact & Certifications</h4>
+          <div class="space-y-2 text-slate-300">
             <div class="text-white font-bold text-sm">+91 98765 43210</div>
-            <div>011-23456789 / 011-98765432</div>
-            <div class="text-red-400 font-semibold">24/7 Emergency Dispatch Available</div>
-            <div class="pt-2 text-[11px] text-slate-500">ISO 9001:2015 Certified Manufacturing Facility</div>
+            <div>sales@ramdoorshutter.com</div>
+            <div class="text-[#f59e0b] font-semibold">ISO 9001:2015 Certified Manufacturer</div>
           </div>
         </div>
 
       </div>
 
-      <!-- Copyright Bar -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
         <div>
-          &copy; <span id="current-year">2026</span> RAM DOOR SHUTTER. All Rights Reserved. Fabricated with Industrial Pride.
+          &copy; <span id="current-year">2026</span> Ram Door Shutter. All Rights Reserved. OEM & ODM Entrance Automation.
         </div>
         <div class="flex items-center gap-4">
           <a href="#" class="hover:text-slate-300 transition">Privacy Policy</a>
           <span>•</span>
-          <a href="#" class="hover:text-slate-300 transition">Terms of Supply</a>
-          <span>•</span>
-          <a href="#" class="hover:text-slate-300 transition">Warranty Terms</a>
+          <a href="#" class="hover:text-slate-300 transition">Terms & Conditions</a>
         </div>
       </div>
 
@@ -1458,19 +978,17 @@
   </footer>
 
   <!-- ======================================================================
-       FLOATING ACTION BUTTONS (WHATSAPP & CALL)
+       FLOATING ACTIONS (WhatsApp & Scroll Top)
        ====================================================================== -->
-  <a href="tel:+919876543210" class="quick-call-float-btn shadow-xl" title="Call Fabricator Hotline">
-    <i class="fas fa-phone-alt"></i>
-  </a>
+  <button id="scroll-top-btn" class="scroll-top-btn" title="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
-  <a href="https://wa.me/919876543210?text=Hi%20RAM%20Door%20Shutter,%20I%20would%20like%20to%20get%20a%20quotation%20for%20my%20site." target="_blank" class="whatsapp-float-btn" title="Chat on WhatsApp">
+  <a href="https://wa.me/919876543210?text=Hi%20Ram%20Door%20Shutter,%20I%20would%20like%20to%20get%20a%20quotation." target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ======================================================================
-       TOAST NOTIFICATION CONTAINER
-       ====================================================================== -->
+  <!-- Toast Notification -->
   <div id="toast-notification"></div>
 
   <!-- Scripts -->
