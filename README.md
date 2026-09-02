@@ -1,79 +1,86 @@
-# RAM DOOR SHUTTER - Official Manufacturer Website
+# Ram Door Shutter – Entrance Automation & High-Speed Door Manufacturer
 
-A website for **RAM DOOR SHUTTER** (Door Shop & Heavy Duty Rolling Shutter Manufacturer and Fabricator), styled in an industrial **Red, White, and Black** visual theme.
-
----
-
-## 🚀 Key Features
-
-1. **Interactive Rolling Shutter Visualizer & Simulator**
-   - Motorized remote control with animated UP, STOP, DOWN buttons.
-   - Slat Profile Switcher: Solid Galvanized Steel, Perforated Retail Mesh, Crystal Polycarbonate Clear, Commercial Security Grill.
-   - Electrostatic Powder Coat Color Swatches: Signal Red, Matte Black, Machine Gray, Pure White, Royal Blue, Forest Green.
-   - Real-time HUD ratings for Security Grade, Airflow/Ventilation %, and Visibility %.
-
-2. **Instant Shutter Cost Estimator & Quote Pre-filler**
-   - Preset opening sizes (Shop 10x10, Garage 12x10, Warehouse 16x14, Industrial Bay 20x18).
-   - Real-time width and height sliders with automatic area calculation.
-   - Material & Gauge dropdown (20G GI, 18G Heavy GI, Aluminum Alloy, Polycarbonate, Fire-Rated).
-   - Motor & Drive System selection (Manual, Gearbox, Center Motor, Heavy Industrial Side Drive, High-Speed Inverter).
-   - Add-on accessories (Anti-drop brake, UPS Battery backup, Safety sensors, Powder coating).
-   - 1-Click **"Send Estimate on WhatsApp"** button that pre-formats the exact dimensions and estimated quote into a ready-to-send WhatsApp message.
-   - 1-Click **"Print / Save Spec Sheet"** for quotations.
-
-3. **Complete Product Catalog & Technical Spec Modals**
-   - Motorized Rolling Shutters, Perforated Showroom Grills, Crystal Polycarbonate Shutters, Industrial Heavy Duty Doors, Fire-Rated Certified Shutters, Insulated Aluminum Shutters, High-Speed Rapid Roll Doors, Collapsible Lattice Gates.
-   - Filter tabs by category.
-   - Interactive modal popup with gauge specs, motor capacity, and wind resistance ratings.
-
-4. **24/7 Emergency Repair & Service Dispatch Unit**
-   - Rapid response form with direct WhatsApp SOS alert for technician dispatch.
-   - Retrofit upgrades (Manual to Motorized in 4 hours).
-   - Annual Maintenance Contracts (AMC) and spring replacement services.
-
-5. **Direct Manufacturer Advantages & 6-Stage Engineering Process**
-   - Coil Slitting, CNC Roll Forming, 200°C Powder Coating, Motor Integration, QA Cycle Testing, Site Delivery.
-
-6. **Responsive Red-White-Black Industrial UI**
-   - Mobile-first drawer navigation.
-   - Floating WhatsApp and Quick Call action buttons.
-   - Smooth scrolling and interactive toast notifications.
+Official website repository for **Ram Door Shutter** – A leading manufacturer of entrance automation products, high-speed doors, industrial rolling shutters, sectional doors, and logistics equipment. OEM & ODM specialists.
 
 ---
 
-## 📁 File Structure
+## 🌟 Key Website Features
+
+1. **Corporate Header & Topbar**
+   - Direct hotline, WhatsApp link, international email, and multi-language switcher (`EN`).
+   - Sticky white navigation with search trigger and **Request Quote** CTA.
+
+2. **Left Floating Action Sidebar**
+   - Quick-access vertical dock with Email, Direct Call, WhatsApp, and Live Chat triggers.
+
+3. **Hero Banner & Frosted Glass Stats Bar**
+   - High-impact entrance automation manufacturing hero with gold accents.
+   - ISO 9001 Certified Manufacturer badge.
+   - Frosted glass stats bar: **20+ Years Experience**, **50+ Countries Served**, **10,000+ Projects Completed**, **500+ Satisfied Clients**.
+
+4. **Product Categories Grid**
+   - High Speed Doors (PVC roll-up, zipper, stacking, spiral aluminum, freezer & cleanroom).
+   - Industrial Stacking Doors (Aluminium, steel, polycarbonate, fire-rated).
+   - Sectional Doors (Insulated, overhead, vertical lift, garage).
+   - Automatic Rolling Doors (Sliding, security grilles, motorized systems).
+
+5. **About Section: Dual-Image Overlap & Capabilities**
+   - Overlapping manufacturing facility imagery with a **20+ Years of Excellence** gold badge.
+   - 2x2 capability matrix: **OEM & ODM**, **Global Reach**, **ISO Certified**, **24/7 Support**.
+
+6. **Why Choose Us / Value Proposition**
+   - Global Operations Center showcase with **20+ Years Manufacturing Excellence** badge.
+   - Value pillars: **Premium Quality Standards**, **OEM & ODM Capabilities**, **On-Time Global Delivery**, **End-to-End Support**.
+
+7. **Interactive Shutter Simulator & Remote Control Handset**
+   - Interactive UP, STOP, DOWN motorized remote handset with LED signal.
+   - Profile switchers (Solid Steel, Perforated Mesh, Crystal Polycarbonate).
+   - Live Security, Airflow, and Visibility HUD indicators.
+
+8. **Instant Cost Estimator & Quote Generator**
+   - Quick size presets (Shop 10x10, Garage 12x10, Warehouse 16x14, Industrial 20x18).
+   - Width and height sliders with instant price range calculation.
+   - 1-Click **"Send Estimate on WhatsApp"** button.
+
+9. **Floating Widgets**
+   - Bottom-right **WhatsApp Chat** floating button.
+   - **Scroll to Top** button.
+
+---
+
+## 📁 Repository Structure
 
 ```
 ramdoorshetter/
-├── index.html        # Main webpage layout & components
+├── index.html        # Main entrance automation web application
 ├── css/
-│   └── styles.css    # Custom industrial Red/White/Black styling & animations
+│   └── styles.css    # Custom corporate stylesheet, animations & layout
 ├── js/
-│   └── app.js        # Simulator engine, cost estimator & interactivity
-├── images/           # Local assets / images folder
-└── README.md         # Documentation
+│   └── app.js        # Simulator engine, cost calculator, search & smooth scroll
+├── images/           # Assets directory
+└── README.md         # Documentation & deployment guide
 ```
 
 ---
 
-## 💻 How to View & Run the Website
+## 🚀 How to Run Locally
 
-### Option 1: Double-Click
-Simply double-click `index.html` in your file explorer to open it in any web browser (Chrome, Edge, Firefox, Safari).
+### Option 1: Direct File Opening
+Double-click `index.html` in your file explorer to open it in any modern browser.
 
-### Option 2: Run a Local Server (PowerShell)
+### Option 2: Run a Local Web Server
 ```powershell
 python -m http.server 8000
 ```
-Then open [http://localhost:8000](http://localhost:8000) in your browser.
+Then visit [http://localhost:8000](http://localhost:8000).
 
 ---
 
-## 🛠️ Customization Details
+## 🌐 Deploying to GitHub Pages (Free Hosting)
 
-- **Change Phone Numbers / WhatsApp**:
-  In `index.html` and `js/app.js`, replace `9876543210` with your actual phone/WhatsApp number.
-- **Change Office Address / Email**:
-  Update the address and email fields in the `contact` section of `index.html`.
-- **Change Pricing Multipliers**:
-  Adjust the base per-sq-ft rates in `js/app.js` inside the `initCostCalculator` function.
+1. Go to your repository settings on GitHub:  
+   `https://github.com/shamshadkhan36/ramdoorshetter/settings/pages`
+2. Under **Build and deployment** > **Source**, select **Deploy from a branch**.
+3. Choose the `main` branch and folder `/ (root)`, then click **Save**.
+4. Your website will be live in 1-2 minutes at:  
+   `https://shamshadkhan36.github.io/ramdoorshetter/`
