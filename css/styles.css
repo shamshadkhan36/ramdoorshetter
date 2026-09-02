@@ -1,7 +1,6 @@
 /* ==========================================================================
-   RAM DOOR SHUTTER - CORPORATE ENTRANCE AUTOMATION THEME
-   Inspired by International Entrance Automation & High-Speed Door Manufacturers
-   Palette: Corporate Royal Blue (#0d4f9b, #15549a), Amber Gold (#f59e0b), Pure White (#ffffff), Slate (#0f172a, #334155)
+   RAM DOOR SHUTTER - CORPORATE ENTRANCE AUTOMATION THEME & ANIMATIONS
+   Palette: Corporate Royal Blue (#0d4f9b), Amber Gold (#f59e0b), Pure White (#ffffff), Slate (#0f172a)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap');
@@ -44,6 +43,7 @@ html {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--text-body);
   background-color: var(--bg-white);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .brand-font {
@@ -68,16 +68,145 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   background: var(--primary-blue-hover);
 }
 
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(245, 158, 11, 0);
+  }
+}
+
+@keyframes pulseBlue {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(13, 79, 155, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(13, 79, 155, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes slideInSidebar {
+  from {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+/* Scroll Reveal Classes (Zero Dependency AOS) */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.reveal-left {
+  transform: translateX(-35px);
+}
+
+.reveal-item.reveal-right {
+  transform: translateX(35px);
+}
+
+.reveal-item.reveal-scale {
+  transform: scale(0.94);
+}
+
+.reveal-item.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+
+/* Floating Elements */
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.pulse-gold-badge {
+  animation: pulseGold 3s infinite;
+}
+
+.pulse-blue-badge {
+  animation: pulseBlue 3s infinite;
+}
+
 /* Navigation & Active States */
 .nav-link-item {
   position: relative;
   font-weight: 600;
   color: #334155;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .nav-link-item:hover, .nav-link-item.active {
   color: var(--primary-blue);
+  transform: translateY(-1px);
 }
 
 .nav-pill-active {
@@ -85,6 +214,7 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   color: var(--primary-blue) !important;
   border-radius: 9999px;
   padding: 6px 18px;
+  transition: all 0.25s ease;
 }
 
 /* Floating Left Action Sidebar */
@@ -97,6 +227,7 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  animation: slideInSidebar 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .floating-sidebar-btn {
@@ -107,16 +238,17 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   justify-content: center;
   color: #ffffff;
   font-size: 18px;
-  border-radius: 0 10px 10px 0;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.25s ease;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
 
 .floating-sidebar-btn:hover {
-  width: 52px;
-  padding-left: 4px;
-  box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.22);
+  width: 54px;
+  padding-left: 6px;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.24);
+  transform: scale(1.05);
 }
 
 .floating-sidebar-btn.btn-email { background-color: #ef4444; }
@@ -124,7 +256,7 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 .floating-sidebar-btn.btn-whatsapp { background-color: #22c55e; }
 .floating-sidebar-btn.btn-chat { background-color: #10b981; }
 
-/* Section Eyebrow Tag Pill (e.g., —— OUR PRODUCTS ——) */
+/* Section Eyebrow Tag Pill */
 .section-tag-pill {
   display: inline-flex;
   align-items: center;
@@ -138,6 +270,12 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.section-tag-pill:hover {
+  background-color: #dbeafe;
+  transform: scale(1.03);
 }
 
 .section-tag-pill::before,
@@ -157,21 +295,36 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
-/* Category Cards (from Screenshot 2) */
+.hero-stats-bar:hover {
+  background: rgba(13, 79, 155, 0.45);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Category Cards with Smooth Zoom & Hover Glow */
 .category-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 18px;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
 .category-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: #93c5fd;
-  box-shadow: 0 20px 35px -8px rgba(13, 79, 155, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 22px 40px -10px rgba(13, 79, 155, 0.15), 0 10px 18px -4px rgba(0, 0, 0, 0.04);
+}
+
+.category-card img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-card:hover img {
+  transform: scale(1.08);
 }
 
 .category-card.featured-card {
@@ -185,23 +338,29 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   border: 1px solid #dbeafe;
   font-size: 11px;
   font-weight: 600;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 9999px;
+  transition: all 0.2s ease;
 }
 
-/* Value Feature Cards (Screenshot 3 & 4) */
+.category-badge-tag:hover {
+  background-color: #dbeafe;
+  transform: translateY(-1px);
+}
+
+/* Value Feature Cards */
 .feature-box-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 24px;
-  transition: all 0.25s ease;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .feature-box-card:hover {
   border-color: #bfdbfe;
-  box-shadow: 0 12px 24px -6px rgba(13, 79, 155, 0.08);
-  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -8px rgba(13, 79, 155, 0.1);
+  transform: translateY(-5px);
 }
 
 .feature-icon-wrapper {
@@ -215,6 +374,12 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   justify-content: center;
   font-size: 20px;
   box-shadow: 0 6px 14px rgba(13, 79, 155, 0.25);
+  transition: all 0.3s ease;
+}
+
+.feature-box-card:hover .feature-icon-wrapper {
+  transform: rotate(6deg) scale(1.1);
+  background-color: #093c78;
 }
 
 /* Floating Bottom Right Actions */
@@ -233,13 +398,13 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   font-size: 28px;
   box-shadow: 0 10px 25px rgba(34, 197, 94, 0.45);
   z-index: 50;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
 
 .floating-whatsapp-btn:hover {
-  transform: scale(1.1) rotate(6deg);
-  box-shadow: 0 14px 30px rgba(34, 197, 94, 0.6);
+  transform: scale(1.12) rotate(8deg);
+  box-shadow: 0 14px 32px rgba(34, 197, 94, 0.6);
   color: #ffffff;
 }
 
@@ -265,10 +430,10 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 
 .scroll-top-btn:hover {
   background-color: var(--primary-blue);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
-/* Shutter Simulator Styles */
+/* Shutter Simulator Components */
 .shutter-viewport-corporate {
   position: relative;
   overflow: hidden;
@@ -374,21 +539,6 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-.slat-grill {
-  background: transparent;
-  border-bottom: 3.5px solid var(--slat-bg, #0d4f9b);
-  border-top: 3.5px solid var(--slat-bg, #0d4f9b);
-  position: relative;
-}
-.slat-grill::after {
-  content: '';
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  height: 100%;
-  background: repeating-linear-gradient(90deg, var(--slat-bg, #0d4f9b), var(--slat-bg, #0d4f9b) 4px, transparent 4px, transparent 30px);
-}
-
 .shutter-bottom-bar {
   width: 100%;
   height: 28px;
@@ -449,13 +599,14 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   border: 1px solid #e2e8f0;
   color: #1e293b;
   box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
 }
 
 .remote-btn-corp:hover {
   background: #ffffff;
   border-color: #cbd5e1;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 .remote-btn-blue {

@@ -29,13 +29,13 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Custom Stylesheet -->
+  <!-- Custom Stylesheet with Animations -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased selection:bg-blue-800 selection:text-white relative">
 
   <!-- ======================================================================
-       FLOATING LEFT ACTION SIDEBAR (Exact match with Screenshots)
+       FLOATING LEFT ACTION SIDEBAR (Exact match with Screenshots + Animations)
        ====================================================================== -->
   <div class="floating-left-sidebar hidden sm:flex">
     <a href="mailto:sales@ramdoorshutter.com" class="floating-sidebar-btn btn-email" title="Send Email">
@@ -60,15 +60,15 @@
       
       <!-- Contact Info List -->
       <div class="flex items-center flex-wrap gap-4 sm:gap-7 text-slate-300">
-        <a href="tel:+919876543210" class="flex items-center gap-2 hover:text-white transition">
+        <a href="tel:+919876543210" class="flex items-center gap-2 hover:text-white transition transform hover:scale-105">
           <i class="fas fa-phone-alt text-slate-400 text-xs"></i>
           <span>+91 98765 43210</span>
         </a>
-        <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-2 hover:text-white transition">
+        <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-2 hover:text-white transition transform hover:scale-105">
           <i class="fab fa-whatsapp text-slate-400 text-xs"></i>
           <span>+91 98111 22334</span>
         </a>
-        <a href="mailto:sales@ramdoorshutter.com" class="hidden md:flex items-center gap-2 hover:text-white transition">
+        <a href="mailto:sales@ramdoorshutter.com" class="hidden md:flex items-center gap-2 hover:text-white transition transform hover:scale-105">
           <i class="fas fa-envelope text-slate-400 text-xs"></i>
           <span>sales@ramdoorshutter.com</span>
         </a>
@@ -76,7 +76,7 @@
 
       <!-- Language Selector -->
       <div class="flex items-center gap-2 text-slate-200">
-        <div class="flex items-center gap-1.5 px-2 py-1 rounded bg-slate-800/80 border border-slate-700 text-xs cursor-pointer hover:bg-slate-700 transition">
+        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700 text-xs cursor-pointer hover:bg-slate-700 transition">
           <span class="text-sm">🇬🇧</span>
           <span class="font-semibold text-white">EN</span>
           <i class="fas fa-chevron-down text-[10px] text-slate-400 ml-1"></i>
@@ -89,11 +89,11 @@
   <!-- ======================================================================
        MAIN HEADER & NAVIGATION (Exact match with Screenshot 1)
        ====================================================================== -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-12 flex items-center justify-between h-20">
       
-      <!-- Brand Logo (Clean Modern Blue Font) -->
-      <a href="#" class="flex items-center gap-2 group">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2 group transition transform hover:scale-102">
         <span class="text-2xl sm:text-3xl font-black tracking-tight text-[#0d4f9b] brand-font flex items-center">
           Ram<span class="text-slate-900">Door</span><span class="text-[#f59e0b] text-xl font-bold ml-1">Shutter</span>
         </span>
@@ -106,7 +106,7 @@
         <div class="relative group">
           <a href="#products" class="nav-link-item py-1 flex items-center gap-1">
             <span>Products</span>
-            <i class="fas fa-chevron-down text-[10px] text-slate-400"></i>
+            <i class="fas fa-chevron-down text-[10px] text-slate-400 group-hover:rotate-180 transition duration-300"></i>
           </a>
         </div>
         <a href="#simulator" class="nav-link-item py-1">Simulator & Quote</a>
@@ -117,12 +117,12 @@
       <!-- Right Action CTAs -->
       <div class="hidden sm:flex items-center gap-3">
         <!-- Search Button -->
-        <button id="search-modal-btn" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition border border-slate-200">
+        <button id="search-modal-btn" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition border border-slate-200 hover:scale-105 active:scale-95">
           <i class="fas fa-search text-sm"></i>
         </button>
 
         <!-- Request Quote Blue Button -->
-        <a href="#calculator" class="px-6 py-2.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white text-sm font-bold tracking-wide shadow-md shadow-blue-900/20 transition transform hover:-translate-y-0.5">
+        <a href="#calculator" class="px-6 py-2.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white text-sm font-bold tracking-wide shadow-md shadow-blue-900/20 transition transform hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">
           Request Quote
         </a>
       </div>
@@ -150,23 +150,23 @@
   </header>
 
   <!-- ======================================================================
-       HERO SECTION WITH STATS BAR (Exact match with Screenshot 1)
+       HERO SECTION WITH STATS BAR (Screenshot 1 + Animated Counters)
        ====================================================================== -->
   <section id="hero" class="relative text-white overflow-hidden py-20 lg:py-28 bg-slate-900">
     
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80" alt="Entrance Automation Manufacturing" class="w-full h-full object-cover opacity-35 scale-105" />
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80" alt="Entrance Automation Manufacturing" class="w-full h-full object-cover opacity-35 scale-105 transition-transform duration-1000" />
       <div class="absolute inset-0 hero-bg-overlay"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-12 relative z-10 space-y-12">
       
       <!-- Hero Center Text Content -->
-      <div class="max-w-3xl space-y-6 text-left">
+      <div class="max-w-3xl space-y-6 text-left reveal-item is-revealed">
         
-        <!-- ISO Badge (Screenshot 1) -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-600/60 text-slate-200 text-xs font-semibold tracking-wide backdrop-blur-md">
+        <!-- ISO Badge (Screenshot 1 + Gentle Pulse) -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-600/60 text-slate-200 text-xs font-semibold tracking-wide backdrop-blur-md pulse-gold-badge">
           <i class="fas fa-award text-[#f59e0b]"></i>
           <span>ISO 9001 Certified Manufacturer</span>
         </div>
@@ -183,13 +183,13 @@
           A leading manufacturer of entrance automation products, delivering innovative, reliable, and high-quality solutions to customers worldwide. OEM & ODM specialists.
         </p>
 
-        <!-- CTA Buttons -->
+        <!-- CTA Buttons with Micro-interactions -->
         <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="#products" class="px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-sm tracking-wide shadow-lg shadow-blue-900/30 transition flex items-center gap-2">
+          <a href="#products" class="px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-sm tracking-wide shadow-lg shadow-blue-900/30 transition transform hover:-translate-y-1 hover:shadow-xl flex items-center gap-2">
             <span>Explore Products</span>
             <i class="fas fa-arrow-right text-xs"></i>
           </a>
-          <a href="#simulator" class="px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm tracking-wide border border-white/25 backdrop-blur-md transition flex items-center gap-2">
+          <a href="#simulator" class="px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm tracking-wide border border-white/25 backdrop-blur-md transition transform hover:-translate-y-1 flex items-center gap-2">
             <i class="fas fa-sliders-h text-[#f59e0b]"></i>
             <span>Interactive Simulator</span>
           </a>
@@ -197,26 +197,26 @@
 
       </div>
 
-      <!-- Frosted Glass Stats Bar (Exact match with Screenshot 1) -->
-      <div class="hero-stats-bar p-6 sm:p-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+      <!-- Frosted Glass Stats Bar with Dynamic Animated Counters -->
+      <div class="hero-stats-bar p-6 sm:p-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center reveal-item delay-200">
         
         <div class="space-y-1">
-          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">20+</div>
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="20" data-suffix="+">20+</div>
           <div class="text-xs sm:text-sm text-slate-200 font-medium">Years Experience</div>
         </div>
 
         <div class="space-y-1">
-          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">50+</div>
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="50" data-suffix="+">50+</div>
           <div class="text-xs sm:text-sm text-slate-200 font-medium">Countries Served</div>
         </div>
 
         <div class="space-y-1">
-          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">10000+</div>
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="10000" data-suffix="+">10000+</div>
           <div class="text-xs sm:text-sm text-slate-200 font-medium">Projects Completed</div>
         </div>
 
         <div class="space-y-1">
-          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font">500+</div>
+          <div class="text-3xl sm:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="500" data-suffix="+">500+</div>
           <div class="text-xs sm:text-sm text-slate-200 font-medium">Satisfied Clients</div>
         </div>
 
@@ -226,13 +226,13 @@
   </section>
 
   <!-- ======================================================================
-       PRODUCT CATEGORIES SECTION (Exact match with Screenshot 2)
+       PRODUCT CATEGORIES SECTION (Screenshot 2 + Scroll Reveal + 3D Tilt)
        ====================================================================== -->
-  <section id="products" class="py-20 bg-white text-slate-800 border-b border-slate-200">
+  <section id="products" class="py-20 bg-white text-slate-800 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <!-- Section Header with Eyebrow Pill -->
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-item">
         <div class="section-tag-pill">
           OUR PRODUCTS
         </div>
@@ -244,17 +244,17 @@
         </p>
       </div>
 
-      <!-- 4-Column Product Cards Grid (Screenshot 2) -->
+      <!-- 4-Column Product Cards Grid with Staggered Fade Up (Screenshot 2) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Card 1: High Speed Doors -->
-        <div class="category-card flex flex-col justify-between group">
+        <div class="category-card flex flex-col justify-between group reveal-item delay-100">
           <div>
-            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
-              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" alt="High Speed Doors" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" alt="High Speed Doors" class="max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-6">
-              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2">High Speed Doors</h3>
+              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2 group-hover:text-[#0d4f9b] transition">High Speed Doors</h3>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 PVC roll-up, zipper, stacking, spiral aluminum, freezer, and clean room high speed doors for fast and efficient access.
               </p>
@@ -267,13 +267,13 @@
         </div>
 
         <!-- Card 2: Industrial Stacking Door -->
-        <div class="category-card flex flex-col justify-between group">
+        <div class="category-card flex flex-col justify-between group reveal-item delay-200">
           <div>
-            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
-              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Industrial Stacking Door" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Industrial Stacking Door" class="max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-6">
-              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2">Industrial Stacking Door</h3>
+              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2 group-hover:text-[#0d4f9b] transition">Industrial Stacking Door</h3>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 Aluminium, steel, polycarbonate, fire-rated, commercial and industrial rolling shutters with manual and motorized options.
               </p>
@@ -286,13 +286,13 @@
         </div>
 
         <!-- Card 3: Sectional Doors -->
-        <div class="category-card flex flex-col justify-between group">
+        <div class="category-card flex flex-col justify-between group reveal-item delay-300">
           <div>
-            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
-              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Sectional Doors" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Sectional Doors" class="max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-6">
-              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2">Sectional Doors</h3>
+              <h3 class="text-lg font-bold text-slate-900 brand-font mb-2 group-hover:text-[#0d4f9b] transition">Sectional Doors</h3>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 Industrial, insulated, overhead, vertical lift, garage, and glass sectional doors for every application and environment.
               </p>
@@ -305,10 +305,10 @@
         </div>
 
         <!-- Card 4: Automatic Rolling Door (Featured Active Style) -->
-        <div class="category-card featured-card flex flex-col justify-between group">
+        <div class="category-card featured-card flex flex-col justify-between group reveal-item delay-400">
           <div>
-            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100">
-              <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Automatic Rolling Door" class="max-h-48 w-auto object-contain group-hover:scale-105 transition duration-300 rounded-lg shadow-sm" />
+            <div class="h-60 bg-gradient-to-b from-slate-50 to-slate-100 p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Automatic Rolling Door" class="max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-6">
               <h3 class="text-lg font-bold text-[#0d4f9b] brand-font mb-2">Automatic Rolling Door</h3>
@@ -329,15 +329,15 @@
   </section>
 
   <!-- ======================================================================
-       ABOUT SECTION: DUAL IMAGE & 2x2 GRID (Exact match with Screenshot 3)
+       ABOUT SECTION: DUAL IMAGE & 2x2 GRID (Screenshot 3 + Reveal Animations)
        ====================================================================== -->
-  <section id="about" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200">
+  <section id="about" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left: Overlapping Factory Images + Gold 20+ Badge -->
-        <div class="lg:col-span-5 relative">
+        <div class="lg:col-span-5 relative reveal-item reveal-left">
           <div class="relative">
             <!-- Main Factory Plant Image -->
             <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-200 h-80 sm:h-96">
@@ -345,12 +345,12 @@
             </div>
 
             <!-- Inset Company Headquarters Photo -->
-            <div class="absolute -bottom-6 -left-4 sm:-left-6 w-52 sm:w-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+            <div class="absolute -bottom-6 -left-4 sm:-left-6 w-52 sm:w-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white animate-float">
               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Global Operations Center" class="w-full h-36 object-cover" />
             </div>
 
             <!-- Yellow/Gold 20+ Badge (Screenshot 3) -->
-            <div class="absolute -bottom-4 right-2 sm:right-4 bg-[#f59e0b] text-slate-950 font-black px-5 py-3 rounded-2xl shadow-xl flex flex-col items-center justify-center">
+            <div class="absolute -bottom-4 right-2 sm:right-4 bg-[#f59e0b] text-slate-950 font-black px-5 py-3 rounded-2xl shadow-xl flex flex-col items-center justify-center pulse-gold-badge">
               <span class="text-2xl sm:text-3xl brand-font leading-none">20+</span>
               <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 mt-1">Years of Excellence</span>
             </div>
@@ -358,7 +358,7 @@
         </div>
 
         <!-- Right: Text Content & 4 Feature Boxes (Screenshot 3) -->
-        <div class="lg:col-span-7 space-y-6 lg:pl-6 pt-8 lg:pt-0">
+        <div class="lg:col-span-7 space-y-6 lg:pl-6 pt-8 lg:pt-0 reveal-item reveal-right">
           
           <div class="section-tag-pill">
             ABOUT RAM DOOR SHUTTER
@@ -379,8 +379,8 @@
           <!-- 4 Feature Box Grid (2x2) -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             
-            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
-              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+            <div class="feature-box-card p-4 rounded-xl flex items-center gap-3">
+              <div class="feature-icon-wrapper">
                 <i class="fas fa-industry"></i>
               </div>
               <div>
@@ -389,8 +389,8 @@
               </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
-              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+            <div class="feature-box-card p-4 rounded-xl flex items-center gap-3">
+              <div class="feature-icon-wrapper">
                 <i class="fas fa-globe"></i>
               </div>
               <div>
@@ -399,8 +399,8 @@
               </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
-              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+            <div class="feature-box-card p-4 rounded-xl flex items-center gap-3">
+              <div class="feature-icon-wrapper">
                 <i class="fas fa-certificate"></i>
               </div>
               <div>
@@ -409,8 +409,8 @@
               </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
-              <div class="w-11 h-11 rounded-lg bg-[#0d4f9b] text-white flex items-center justify-center text-lg shrink-0">
+            <div class="feature-box-card p-4 rounded-xl flex items-center gap-3">
+              <div class="feature-icon-wrapper">
                 <i class="fas fa-headset"></i>
               </div>
               <div>
@@ -421,9 +421,9 @@
 
           </div>
 
-          <!-- Blue Action Button (Screenshot 3) -->
+          <!-- Blue Action Button -->
           <div class="pt-2">
-            <a href="#why-us" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-sm tracking-wide shadow-md transition">
+            <a href="#why-us" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-sm tracking-wide shadow-md transition transform hover:-translate-y-0.5 hover:shadow-lg">
               <span>Learn More About Us</span>
               <i class="fas fa-arrow-right text-xs"></i>
             </a>
@@ -437,20 +437,19 @@
   </section>
 
   <!-- ======================================================================
-       WHY CHOOSE US / VALUE PROPOSITION (Exact match with Screenshot 4)
+       WHY CHOOSE US / VALUE PROPOSITION (Screenshot 4 + Stagger Animation)
        ====================================================================== -->
-  <section id="why-us" class="py-20 bg-white text-slate-800 border-b border-slate-200">
+  <section id="why-us" class="py-20 bg-white text-slate-800 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Left: Operations Center Building Image with Navy Badge (Screenshot 4) -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Ram Door Shutter Operations Center" class="w-full h-[450px] object-cover" />
+        <!-- Left: Operations Center Building Image with Navy Badge -->
+        <div class="lg:col-span-5 relative reveal-item reveal-left">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Ram Door Shutter Operations Center" class="w-full h-[450px] object-cover group-hover:scale-105 transition duration-700" />
             
-            <!-- Dark Navy Badge at Bottom Left (Screenshot 4) -->
-            <div class="absolute bottom-6 left-6 right-6 bg-[#0a2540]/90 backdrop-blur-md text-white p-4 rounded-2xl border border-slate-600 flex items-center gap-3">
+            <div class="absolute bottom-6 left-6 right-6 bg-[#0a2540]/90 backdrop-blur-md text-white p-4 rounded-2xl border border-slate-600 flex items-center gap-3 pulse-blue-badge">
               <div class="w-10 h-10 rounded-xl bg-[#f59e0b] text-slate-950 flex items-center justify-center text-lg shrink-0">
                 <i class="fas fa-industry"></i>
               </div>
@@ -462,10 +461,10 @@
           </div>
         </div>
 
-        <!-- Right: 4 Large Feature Cards (2x2 Grid from Screenshot 4) -->
-        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <!-- Right: 4 Large Feature Cards (2x2 Grid) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 reveal-item reveal-right">
           
-          <!-- Card 1: Premium Quality Standards -->
+          <!-- Card 1 -->
           <div class="feature-box-card">
             <div class="feature-icon-wrapper mb-4">
               <i class="fas fa-award"></i>
@@ -476,7 +475,7 @@
             </p>
           </div>
 
-          <!-- Card 2: OEM & ODM Capabilities -->
+          <!-- Card 2 -->
           <div class="feature-box-card">
             <div class="feature-icon-wrapper mb-4">
               <i class="fas fa-cogs"></i>
@@ -487,7 +486,7 @@
             </p>
           </div>
 
-          <!-- Card 3: On-Time Global Delivery -->
+          <!-- Card 3 -->
           <div class="feature-box-card">
             <div class="feature-icon-wrapper mb-4">
               <i class="fas fa-shipping-fast"></i>
@@ -498,7 +497,7 @@
             </p>
           </div>
 
-          <!-- Card 4: End-to-End Support -->
+          <!-- Card 4 -->
           <div class="feature-box-card">
             <div class="feature-icon-wrapper mb-4">
               <i class="fas fa-wrench"></i>
@@ -519,10 +518,10 @@
   <!-- ======================================================================
        INTERACTIVE SHUTTER SIMULATOR & REMOTE CONTROL
        ====================================================================== -->
-  <section id="simulator" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200">
+  <section id="simulator" class="py-20 bg-slate-50 text-slate-800 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3 reveal-item">
         <div class="section-tag-pill">
           LIVE DEMO STUDIO
         </div>
@@ -537,7 +536,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <!-- Left: Simulator Graphic Viewport -->
-        <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-lg">
+        <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-lg reveal-item reveal-left">
           
           <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-100">
             <div class="flex items-center gap-2">
@@ -603,7 +602,7 @@
         </div>
 
         <!-- Right: Simulator Controls -->
-        <div class="lg:col-span-5 space-y-6">
+        <div class="lg:col-span-5 space-y-6 reveal-item reveal-right">
           
           <div class="remote-control-corp p-6">
             <div class="flex items-center justify-between mb-4">
@@ -618,15 +617,15 @@
             </div>
 
             <div class="grid grid-cols-3 gap-3">
-              <button id="btn-remote-up" class="remote-btn-corp py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-emerald-500">
+              <button id="btn-remote-up" class="remote-btn-corp py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-emerald-500 active:scale-95 transition">
                 <i class="fas fa-chevron-up text-lg text-emerald-600"></i>
                 <span>OPEN ▲</span>
               </button>
-              <button id="btn-remote-stop" class="remote-btn-corp remote-btn-blue py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 shadow-md">
+              <button id="btn-remote-stop" class="remote-btn-corp remote-btn-blue py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 shadow-md active:scale-95 transition">
                 <i class="fas fa-stop text-lg text-white"></i>
                 <span>STOP ■</span>
               </button>
-              <button id="btn-remote-down" class="remote-btn-corp py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-amber-500">
+              <button id="btn-remote-down" class="remote-btn-corp py-3.5 px-3 rounded-xl font-bold text-xs uppercase flex flex-col items-center justify-center gap-1.5 hover:border-amber-500 active:scale-95 transition">
                 <i class="fas fa-chevron-down text-lg text-amber-600"></i>
                 <span>CLOSE ▼</span>
               </button>
@@ -675,10 +674,10 @@
   <!-- ======================================================================
        INSTANT COST ESTIMATOR & QUOTATION
        ====================================================================== -->
-  <section id="calculator" class="py-20 bg-white text-slate-800 border-b border-slate-200">
+  <section id="calculator" class="py-20 bg-white text-slate-800 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3 reveal-item">
         <div class="section-tag-pill">
           FAST QUOTE GENERATOR
         </div>
@@ -693,23 +692,23 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
         <!-- Left: Input Form Controls -->
-        <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
+        <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6 reveal-item reveal-left">
           
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
               Quick Size Presets
             </label>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="10" data-h="10">
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0" data-w="10" data-h="10">
                 Shop (10×10 ft)
               </button>
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="12" data-h="10">
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0" data-w="12" data-h="10">
                 Garage (12×10 ft)
               </button>
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="16" data-h="14">
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0" data-w="16" data-h="14">
                 Warehouse (16×14)
               </button>
-              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="20" data-h="18">
+              <button type="button" class="calc-preset-btn py-2.5 px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0" data-w="20" data-h="18">
                 Industrial (20×18)
               </button>
             </div>
@@ -767,7 +766,7 @@
         </div>
 
         <!-- Right: Quotation Breakdown Box -->
-        <div class="lg:col-span-5 sticky top-28 space-y-4">
+        <div class="lg:col-span-5 sticky top-28 space-y-4 reveal-item reveal-right">
           
           <div class="bg-white text-slate-900 p-6 sm:p-8 rounded-2xl border-2 border-[#0d4f9b] shadow-2xl relative overflow-hidden">
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
@@ -805,7 +804,7 @@
             </div>
 
             <div class="space-y-3">
-              <a id="calc-whatsapp-btn" href="#" target="_blank" class="w-full py-4 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-emerald-600/25 transition flex items-center justify-center gap-2">
+              <a id="calc-whatsapp-btn" href="#" target="_blank" class="w-full py-4 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-emerald-600/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
                 <i class="fab fa-whatsapp text-lg"></i>
                 <span>Send Estimate on WhatsApp</span>
               </a>
@@ -823,10 +822,10 @@
   <!-- ======================================================================
        CONTACT & INQUIRY FORM
        ====================================================================== -->
-  <section id="contact" class="py-20 bg-slate-50 text-slate-800 relative">
+  <section id="contact" class="py-20 bg-slate-50 text-slate-800 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-12">
       
-      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3 reveal-item">
         <div class="section-tag-pill">
           CONTACT US
         </div>
@@ -840,7 +839,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
         
-        <div class="lg:col-span-5 space-y-6">
+        <div class="lg:col-span-5 space-y-6 reveal-item reveal-left">
           <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-md space-y-4">
             <h3 class="text-base font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
               <i class="fas fa-building text-[#0d4f9b]"></i> Operations Center & Factory
@@ -867,7 +866,7 @@
           </div>
         </div>
 
-        <div class="lg:col-span-7">
+        <div class="lg:col-span-7 reveal-item reveal-right">
           <div class="bg-white p-7 sm:p-9 rounded-2xl border border-slate-200 shadow-xl">
             <h3 class="text-lg font-bold text-slate-900 mb-2 brand-font">Request Free Technical Consultation</h3>
             <p class="text-xs text-slate-500 mb-6">Fill in your requirements below and our team will get in touch shortly.</p>
@@ -900,7 +899,7 @@
                 <textarea id="contact-message" rows="3" placeholder="Tell us about your project dimensions, site requirements, and timeline..." class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-4 bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/25 transition flex items-center justify-center gap-2">
+              <button type="submit" class="w-full py-4 bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/25 transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
                 <i class="fas fa-paper-plane"></i>
                 <span>Submit Inquiry</span>
               </button>
