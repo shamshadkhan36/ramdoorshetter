@@ -1,38 +1,189 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" data-theme="blue" data-layout="corporate">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Ram Door Shutter – Your Ultimate Entrance Automation Solution | ISO 9001 Certified Manufacturer</title>
-  <meta name="description" content="Ram Door Shutter is a leading manufacturer of entrance automation products, high speed doors, rolling shutters, sectional doors, and logistics equipment worldwide. OEM & ODM specialists." />
+  <title>Ram Door Shutter – Entrance Automation & High-Speed Door Manufacturer</title>
+  <meta name="description" content="Ram Door Shutter is a leading manufacturer of entrance automation products, high speed doors, rolling shutters, sectional doors, and logistics equipment worldwide." />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              blue: '#0d4f9b',
-              blueDark: '#0a2540',
-              blueLight: '#eff6ff',
-              gold: '#f59e0b',
-              topbar: '#091a30',
-            }
-          }
-        }
-      }
-    }
-  </script>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Custom Responsive Stylesheet with Animations -->
+  <!-- Custom Responsive Stylesheet with 5 Themes & 5 Layouts -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-blue-800 selection:text-white relative pb-16 sm:pb-0">
+<body class="font-sans antialiased relative pb-16 sm:pb-0">
+
+  <!-- ======================================================================
+       FLOATING THEME & LAYOUT SWITCHER BUTTON
+       ====================================================================== -->
+  <button id="customizer-trigger-btn" class="customizer-trigger-btn" title="Change Theme & Layout">
+    <i class="fas fa-palette text-sm"></i>
+    <span>Themes & Layouts</span>
+  </button>
+
+  <!-- ======================================================================
+       THEME & LAYOUT CUSTOMIZER MODAL
+       ====================================================================== -->
+  <div id="customizer-modal" class="customizer-modal">
+    <div class="customizer-card p-6 sm:p-8 space-y-6">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+        <div>
+          <h3 class="text-lg font-bold text-slate-900 brand-font">Customize Theme & Layout</h3>
+          <p class="text-xs text-slate-500">Choose from 5 color palettes and 5 dynamic layout styles.</p>
+        </div>
+        <button id="customizer-close-btn" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition">
+          <i class="fas fa-times text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Part 1: 5 Color Themes -->
+      <div class="space-y-3">
+        <label class="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+          <i class="fas fa-swatchbook text-blue-600"></i>
+          <span>Select Color Theme (5 Options)</span>
+        </label>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          
+          <!-- Theme 1: Corporate Blue -->
+          <button class="theme-option-btn active" data-theme="blue" data-name="Corporate Royal Blue & Gold">
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-[#0d4f9b] border-2 border-amber-400 flex items-center justify-center text-white text-[10px] shrink-0">
+                <i class="fas fa-check"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">Corporate Blue & Gold</div>
+                <div class="text-[10px] text-slate-500">NovaLink Modern Style</div>
+              </div>
+            </div>
+          </button>
+
+          <!-- Theme 2: Industrial Red -->
+          <button class="theme-option-btn" data-theme="red" data-name="Industrial Red & Black">
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-[#dc2626] border-2 border-slate-900 flex items-center justify-center text-white text-[10px] shrink-0">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">Industrial Red & Black</div>
+                <div class="text-[10px] text-slate-500">Heavy Fabricator Look</div>
+              </div>
+            </div>
+          </button>
+
+          <!-- Theme 3: Modern Emerald -->
+          <button class="theme-option-btn" data-theme="emerald" data-name="Modern Emerald & Slate">
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-[#059669] border-2 border-emerald-300 flex items-center justify-center text-white text-[10px] shrink-0">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">Modern Emerald Green</div>
+                <div class="text-[10px] text-slate-500">Clean High-Tech Feel</div>
+              </div>
+            </div>
+          </button>
+
+          <!-- Theme 4: Executive Titanium -->
+          <button class="theme-option-btn" data-theme="titanium" data-name="Executive Titanium & Platinum">
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-[#334155] border-2 border-amber-500 flex items-center justify-center text-white text-[10px] shrink-0">
+                <i class="fas fa-gem"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">Executive Titanium</div>
+                <div class="text-[10px] text-slate-500">Sleek Platinum Luxury</div>
+              </div>
+            </div>
+          </button>
+
+          <!-- Theme 5: Cyber Midnight -->
+          <button class="theme-option-btn sm:col-span-2" data-theme="midnight" data-name="Cyber Midnight Dark">
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-[#030712] border-2 border-sky-400 flex items-center justify-center text-sky-400 text-[10px] shrink-0">
+                <i class="fas fa-moon"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">Cyber Midnight Dark</div>
+                <div class="text-[10px] text-slate-500">Dark Obsidian & Neon Cyan Accents</div>
+              </div>
+            </div>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Part 2: 5 Layout Formats -->
+      <div class="space-y-3 pt-2 border-t border-slate-200">
+        <label class="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+          <i class="fas fa-table-columns text-blue-600"></i>
+          <span>Select Page Layout (5 Options)</span>
+        </label>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          
+          <!-- Layout 1: Corporate Grid -->
+          <button class="layout-option-btn active" data-layout="corporate" data-name="Corporate Standard Grid">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-2">
+              <i class="fas fa-th-large text-blue-600"></i>
+              <span>1. Corporate Grid</span>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1">Balanced 4-col cards & dual image about layout.</p>
+          </button>
+
+          <!-- Layout 2: Centered Showcase -->
+          <button class="layout-option-btn" data-layout="showcase" data-name="Centered Studio Showcase">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-2">
+              <i class="fas fa-align-center text-blue-600"></i>
+              <span>2. Centered Showcase</span>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1">Centered hero typography & adaptive fluid grid.</p>
+          </button>
+
+          <!-- Layout 3: Industrial Split -->
+          <button class="layout-option-btn" data-layout="split" data-name="Industrial Asymmetric Split">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-2">
+              <i class="fas fa-columns text-blue-600"></i>
+              <span>3. Industrial Split</span>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1">Alternating zigzag visual content structure.</p>
+          </button>
+
+          <!-- Layout 4: Enterprise Compact -->
+          <button class="layout-option-btn" data-layout="compact" data-name="Enterprise Compact Density">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-2">
+              <i class="fas fa-compress text-blue-600"></i>
+              <span>4. Enterprise Compact</span>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1">Streamlined padding & dense information architecture.</p>
+          </button>
+
+          <!-- Layout 5: Visual Magazine -->
+          <button class="layout-option-btn sm:col-span-2" data-layout="magazine" data-name="Visual Full-Bleed Magazine">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-2">
+              <i class="fas fa-expand text-blue-600"></i>
+              <span>5. Visual Magazine</span>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1">Bold large typography, elevated card shadows & full-bleed hero.</p>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="pt-2 flex items-center justify-between">
+        <button id="customizer-reset-btn" class="text-xs font-semibold text-slate-600 hover:text-blue-700 underline">
+          Reset to Default
+        </button>
+        <span class="text-[11px] text-slate-500">Preferences auto-saved in browser</span>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ======================================================================
        FLOATING LEFT ACTION SIDEBAR (Desktop / Tablet)
@@ -58,7 +209,6 @@
   <div class="bg-[#091a30] text-slate-300 text-[11px] sm:text-xs py-2 px-3 sm:px-8 lg:px-12 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
       
-      <!-- Contact Info List -->
       <div class="flex items-center flex-wrap gap-3 sm:gap-6 text-slate-300">
         <a href="tel:+919876543210" class="flex items-center gap-1.5 hover:text-white transition">
           <i class="fas fa-phone-alt text-slate-400 text-[10px] sm:text-xs"></i>
@@ -74,7 +224,6 @@
         </a>
       </div>
 
-      <!-- Language Selector -->
       <div class="flex items-center gap-2 text-slate-200 shrink-0">
         <div class="flex items-center gap-1 px-2 py-0.5 sm:py-1 rounded bg-slate-800/80 border border-slate-700 text-[11px] sm:text-xs cursor-pointer hover:bg-slate-700 transition">
           <span>🇬🇧</span>
@@ -87,21 +236,21 @@
   </div>
 
   <!-- ======================================================================
-       MAIN HEADER & NAVIGATION (Responsive with Drawer)
+       MAIN HEADER & NAVIGATION
        ====================================================================== -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between h-16 sm:h-20">
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-1.5 sm:gap-2 group">
-        <span class="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight text-[#0d4f9b] brand-font flex items-center">
-          Ram<span class="text-slate-900">Door</span><span class="text-[#f59e0b] text-base sm:text-xl font-bold ml-1">Shutter</span>
+        <span class="text-xl sm:text-2xl lg:text-3xl font-black tracking-tight theme-text-primary brand-font flex items-center">
+          Ram<span class="text-slate-900">Door</span><span class="theme-text-accent text-base sm:text-xl font-bold ml-1">Shutter</span>
         </span>
       </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
-        <a href="#hero" class="nav-pill-active font-bold">Home</a>
+        <a href="#hero" class="theme-pill-active font-bold px-4 py-1.5 rounded-full">Home</a>
         <a href="#about" class="nav-link-item py-1">About Us</a>
         <div class="relative group">
           <a href="#products" class="nav-link-item py-1 flex items-center gap-1">
@@ -116,33 +265,31 @@
 
       <!-- Right Action CTAs -->
       <div class="hidden sm:flex items-center gap-3">
-        <!-- Search Button -->
         <button id="search-modal-btn" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition border border-slate-200">
           <i class="fas fa-search text-xs sm:text-sm"></i>
         </button>
 
-        <!-- Request Quote Blue Button -->
-        <a href="#calculator" class="px-5 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md shadow-blue-900/20 transition transform hover:-translate-y-0.5">
+        <a href="#calculator" class="px-5 sm:px-6 py-2 sm:py-2.5 rounded-xl theme-btn-primary text-xs sm:text-sm font-bold tracking-wide shadow-md transition transform hover:-translate-y-0.5">
           Request Quote
         </a>
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" class="lg:hidden text-slate-800 p-2 sm:p-2.5 rounded-xl bg-slate-100 border border-slate-200 hover:text-[#0d4f9b] focus:outline-none">
+      <button id="mobile-menu-btn" class="lg:hidden text-slate-800 p-2 sm:p-2.5 rounded-xl bg-slate-100 border border-slate-200 hover:text-blue-700 focus:outline-none">
         <i class="fas fa-bars text-lg sm:text-xl"></i>
       </button>
     </div>
 
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-5 py-5 space-y-3 shadow-2xl">
-      <a href="#hero" class="mobile-nav-link block text-[#0d4f9b] font-bold py-2 border-b border-slate-100 text-sm">Home</a>
+      <a href="#hero" class="mobile-nav-link block theme-text-primary font-bold py-2 border-b border-slate-100 text-sm">Home</a>
       <a href="#about" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100 text-sm">About Us</a>
       <a href="#products" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100 text-sm">Products</a>
       <a href="#simulator" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100 text-sm">Simulator & Quote</a>
       <a href="#why-us" class="mobile-nav-link block text-slate-800 font-semibold py-2 border-b border-slate-100 text-sm">Why Choose Us</a>
       <a href="#contact" class="mobile-nav-link block text-slate-800 font-semibold py-2 text-sm">Contact Us</a>
       <div class="pt-2">
-        <a href="#calculator" class="w-full block py-3 bg-[#0d4f9b] text-center font-bold text-white rounded-xl shadow-md text-sm">
+        <a href="#calculator" class="w-full block py-3 theme-btn-primary text-center font-bold text-white rounded-xl shadow-md text-sm">
           Request Instant Quote
         </a>
       </div>
@@ -150,11 +297,11 @@
   </header>
 
   <!-- ======================================================================
-       HERO SECTION WITH STATS BAR (Responsive)
+       HERO SECTION WITH STATS BAR
        ====================================================================== -->
   <section id="hero" class="relative text-white overflow-hidden py-14 sm:py-20 lg:py-28 bg-slate-900">
     
-    <!-- Background Image with Overlay -->
+    <!-- Background Image with Dynamic Theme Overlay -->
     <div class="absolute inset-0 z-0">
       <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80" alt="Entrance Automation Manufacturing" class="w-full h-full object-cover opacity-35 scale-105" />
       <div class="absolute inset-0 hero-bg-overlay"></div>
@@ -163,60 +310,56 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 space-y-10 sm:space-y-12">
       
       <!-- Hero Center Text Content -->
-      <div class="max-w-3xl space-y-4 sm:space-y-6 text-left reveal-item is-revealed">
+      <div class="hero-content-wrapper max-w-3xl space-y-4 sm:space-y-6 text-left reveal-item is-revealed">
         
-        <!-- ISO Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-600/60 text-slate-200 text-[11px] sm:text-xs font-semibold tracking-wide backdrop-blur-md pulse-gold-badge">
-          <i class="fas fa-award text-[#f59e0b]"></i>
+        <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-600/60 text-slate-200 text-[11px] sm:text-xs font-semibold tracking-wide backdrop-blur-md pulse-badge">
+          <i class="fas fa-award theme-text-accent"></i>
           <span>ISO 9001 Certified Manufacturer</span>
         </div>
 
-        <!-- Big Headline with Gold Accent -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white brand-font">
           Ram Door Shutter – Your<br class="hidden sm:inline" />
           Ultimate Entrance<br />
-          <span class="text-[#f59e0b]">Automation Solution</span>
+          <span class="theme-text-accent">Automation Solution</span>
         </h1>
 
-        <!-- Subtitle -->
         <p class="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed font-normal max-w-2xl">
           A leading manufacturer of entrance automation products, delivering innovative, reliable, and high-quality solutions to customers worldwide. OEM & ODM specialists.
         </p>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 pt-2">
-          <a href="#products" class="px-6 sm:px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-blue-900/30 transition transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+        <div class="hero-cta-wrapper flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 pt-2">
+          <a href="#products" class="px-6 sm:px-8 py-3.5 rounded-xl theme-btn-primary font-bold text-xs sm:text-sm tracking-wide shadow-lg transition transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
             <span>Explore Products</span>
             <i class="fas fa-arrow-right text-xs"></i>
           </a>
           <a href="#simulator" class="px-6 sm:px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm tracking-wide border border-white/25 backdrop-blur-md transition text-center flex items-center justify-center gap-2">
-            <i class="fas fa-sliders-h text-[#f59e0b]"></i>
+            <i class="fas fa-sliders-h theme-text-accent"></i>
             <span>Interactive Simulator</span>
           </a>
         </div>
 
       </div>
 
-      <!-- Frosted Glass Stats Bar (Responsive 2x2 on Mobile, 4-col on Desktop) -->
+      <!-- Frosted Glass Stats Bar -->
       <div class="hero-stats-bar p-4 sm:p-6 lg:p-8 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center reveal-item delay-200">
         
         <div class="space-y-0.5 sm:space-y-1 p-2">
-          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="20" data-suffix="+">20+</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black theme-text-accent brand-font counter-value" data-target="20" data-suffix="+">20+</div>
           <div class="text-[11px] sm:text-xs lg:text-sm text-slate-200 font-medium">Years Experience</div>
         </div>
 
         <div class="space-y-0.5 sm:space-y-1 p-2">
-          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="50" data-suffix="+">50+</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black theme-text-accent brand-font counter-value" data-target="50" data-suffix="+">50+</div>
           <div class="text-[11px] sm:text-xs lg:text-sm text-slate-200 font-medium">Countries Served</div>
         </div>
 
         <div class="space-y-0.5 sm:space-y-1 p-2">
-          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="10000" data-suffix="+">10000+</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black theme-text-accent brand-font counter-value" data-target="10000" data-suffix="+">10000+</div>
           <div class="text-[11px] sm:text-xs lg:text-sm text-slate-200 font-medium">Projects Done</div>
         </div>
 
         <div class="space-y-0.5 sm:space-y-1 p-2">
-          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-[#f59e0b] brand-font counter-value" data-target="500" data-suffix="+">500+</div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black theme-text-accent brand-font counter-value" data-target="500" data-suffix="+">500+</div>
           <div class="text-[11px] sm:text-xs lg:text-sm text-slate-200 font-medium">Satisfied Clients</div>
         </div>
 
@@ -226,12 +369,11 @@
   </section>
 
   <!-- ======================================================================
-       PRODUCT CATEGORIES SECTION (Responsive Grid)
+       PRODUCT CATEGORIES SECTION
        ====================================================================== -->
-  <section id="products" class="py-14 sm:py-20 bg-white text-slate-800 border-b border-slate-200 overflow-hidden">
+  <section id="products" class="py-14 sm:py-20 theme-bg-card border-b theme-border overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       
-      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2 sm:space-y-3 reveal-item">
         <div class="section-tag-pill">
           OUR PRODUCTS
@@ -244,17 +386,16 @@
         </p>
       </div>
 
-      <!-- 4-Column Product Cards Grid (1 col mobile, 2 col tablet, 4 col desktop) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         
         <!-- Card 1: High Speed Doors -->
         <div class="category-card flex flex-col justify-between group reveal-item delay-100">
           <div>
-            <div class="h-48 sm:h-56 bg-gradient-to-b from-slate-50 to-slate-100 p-4 sm:p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+            <div class="h-48 sm:h-56 theme-bg-subtle p-4 sm:p-6 flex items-center justify-center border-b theme-border overflow-hidden">
               <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" alt="High Speed Doors" class="max-h-40 sm:max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-5 sm:p-6">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 brand-font mb-2 group-hover:text-[#0d4f9b] transition">High Speed Doors</h3>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 brand-font mb-2 group-hover:theme-text-primary transition">High Speed Doors</h3>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 PVC roll-up, zipper, stacking, spiral aluminum, freezer, and clean room high speed doors for fast and efficient access.
               </p>
@@ -269,11 +410,11 @@
         <!-- Card 2: Industrial Stacking Door -->
         <div class="category-card flex flex-col justify-between group reveal-item delay-200">
           <div>
-            <div class="h-48 sm:h-56 bg-gradient-to-b from-slate-50 to-slate-100 p-4 sm:p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+            <div class="h-48 sm:h-56 theme-bg-subtle p-4 sm:p-6 flex items-center justify-center border-b theme-border overflow-hidden">
               <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Industrial Stacking Door" class="max-h-40 sm:max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-5 sm:p-6">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 brand-font mb-2 group-hover:text-[#0d4f9b] transition">Industrial Stacking Door</h3>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 brand-font mb-2 group-hover:theme-text-primary transition">Industrial Stacking Door</h3>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 Aluminium, steel, polycarbonate, fire-rated, commercial and industrial rolling shutters with manual and motorized options.
               </p>
@@ -288,11 +429,11 @@
         <!-- Card 3: Sectional Doors -->
         <div class="category-card flex flex-col justify-between group reveal-item delay-300">
           <div>
-            <div class="h-48 sm:h-56 bg-gradient-to-b from-slate-50 to-slate-100 p-4 sm:p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+            <div class="h-48 sm:h-56 theme-bg-subtle p-4 sm:p-6 flex items-center justify-center border-b theme-border overflow-hidden">
               <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Sectional Doors" class="max-h-40 sm:max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-5 sm:p-6">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 brand-font mb-2 group-hover:text-[#0d4f9b] transition">Sectional Doors</h3>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 brand-font mb-2 group-hover:theme-text-primary transition">Sectional Doors</h3>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 Industrial, insulated, overhead, vertical lift, garage, and glass sectional doors for every application and environment.
               </p>
@@ -307,11 +448,11 @@
         <!-- Card 4: Automatic Rolling Door -->
         <div class="category-card featured-card flex flex-col justify-between group reveal-item delay-400">
           <div>
-            <div class="h-48 sm:h-56 bg-gradient-to-b from-slate-50 to-slate-100 p-4 sm:p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+            <div class="h-48 sm:h-56 theme-bg-subtle p-4 sm:p-6 flex items-center justify-center border-b theme-border overflow-hidden">
               <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Automatic Rolling Door" class="max-h-40 sm:max-h-48 w-auto object-contain rounded-lg shadow-sm" />
             </div>
             <div class="p-5 sm:p-6">
-              <h3 class="text-base sm:text-lg font-bold text-[#0d4f9b] brand-font mb-2">Automatic Rolling Door</h3>
+              <h3 class="text-base sm:text-lg font-bold theme-text-primary brand-font mb-2">Automatic Rolling Door</h3>
               <p class="text-xs text-slate-600 leading-relaxed mb-4">
                 Industrial sliding, folding, security grille, aluminium and polycarbonate sliding doors for smooth, reliable operation.
               </p>
@@ -329,9 +470,9 @@
   </section>
 
   <!-- ======================================================================
-       ABOUT SECTION: DUAL IMAGE & 2x2 GRID (Responsive)
+       ABOUT SECTION: DUAL IMAGE & 2x2 GRID
        ====================================================================== -->
-  <section id="about" class="py-14 sm:py-20 bg-slate-50 text-slate-800 border-b border-slate-200 overflow-hidden">
+  <section id="about" class="py-14 sm:py-20 theme-bg-subtle border-b theme-border overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -339,18 +480,15 @@
         <!-- Left: Overlapping Factory Images + Gold 20+ Badge -->
         <div class="lg:col-span-5 relative reveal-item reveal-left pb-6 sm:pb-0">
           <div class="relative max-w-md mx-auto lg:max-w-none">
-            <!-- Main Factory Plant Image -->
             <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-200 h-64 sm:h-80 lg:h-96">
               <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Advanced Manufacturing Facility" class="w-full h-full object-cover" />
             </div>
 
-            <!-- Inset Company Headquarters Photo -->
             <div class="absolute -bottom-4 sm:-bottom-6 -left-2 sm:-left-6 w-40 sm:w-56 lg:w-64 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white bg-white animate-float">
               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Global Operations Center" class="w-full h-24 sm:h-32 lg:h-36 object-cover" />
             </div>
 
-            <!-- Yellow/Gold 20+ Badge -->
-            <div class="absolute -bottom-3 sm:-bottom-4 right-1 sm:right-4 bg-[#f59e0b] text-slate-950 font-black px-3.5 sm:px-5 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-xl flex flex-col items-center justify-center pulse-gold-badge">
+            <div class="absolute -bottom-3 sm:-bottom-4 right-1 sm:right-4 bg-[#f59e0b] text-slate-950 font-black px-3.5 sm:px-5 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-xl flex flex-col items-center justify-center pulse-badge">
               <span class="text-xl sm:text-2xl lg:text-3xl brand-font leading-none">20+</span>
               <span class="text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-900 mt-0.5 sm:mt-1">Years Excellence</span>
             </div>
@@ -376,7 +514,6 @@
             With advanced manufacturing capabilities and strategic partnerships with multiple leading factories across the region, we offer a comprehensive range of entrance automation systems for commercial, industrial, retail, and residential applications.
           </p>
 
-          <!-- 4 Feature Box Grid (2x2) -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-1 sm:pt-2">
             
             <div class="feature-box-card flex items-center gap-3">
@@ -421,9 +558,8 @@
 
           </div>
 
-          <!-- Blue Action Button -->
           <div class="pt-2">
-            <a href="#why-us" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-xs sm:text-sm tracking-wide shadow-md transition transform hover:-translate-y-0.5">
+            <a href="#why-us" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl theme-btn-primary font-bold text-xs sm:text-sm tracking-wide shadow-md transition transform hover:-translate-y-0.5">
               <span>Learn More About Us</span>
               <i class="fas fa-arrow-right text-xs"></i>
             </a>
@@ -437,19 +573,18 @@
   </section>
 
   <!-- ======================================================================
-       WHY CHOOSE US / VALUE PROPOSITION (Responsive)
+       WHY CHOOSE US / VALUE PROPOSITION
        ====================================================================== -->
-  <section id="why-us" class="py-14 sm:py-20 bg-white text-slate-800 border-b border-slate-200 overflow-hidden">
+  <section id="why-us" class="py-14 sm:py-20 theme-bg-card border-b theme-border overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <!-- Left: Operations Center Building Image with Navy Badge -->
         <div class="lg:col-span-5 relative reveal-item reveal-left">
-          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-200 group max-w-md mx-auto lg:max-w-none">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border theme-border group max-w-md mx-auto lg:max-w-none">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Ram Door Shutter Operations Center" class="w-full h-64 sm:h-80 lg:h-[450px] object-cover group-hover:scale-105 transition duration-700" />
             
-            <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-[#0a2540]/90 backdrop-blur-md text-white p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-600 flex items-center gap-3 pulse-blue-badge">
+            <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-slate-900/90 backdrop-blur-md text-white p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-slate-700 flex items-center gap-3 pulse-badge">
               <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#f59e0b] text-slate-950 flex items-center justify-center text-sm sm:text-lg shrink-0">
                 <i class="fas fa-industry"></i>
               </div>
@@ -461,7 +596,6 @@
           </div>
         </div>
 
-        <!-- Right: 4 Large Feature Cards (2x2 Grid) -->
         <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 reveal-item reveal-right">
           
           <div class="feature-box-card">
@@ -512,9 +646,9 @@
   </section>
 
   <!-- ======================================================================
-       INTERACTIVE SHUTTER SIMULATOR & REMOTE CONTROL (Responsive)
+       INTERACTIVE SHUTTER SIMULATOR & REMOTE CONTROL
        ====================================================================== -->
-  <section id="simulator" class="py-14 sm:py-20 bg-slate-50 text-slate-800 border-b border-slate-200 overflow-hidden">
+  <section id="simulator" class="py-14 sm:py-20 theme-bg-subtle border-b theme-border overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2 sm:space-y-3 reveal-item">
@@ -531,14 +665,13 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
         
-        <!-- Left: Simulator Graphic Viewport -->
-        <div class="lg:col-span-7 bg-white rounded-2xl p-4 sm:p-7 border border-slate-200 shadow-lg reveal-item reveal-left">
+        <div class="lg:col-span-7 theme-bg-card rounded-2xl p-4 sm:p-7 border theme-border shadow-lg reveal-item reveal-left">
           
-          <div class="flex flex-wrap items-center justify-between gap-2 sm:gap-3 mb-3 sm:mb-4 pb-3 border-b border-slate-100">
-            <span id="shutter-status-badge" class="px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-bold uppercase bg-blue-50 text-[#0d4f9b] border border-blue-200">
+          <div class="flex flex-wrap items-center justify-between gap-2 sm:gap-3 mb-3 sm:mb-4 pb-3 border-b theme-border">
+            <span id="shutter-status-badge" class="px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-bold uppercase theme-pill-active">
               STATUS: FULLY CLOSED (LOCKED)
             </span>
-            <div id="shutter-height-pct" class="text-[10px] sm:text-xs font-mono text-slate-700 font-bold bg-slate-100 px-2.5 sm:px-3 py-1 rounded-lg border border-slate-200">
+            <div id="shutter-height-pct" class="text-[10px] sm:text-xs font-mono text-slate-700 font-bold theme-bg-subtle px-2.5 sm:px-3 py-1 rounded-lg border theme-border">
               0% OPEN (100% CLOSED)
             </div>
           </div>
@@ -549,7 +682,7 @@
             <div class="shutter-curtain-container-corporate">
               <div class="shutter-interior-view-corporate">
                 <div class="text-center p-4 sm:p-6 bg-white/95 rounded-xl sm:rounded-2xl border border-slate-200 shadow-md max-w-sm">
-                  <i class="fas fa-warehouse text-[#0d4f9b] text-3xl sm:text-4xl mb-2 sm:mb-3"></i>
+                  <i class="fas fa-warehouse theme-text-primary text-3xl sm:text-4xl mb-2 sm:mb-3"></i>
                   <h4 class="text-sm sm:text-base font-bold text-slate-900">RAM COMMERCIAL STOREFRONT</h4>
                   <p class="text-[11px] sm:text-xs text-slate-600 mt-1">Protected by High-Speed Automation.</p>
                 </div>
@@ -578,16 +711,16 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-2 sm:gap-3 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-slate-100 text-center">
-            <div class="bg-slate-50 p-2 sm:p-2.5 rounded-lg sm:rounded-xl border border-slate-200">
+          <div class="grid grid-cols-3 gap-2 sm:gap-3 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t theme-border text-center">
+            <div class="theme-bg-subtle p-2 sm:p-2.5 rounded-lg sm:rounded-xl border theme-border">
               <div class="text-[9px] sm:text-[10px] uppercase font-mono text-slate-500 font-bold">Security</div>
-              <div id="sim-security-rating" class="text-[10px] sm:text-xs font-bold text-[#0d4f9b] mt-0.5">Max (10/10)</div>
+              <div id="sim-security-rating" class="text-[10px] sm:text-xs font-bold theme-text-primary mt-0.5">Max (10/10)</div>
             </div>
-            <div class="bg-slate-50 p-2 sm:p-2.5 rounded-lg sm:rounded-xl border border-slate-200">
+            <div class="theme-bg-subtle p-2 sm:p-2.5 rounded-lg sm:rounded-xl border theme-border">
               <div class="text-[9px] sm:text-[10px] uppercase font-mono text-slate-500 font-bold">Airflow</div>
               <div id="sim-airflow-rating" class="text-[10px] sm:text-xs font-bold text-slate-800 mt-0.5">0%</div>
             </div>
-            <div class="bg-slate-50 p-2 sm:p-2.5 rounded-lg sm:rounded-xl border border-slate-200">
+            <div class="theme-bg-subtle p-2 sm:p-2.5 rounded-lg sm:rounded-xl border theme-border">
               <div class="text-[9px] sm:text-[10px] uppercase font-mono text-slate-500 font-bold">Visibility</div>
               <div id="sim-visibility-rating" class="text-[10px] sm:text-xs font-bold text-slate-800 mt-0.5">0%</div>
             </div>
@@ -595,13 +728,12 @@
 
         </div>
 
-        <!-- Right: Simulator Controls -->
         <div class="lg:col-span-5 space-y-4 sm:space-y-6 reveal-item reveal-right">
           
           <div class="remote-control-corp p-4 sm:p-6">
             <div class="flex items-center justify-between mb-3 sm:mb-4">
               <div class="flex items-center gap-2">
-                <i class="fas fa-wifi text-[#0d4f9b]"></i>
+                <i class="fas fa-wifi theme-text-primary"></i>
                 <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900">Remote Handset</h3>
               </div>
               <div class="flex items-center gap-1.5">
@@ -615,7 +747,7 @@
                 <i class="fas fa-chevron-up text-base sm:text-lg text-emerald-600"></i>
                 <span>OPEN ▲</span>
               </button>
-              <button id="btn-remote-stop" class="remote-btn-corp remote-btn-blue py-3 sm:py-3.5 px-2 sm:px-3 rounded-xl font-bold text-[11px] sm:text-xs uppercase flex flex-col items-center justify-center gap-1 shadow-md active:scale-95 transition">
+              <button id="btn-remote-stop" class="remote-btn-corp remote-btn-primary py-3 sm:py-3.5 px-2 sm:px-3 rounded-xl font-bold text-[11px] sm:text-xs uppercase flex flex-col items-center justify-center gap-1 shadow-md active:scale-95 transition">
                 <i class="fas fa-stop text-base sm:text-lg text-white"></i>
                 <span>STOP ■</span>
               </button>
@@ -626,21 +758,21 @@
             </div>
           </div>
 
-          <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2.5 sm:space-y-3">
+          <div class="theme-bg-card p-4 sm:p-6 rounded-2xl border theme-border shadow-sm space-y-2.5 sm:space-y-3">
             <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
-              <i class="fas fa-layer-group text-[#0d4f9b]"></i> Slat Profile
+              <i class="fas fa-layer-group theme-text-primary"></i> Slat Profile
             </h3>
             
             <div class="space-y-2">
-              <label class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#0d4f9b] cursor-pointer transition">
+              <label class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl theme-bg-subtle border theme-border hover:border-blue-700 cursor-pointer transition">
                 <div class="flex items-center gap-2.5 sm:gap-3">
                   <input type="radio" name="sim-material" value="solid" checked data-label="Solid Steel Slat" class="accent-blue-700 w-4 h-4" />
                   <span class="text-xs font-bold text-slate-900">Solid Steel Slat</span>
                 </div>
-                <span class="text-[10px] sm:text-[11px] font-mono text-[#0d4f9b] font-bold">Standard</span>
+                <span class="text-[10px] sm:text-[11px] font-mono theme-text-primary font-bold">Standard</span>
               </label>
 
-              <label class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#0d4f9b] cursor-pointer transition">
+              <label class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl theme-bg-subtle border theme-border hover:border-blue-700 cursor-pointer transition">
                 <div class="flex items-center gap-2.5 sm:gap-3">
                   <input type="radio" name="sim-material" value="perforated" data-label="Perforated Mesh" class="accent-blue-700 w-4 h-4" />
                   <span class="text-xs font-bold text-slate-900">Perforated Mesh</span>
@@ -648,7 +780,7 @@
                 <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 font-bold">Retail</span>
               </label>
 
-              <label class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#0d4f9b] cursor-pointer transition">
+              <label class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl theme-bg-subtle border theme-border hover:border-blue-700 cursor-pointer transition">
                 <div class="flex items-center gap-2.5 sm:gap-3">
                   <input type="radio" name="sim-material" value="polycarbonate" data-label="Crystal Polycarbonate" class="accent-blue-700 w-4 h-4" />
                   <span class="text-xs font-bold text-slate-900">Crystal Polycarbonate</span>
@@ -666,9 +798,9 @@
   </section>
 
   <!-- ======================================================================
-       INSTANT COST ESTIMATOR & QUOTATION (Responsive)
+       INSTANT COST ESTIMATOR & QUOTATION
        ====================================================================== -->
-  <section id="calculator" class="py-14 sm:py-20 bg-white text-slate-800 border-b border-slate-200 overflow-hidden">
+  <section id="calculator" class="py-14 sm:py-20 theme-bg-card border-b theme-border overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2 sm:space-y-3 reveal-item">
@@ -685,24 +817,23 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-start">
         
-        <!-- Left: Input Form Controls -->
-        <div class="lg:col-span-7 bg-slate-50 p-5 sm:p-8 rounded-2xl border border-slate-200 shadow-md space-y-5 sm:space-y-6 reveal-item reveal-left">
+        <div class="lg:col-span-7 theme-bg-subtle p-5 sm:p-8 rounded-2xl border theme-border shadow-md space-y-5 sm:space-y-6 reveal-item reveal-left">
           
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
               Quick Size Presets
             </label>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="10" data-h="10">
+              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold theme-bg-card border theme-border rounded-xl hover:theme-btn-primary shadow-sm transition" data-w="10" data-h="10">
                 Shop (10×10)
               </button>
-              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="12" data-h="10">
+              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold theme-bg-card border theme-border rounded-xl hover:theme-btn-primary shadow-sm transition" data-w="12" data-h="10">
                 Garage (12×10)
               </button>
-              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="16" data-h="14">
+              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold theme-bg-card border theme-border rounded-xl hover:theme-btn-primary shadow-sm transition" data-w="16" data-h="14">
                 Warehouse (16×14)
               </button>
-              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold bg-white border border-slate-300 rounded-xl hover:border-blue-600 shadow-sm transition" data-w="20" data-h="18">
+              <button type="button" class="calc-preset-btn py-2 sm:py-2.5 px-2 sm:px-3 text-xs font-bold theme-bg-card border theme-border rounded-xl hover:theme-btn-primary shadow-sm transition" data-w="20" data-h="18">
                 Industrial (20×18)
               </button>
             </div>
@@ -713,7 +844,7 @@
               <div class="flex justify-between items-center">
                 <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Width (Feet)</label>
                 <div class="flex items-center gap-1">
-                  <input type="number" id="calc-width" min="4" max="40" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-xs sm:text-sm bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 outline-none shadow-sm" />
+                  <input type="number" id="calc-width" min="4" max="40" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-xs sm:text-sm theme-bg-card border theme-border rounded-lg outline-none shadow-sm" />
                   <span class="text-xs text-slate-500 font-bold">ft</span>
                 </div>
               </div>
@@ -724,7 +855,7 @@
               <div class="flex justify-between items-center">
                 <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Height (Feet)</label>
                 <div class="flex items-center gap-1">
-                  <input type="number" id="calc-height" min="4" max="30" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-xs sm:text-sm bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 outline-none shadow-sm" />
+                  <input type="number" id="calc-height" min="4" max="30" value="10" step="0.5" class="w-16 p-1.5 text-center font-bold text-xs sm:text-sm theme-bg-card border theme-border rounded-lg outline-none shadow-sm" />
                   <span class="text-xs text-slate-500 font-bold">ft</span>
                 </div>
               </div>
@@ -736,7 +867,7 @@
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
               Select Slat Material
             </label>
-            <select id="calc-material" class="w-full p-3 sm:p-3.5 bg-white border border-slate-300 rounded-xl text-xs sm:text-sm font-semibold focus:ring-2 focus:ring-blue-600 outline-none shadow-sm">
+            <select id="calc-material" class="w-full p-3 sm:p-3.5 theme-bg-card border theme-border rounded-xl text-xs sm:text-sm font-semibold outline-none shadow-sm">
               <option value="gi-std-20g" selected>Standard 20-Gauge Galvanized Steel</option>
               <option value="gi-heavy-18g">Heavy Duty 18-Gauge Industrial Steel</option>
               <option value="perforated-gi">Perforated Showroom Mesh Steel</option>
@@ -749,7 +880,7 @@
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
               Drive / Operation Mechanism
             </label>
-            <select id="calc-motor" class="w-full p-3 sm:p-3.5 bg-white border border-slate-300 rounded-xl text-xs sm:text-sm font-semibold focus:ring-2 focus:ring-blue-600 outline-none shadow-sm">
+            <select id="calc-motor" class="w-full p-3 sm:p-3.5 theme-bg-card border theme-border rounded-xl text-xs sm:text-sm font-semibold outline-none shadow-sm">
               <option value="manual" selected>Manual Push-Pull (Spring Loaded)</option>
               <option value="center-motor">Motorized Center Motor + 2 Wireless Remote Keyfobs</option>
               <option value="side-motor-heavy">Heavy Duty Industrial Side Drive (600kg-1000kg)</option>
@@ -759,38 +890,37 @@
 
         </div>
 
-        <!-- Right: Quotation Breakdown Box -->
         <div class="lg:col-span-5 sticky top-24 sm:top-28 space-y-4 reveal-item reveal-right">
           
-          <div class="bg-white text-slate-900 p-5 sm:p-8 rounded-2xl border-2 border-[#0d4f9b] shadow-2xl relative overflow-hidden">
-            <div class="flex items-center justify-between pb-3 sm:pb-4 mb-3 sm:mb-4 border-b border-slate-100">
+          <div class="theme-bg-card text-slate-900 p-5 sm:p-8 rounded-2xl border-2 theme-border shadow-2xl relative overflow-hidden">
+            <div class="flex items-center justify-between pb-3 sm:pb-4 mb-3 sm:mb-4 border-b theme-border">
               <div>
-                <span class="text-[9px] sm:text-[10px] font-mono font-bold text-[#0d4f9b] uppercase tracking-widest">RAM FACTORY ESTIMATE</span>
+                <span class="text-[9px] sm:text-[10px] font-mono font-bold theme-text-primary uppercase tracking-widest">RAM FACTORY ESTIMATE</span>
                 <h3 class="text-lg sm:text-xl font-bold text-slate-900 brand-font">Quotation Summary</h3>
               </div>
-              <span class="p-2 sm:p-2.5 bg-blue-50 rounded-xl text-[#0d4f9b]">
+              <span class="p-2 sm:p-2.5 theme-pill-active rounded-xl">
                 <i class="fas fa-file-invoice-dollar text-lg sm:text-xl"></i>
               </span>
             </div>
 
             <div class="space-y-2.5 text-xs mb-5 sm:mb-6">
-              <div class="flex justify-between py-1.5 border-b border-slate-100">
+              <div class="flex justify-between py-1.5 border-b theme-border">
                 <span class="text-slate-500">Curtain Area:</span>
                 <span id="calc-total-area" class="font-bold text-slate-900 font-mono text-xs sm:text-sm">100 sq. ft.</span>
               </div>
-              <div class="flex justify-between py-1.5 border-b border-slate-100">
+              <div class="flex justify-between py-1.5 border-b theme-border">
                 <span class="text-slate-500">Base Slat Rate:</span>
                 <span id="calc-rate-sqft" class="font-bold text-slate-800 font-mono">₹180 - ₹230 / sq.ft</span>
               </div>
-              <div class="flex justify-between py-1.5 border-b border-slate-100">
+              <div class="flex justify-between py-1.5 border-b theme-border">
                 <span class="text-slate-500">Warranty:</span>
                 <span class="font-bold text-emerald-600 font-mono">10 Years Factory Direct</span>
               </div>
             </div>
 
-            <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200 text-center mb-5 sm:mb-6">
+            <div class="theme-bg-subtle p-4 sm:p-5 rounded-2xl border theme-border text-center mb-5 sm:mb-6">
               <div class="text-[11px] sm:text-xs uppercase font-mono text-slate-500 font-bold tracking-wider">Estimated Total Cost</div>
-              <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0d4f9b] brand-font my-1 flex items-center justify-center gap-2">
+              <div class="text-2xl sm:text-3xl lg:text-4xl font-black theme-text-primary brand-font my-1 flex items-center justify-center gap-2">
                 <span id="calc-price-min">₹18,000</span>
                 <span class="text-slate-400 text-lg sm:text-xl font-normal">-</span>
                 <span id="calc-price-max">₹23,000</span>
@@ -814,9 +944,9 @@
   </section>
 
   <!-- ======================================================================
-       CONTACT & INQUIRY FORM (Responsive)
+       CONTACT & INQUIRY FORM
        ====================================================================== -->
-  <section id="contact" class="py-14 sm:py-20 bg-slate-50 text-slate-800 relative overflow-hidden">
+  <section id="contact" class="py-14 sm:py-20 theme-bg-subtle border-b theme-border overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
       
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2 sm:space-y-3 reveal-item">
@@ -834,34 +964,34 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
         
         <div class="lg:col-span-5 space-y-4 sm:space-y-6 reveal-item reveal-left">
-          <div class="bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 shadow-md space-y-3 sm:space-y-4">
+          <div class="theme-bg-card p-5 sm:p-7 rounded-2xl border theme-border shadow-md space-y-3 sm:space-y-4">
             <h3 class="text-sm sm:text-base font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
-              <i class="fas fa-building text-[#0d4f9b]"></i> Operations Center & Factory
+              <i class="fas fa-building theme-text-primary"></i> Operations Center & Factory
             </h3>
             
             <div class="space-y-2.5 sm:space-y-3 text-xs text-slate-700">
               <div class="flex items-start gap-2.5 sm:gap-3">
-                <i class="fas fa-location-dot text-[#0d4f9b] mt-1 shrink-0 text-xs sm:text-sm"></i>
+                <i class="fas fa-location-dot theme-text-primary mt-1 shrink-0 text-xs sm:text-sm"></i>
                 <span>Plot No. 48-A, Industrial Area Phase-2, Near Steel Rolling Yard, New Delhi / NCR, India</span>
               </div>
               <div class="flex items-center gap-2.5 sm:gap-3">
-                <i class="fas fa-phone-alt text-[#0d4f9b] shrink-0 text-xs sm:text-sm"></i>
-                <a href="tel:+919876543210" class="font-bold text-slate-900 hover:text-blue-700 transition">+91 98765 43210 / +91 98111 22334</a>
+                <i class="fas fa-phone-alt theme-text-primary shrink-0 text-xs sm:text-sm"></i>
+                <a href="tel:+919876543210" class="font-bold text-slate-900 hover:underline transition">+91 98765 43210 / +91 98111 22334</a>
               </div>
               <div class="flex items-center gap-2.5 sm:gap-3">
                 <i class="fab fa-whatsapp text-emerald-600 shrink-0 text-xs sm:text-sm"></i>
                 <a href="https://wa.me/919876543210" target="_blank" class="font-bold text-emerald-600 hover:text-emerald-700 transition">+91 98765 43210 (24/7 WhatsApp)</a>
               </div>
               <div class="flex items-center gap-2.5 sm:gap-3">
-                <i class="fas fa-envelope text-[#0d4f9b] shrink-0 text-xs sm:text-sm"></i>
-                <a href="mailto:sales@ramdoorshutter.com" class="hover:text-blue-700 transition">sales@ramdoorshutter.com</a>
+                <i class="fas fa-envelope theme-text-primary shrink-0 text-xs sm:text-sm"></i>
+                <a href="mailto:sales@ramdoorshutter.com" class="hover:underline transition">sales@ramdoorshutter.com</a>
               </div>
             </div>
           </div>
         </div>
 
         <div class="lg:col-span-7 reveal-item reveal-right">
-          <div class="bg-white p-5 sm:p-8 rounded-2xl border border-slate-200 shadow-xl">
+          <div class="theme-bg-card p-5 sm:p-8 rounded-2xl border theme-border shadow-xl">
             <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1 sm:mb-2 brand-font">Request Free Technical Consultation</h3>
             <p class="text-xs text-slate-500 mb-5 sm:mb-6">Fill in your requirements below and our team will get in touch shortly.</p>
 
@@ -869,17 +999,17 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
                   <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Your Full Name</label>
-                  <input type="text" id="contact-name" required placeholder="e.g. Rajesh Kumar" class="w-full p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none" />
+                  <input type="text" id="contact-name" required placeholder="e.g. Rajesh Kumar" class="w-full p-2.5 sm:p-3 rounded-xl theme-bg-subtle border theme-border text-slate-800 text-xs outline-none" />
                 </div>
                 <div>
                   <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number (Required)</label>
-                  <input type="tel" id="contact-phone" required placeholder="e.g. +91 98765 43210" class="w-full p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none" />
+                  <input type="tel" id="contact-phone" required placeholder="e.g. +91 98765 43210" class="w-full p-2.5 sm:p-3 rounded-xl theme-bg-subtle border theme-border text-slate-800 text-xs outline-none" />
                 </div>
               </div>
 
               <div>
                 <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Product Requirement</label>
-                <select id="contact-shutter-type" class="w-full p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none">
+                <select id="contact-shutter-type" class="w-full p-2.5 sm:p-3 rounded-xl theme-bg-subtle border theme-border text-slate-800 text-xs outline-none">
                   <option value="High Speed Roll-Up Doors">High Speed Roll-Up Doors</option>
                   <option value="Industrial Stacking Doors">Industrial Stacking Doors</option>
                   <option value="Sectional Overhead Doors">Sectional Overhead Doors</option>
@@ -890,10 +1020,10 @@
 
               <div>
                 <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">Project Message</label>
-                <textarea id="contact-message" rows="3" placeholder="Tell us about your project dimensions, site requirements, and timeline..." class="w-full p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-xs focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
+                <textarea id="contact-message" rows="3" placeholder="Tell us about your project dimensions, site requirements, and timeline..." class="w-full p-2.5 sm:p-3 rounded-xl theme-bg-subtle border theme-border text-slate-800 text-xs outline-none"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-3.5 sm:py-4 bg-[#0d4f9b] hover:bg-[#093c78] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/25 transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+              <button type="submit" class="w-full py-3.5 sm:py-4 theme-btn-primary font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
                 <i class="fas fa-paper-plane"></i>
                 <span>Submit Inquiry</span>
               </button>
@@ -908,7 +1038,7 @@
   </section>
 
   <!-- ======================================================================
-       FOOTER (Responsive)
+       FOOTER
        ====================================================================== -->
   <footer class="bg-[#091a30] text-slate-400 text-xs py-10 sm:py-14 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
@@ -917,7 +1047,7 @@
         
         <div class="space-y-3 sm:space-y-4">
           <span class="text-xl sm:text-2xl font-black tracking-tight text-white brand-font flex items-center">
-            Ram<span class="text-slate-300">Door</span><span class="text-[#f59e0b] ml-1">Shutter</span>
+            Ram<span class="text-slate-300">Door</span><span class="theme-text-accent ml-1">Shutter</span>
           </span>
           <p class="text-slate-400 text-xs leading-relaxed">
             A leading manufacturer of entrance automation products, delivering innovative, reliable, and high-quality solutions worldwide.
@@ -950,7 +1080,7 @@
           <div class="space-y-2 text-slate-300">
             <div class="text-white font-bold text-sm">+91 98765 43210</div>
             <div>sales@ramdoorshutter.com</div>
-            <div class="text-[#f59e0b] font-semibold">ISO 9001:2015 Certified Manufacturer</div>
+            <div class="theme-text-accent font-semibold">ISO 9001:2015 Certified Manufacturer</div>
           </div>
         </div>
 
@@ -974,19 +1104,19 @@
        MOBILE BOTTOM ACTION BAR (Sticky Mobile Bar)
        ====================================================================== -->
   <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2 px-4 flex items-center justify-around shadow-2xl">
-    <a href="tel:+919876543210" class="flex flex-col items-center text-slate-700 hover:text-[#0d4f9b]">
-      <i class="fas fa-phone-alt text-base text-[#0d4f9b]"></i>
+    <a href="tel:+919876543210" class="flex flex-col items-center text-slate-700 hover:text-blue-700">
+      <i class="fas fa-phone-alt text-base theme-text-primary"></i>
       <span class="text-[10px] font-bold mt-0.5">Call</span>
     </a>
     <a href="https://wa.me/919876543210" target="_blank" class="flex flex-col items-center text-slate-700 hover:text-emerald-600">
       <i class="fab fa-whatsapp text-lg text-emerald-600"></i>
       <span class="text-[10px] font-bold mt-0.5">WhatsApp</span>
     </a>
-    <a href="#calculator" class="flex flex-col items-center text-slate-700 hover:text-[#0d4f9b]">
-      <i class="fas fa-calculator text-base text-[#f59e0b]"></i>
+    <a href="#calculator" class="flex flex-col items-center text-slate-700 hover:text-blue-700">
+      <i class="fas fa-calculator text-base theme-text-accent"></i>
       <span class="text-[10px] font-bold mt-0.5">Estimate</span>
     </a>
-    <a href="#contact" class="flex flex-col items-center text-slate-700 hover:text-[#0d4f9b]">
+    <a href="#contact" class="flex flex-col items-center text-slate-700 hover:text-blue-700">
       <i class="fas fa-envelope text-base text-red-500"></i>
       <span class="text-[10px] font-bold mt-0.5">Inquire</span>
     </a>

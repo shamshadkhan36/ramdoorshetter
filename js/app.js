@@ -1,9 +1,10 @@
 /**
- * RAM DOOR SHUTTER - ENTRANCE AUTOMATION APPLICATION & ANIMATION ENGINE
- * Smooth scroll reveals, animated number counters, 3D card tilts, and simulator engine
+ * RAM DOOR SHUTTER - MULTI-THEME & MULTI-LAYOUT APPLICATION ENGINE
+ * Features 5 Professional Themes & 5 Dynamic Layouts with Live Switcher
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeLayoutEngine();
   initMobileMenu();
   initShutterSimulator();
   initCostCalculator();
@@ -18,17 +19,107 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================================================
-// 1. SCROLL REVEAL ANIMATION ENGINE (Zero Dependency AOS)
+// 1. 5 THEMES & 5 LAYOUTS ENGINE
+// ============================================================================
+function initThemeLayoutEngine() {
+  const triggerBtn = document.getElementById('customizer-trigger-btn');
+  const modal = document.getElementById('customizer-modal');
+  const closeBtn = document.getElementById('customizer-close-btn');
+  const themeButtons = document.querySelectorAll('.theme-option-btn');
+  const layoutButtons = document.querySelectorAll('.layout-option-btn');
+  const resetBtn = document.getElementById('customizer-reset-btn');
+
+  // Load saved preferences or defaults
+  const savedTheme = localStorage.getItem('ram_door_theme') || 'blue';
+  const savedLayout = localStorage.getItem('ram_door_layout') || 'corporate';
+
+  applyTheme(savedTheme);
+  applyLayout(savedLayout);
+
+  function applyTheme(themeName) {
+    document.documentElement.setAttribute('data-theme', themeName);
+    localStorage.setItem('ram_door_theme', themeName);
+
+    themeButtons.forEach(btn => {
+      if (btn.dataset.theme === themeName) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  function applyLayout(layoutName) {
+    document.documentElement.setAttribute('data-layout', layoutName);
+    localStorage.setItem('ram_door_layout', layoutName);
+
+    layoutButtons.forEach(btn => {
+      if (btn.dataset.layout === layoutName) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  // Open / Close Modal
+  if (triggerBtn && modal) {
+    triggerBtn.addEventListener('click', () => {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
+
+  // Theme selection click handlers
+  themeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const theme = btn.dataset.theme;
+      applyTheme(theme);
+      showToast(`Applied Theme: ${btn.dataset.name || theme.toUpperCase()}`);
+    });
+  });
+
+  // Layout selection click handlers
+  layoutButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const layout = btn.dataset.layout;
+      applyLayout(layout);
+      showToast(`Applied Layout: ${btn.dataset.name || layout.toUpperCase()}`);
+    });
+  });
+
+  // Reset to default
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      applyTheme('blue');
+      applyLayout('corporate');
+      showToast('Reset to Default Corporate Blue & Standard Layout');
+    });
+  }
+}
+
+// ============================================================================
+// 2. SCROLL REVEAL ANIMATION ENGINE
 // ============================================================================
 function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal-item');
   if (!revealElements.length) return;
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -60px 0px',
-    threshold: 0.15
-  };
 
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -37,13 +128,17 @@ function initScrollReveal() {
         obs.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.12
+  });
 
   revealElements.forEach(el => observer.observe(el));
 }
 
 // ============================================================================
-// 2. ANIMATED NUMBER COUNTERS (Hero Stats Bar)
+// 3. ANIMATED NUMBER COUNTERS (Hero Stats Bar)
 // ============================================================================
 function initCounterAnimations() {
   const counterElements = document.querySelectorAll('.counter-value');
@@ -58,7 +153,7 @@ function initCounterAnimations() {
         counterElements.forEach(counter => {
           const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
           const suffix = counter.getAttribute('data-suffix') || '+';
-          const duration = 2000; // ms
+          const duration = 1800; // ms
           const stepTime = 25;
           const totalSteps = duration / stepTime;
           const increment = target / totalSteps;
@@ -83,7 +178,7 @@ function initCounterAnimations() {
 }
 
 // ============================================================================
-// 3. 3D CARD PARALLAX TILT MICRO-INTERACTION
+// 4. 3D CARD PARALLAX TILT
 // ============================================================================
 function initCardTilt() {
   const cards = document.querySelectorAll('.category-card, .feature-box-card');
@@ -114,7 +209,7 @@ function initCardTilt() {
 }
 
 // ============================================================================
-// 4. MOBILE NAVIGATION
+// 5. MOBILE NAVIGATION
 // ============================================================================
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-btn');
@@ -143,7 +238,7 @@ function initMobileMenu() {
 }
 
 // ============================================================================
-// 5. INTERACTIVE ROLLING SHUTTER SIMULATOR
+// 6. INTERACTIVE ROLLING SHUTTER SIMULATOR
 // ============================================================================
 function initShutterSimulator() {
   const curtain = document.getElementById('shutter-curtain');
@@ -205,7 +300,6 @@ function initShutterSimulator() {
     activateLed(false);
     if (statusBadge) {
       statusBadge.textContent = currentPosition === 0 ? 'STATUS: FULLY CLOSED (LOCKED)' : (currentPosition >= 98 ? 'STATUS: FULLY OPEN' : 'STATUS: PAUSED / STATIONARY');
-      statusBadge.className = 'px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase ' + (currentPosition === 0 ? 'bg-blue-50 text-[#0d4f9b] border border-blue-200' : 'bg-slate-100 text-slate-700 border border-slate-200');
     }
   }
 
@@ -216,7 +310,6 @@ function initShutterSimulator() {
     activateLed(true);
     if (statusBadge) {
       statusBadge.textContent = 'STATUS: MOTOR RUNNING - OPENING ▲';
-      statusBadge.className = 'px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-200 animate-pulse';
     }
 
     animationInterval = setInterval(() => {
@@ -237,7 +330,6 @@ function initShutterSimulator() {
     activateLed(true);
     if (statusBadge) {
       statusBadge.textContent = 'STATUS: MOTOR RUNNING - CLOSING ▼';
-      statusBadge.className = 'px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase bg-amber-50 text-amber-700 border border-amber-200 animate-pulse';
     }
 
     animationInterval = setInterval(() => {
@@ -275,7 +367,7 @@ function initShutterSimulator() {
 }
 
 // ============================================================================
-// 6. SMART COST ESTIMATOR & WHATSAPP GENERATOR
+// 7. SMART COST ESTIMATOR & WHATSAPP GENERATOR
 // ============================================================================
 function initCostCalculator() {
   const widthInput = document.getElementById('calc-width');
@@ -326,11 +418,11 @@ function initCostCalculator() {
         heightInput.value = h;
         if (heightSlider) heightSlider.value = h;
         presetButtons.forEach(b => {
-          b.classList.remove('bg-[#0d4f9b]', 'text-white', 'border-blue-600');
-          b.classList.add('bg-white', 'text-slate-800', 'border-slate-300');
+          b.classList.remove('theme-btn-primary');
+          b.classList.add('bg-white', 'text-slate-800');
         });
-        btn.classList.add('bg-[#0d4f9b]', 'text-white', 'border-blue-600');
-        btn.classList.remove('bg-white', 'text-slate-800', 'border-slate-300');
+        btn.classList.add('theme-btn-primary');
+        btn.classList.remove('bg-white', 'text-slate-800');
         calculateEstimate();
       }
     });
@@ -428,14 +520,14 @@ _Please send official proposal and site inspection details._`;
 }
 
 // ============================================================================
-// 7. PRODUCT CATALOG
+// 8. PRODUCT CATALOG
 // ============================================================================
 function initProductCatalog() {
-  // Static catalog cards already rendered in HTML for maximum SEO & performance
+  // Built directly in semantic HTML
 }
 
 // ============================================================================
-// 8. CONTACT FORM & DIRECT INQUIRY
+// 9. CONTACT FORM & DIRECT INQUIRY
 // ============================================================================
 function initContactForm() {
   const contactForm = document.getElementById('main-contact-form');
@@ -468,7 +560,7 @@ function initContactForm() {
 }
 
 // ============================================================================
-// 9. TOAST NOTIFICATION UTILITY
+// 10. TOAST NOTIFICATION UTILITY
 // ============================================================================
 function showToast(message, type = 'info') {
   let toast = document.getElementById('toast-notification');
@@ -478,22 +570,19 @@ function showToast(message, type = 'info') {
     document.body.appendChild(toast);
   }
 
-  const iconClass = type === 'success' ? 'fa-check-circle text-emerald-600' : (type === 'error' ? 'fa-exclamation-triangle text-amber-600' : 'fa-info-circle text-[#0d4f9b]');
-  const borderClass = type === 'success' ? 'border-emerald-500' : (type === 'error' ? 'border-amber-500' : 'border-blue-600');
-
-  toast.className = `fixed bottom-6 left-6 z-50 bg-white text-slate-900 px-5 py-3.5 rounded-2xl border-2 ${borderClass} shadow-2xl flex items-center gap-3 transition-transform duration-300 font-medium text-sm show`;
+  toast.className = `fixed bottom-6 left-6 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transition-transform duration-300 font-medium text-xs sm:text-sm show`;
   toast.innerHTML = `
-    <i class="fas ${iconClass} text-lg"></i>
+    <i class="fas fa-check-circle text-[#f59e0b] text-base"></i>
     <span>${message}</span>
   `;
 
   setTimeout(() => {
     toast.classList.remove('show');
-  }, 3500);
+  }, 3200);
 }
 
 // ============================================================================
-// 10. SMOOTH SCROLL NAVIGATION
+// 11. SMOOTH SCROLL NAVIGATION
 // ============================================================================
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -517,7 +606,7 @@ function initSmoothScroll() {
 }
 
 // ============================================================================
-// 11. SCROLL TO TOP & SEARCH MODAL
+// 12. SCROLL TO TOP & SEARCH MODAL
 // ============================================================================
 function initScrollTop() {
   const scrollBtn = document.getElementById('scroll-top-btn');
