@@ -1,6 +1,6 @@
 /**
  * RAM DOOR SHUTTER - INTERACTIVE JAVASCRIPT APPLICATION
- * Handcrafted for industrial performance, live simulator, cost calculator & quote dispatch
+ * Clean White & Premium Industrial Theme
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -81,9 +81,6 @@ function initShutterSimulator() {
   }
 
   function updateCurtainVisual() {
-    // Shutter curtain height is 340px total. Slat count is 14.
-    // When currentPosition is 0 (Closed), translateY is 0%.
-    // When currentPosition is 100 (Open), translateY is -88%.
     const translateY = -(currentPosition * 0.88);
     curtain.style.transform = `translateY(${translateY}%)`;
     
@@ -111,7 +108,7 @@ function initShutterSimulator() {
     activateLed(false);
     if (statusBadge) {
       statusBadge.textContent = currentPosition === 0 ? 'STATUS: FULLY CLOSED (LOCKED)' : (currentPosition >= 98 ? 'STATUS: FULLY OPEN' : 'STATUS: PAUSED / STATIONARY');
-      statusBadge.className = 'px-3 py-1 rounded text-xs font-mono font-bold uppercase ' + (currentPosition === 0 ? 'bg-red-950 text-red-400 border border-red-800' : 'bg-zinc-800 text-zinc-300');
+      statusBadge.className = 'px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase ' + (currentPosition === 0 ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-slate-100 text-slate-700 border border-slate-200');
     }
   }
 
@@ -122,7 +119,7 @@ function initShutterSimulator() {
     activateLed(true);
     if (statusBadge) {
       statusBadge.textContent = 'STATUS: MOTOR RUNNING - OPENING ▲';
-      statusBadge.className = 'px-3 py-1 rounded text-xs font-mono font-bold uppercase bg-emerald-950 text-emerald-400 border border-emerald-800 animate-pulse';
+      statusBadge.className = 'px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-200 animate-pulse';
     }
 
     animationInterval = setInterval(() => {
@@ -143,7 +140,7 @@ function initShutterSimulator() {
     activateLed(true);
     if (statusBadge) {
       statusBadge.textContent = 'STATUS: MOTOR RUNNING - CLOSING ▼';
-      statusBadge.className = 'px-3 py-1 rounded text-xs font-mono font-bold uppercase bg-amber-950 text-amber-400 border border-amber-800 animate-pulse';
+      statusBadge.className = 'px-3 py-1 rounded-lg text-xs font-mono font-bold uppercase bg-amber-50 text-amber-700 border border-amber-200 animate-pulse';
     }
 
     animationInterval = setInterval(() => {
@@ -184,8 +181,8 @@ function initShutterSimulator() {
       colorSwatches.forEach(s => s.classList.remove('ring-4', 'ring-red-600', 'scale-110'));
       swatch.classList.add('ring-4', 'ring-red-600', 'scale-110');
 
-      const colorBg = swatch.dataset.colorBg || '#374151';
-      const colorDark = swatch.dataset.colorDark || '#1f2937';
+      const colorBg = swatch.dataset.colorBg || '#475569';
+      const colorDark = swatch.dataset.colorDark || '#334155';
       const colorName = swatch.dataset.colorName || 'Selected Color';
 
       document.documentElement.style.setProperty('--slat-bg', colorBg);
@@ -245,7 +242,7 @@ function initCostCalculator() {
     });
   }
 
-  // Preset Buttons (e.g. Standard Shop 10x10, Warehouse Bay 16x14, etc.)
+  // Preset Buttons
   presetButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const w = btn.dataset.w;
@@ -255,8 +252,12 @@ function initCostCalculator() {
         if (widthSlider) widthSlider.value = w;
         heightInput.value = h;
         if (heightSlider) heightSlider.value = h;
-        presetButtons.forEach(b => b.classList.remove('bg-red-600', 'text-white'));
-        btn.classList.add('bg-red-600', 'text-white');
+        presetButtons.forEach(b => {
+          b.classList.remove('bg-red-600', 'text-white', 'border-red-600');
+          b.classList.add('bg-white', 'text-slate-800', 'border-slate-300');
+        });
+        btn.classList.add('bg-red-600', 'text-white', 'border-red-600');
+        btn.classList.remove('bg-white', 'text-slate-800', 'border-slate-300');
         calculateEstimate();
       }
     });
@@ -271,7 +272,6 @@ function initCostCalculator() {
     const height = parseFloat(heightInput.value) || 10;
     const area = Math.round(width * height * 10) / 10; // sq ft
 
-    // Base rate per sq ft based on material
     let baseRateMin = 180;
     let baseRateMax = 230;
     let materialName = "Standard 20G Galvanized Steel (GI)";
@@ -311,7 +311,6 @@ function initCostCalculator() {
       }
     }
 
-    // Motor / Drive System Cost
     let motorCostMin = 0;
     let motorCostMax = 0;
     let motorName = "Manual Push-Pull (Spring Loaded)";
@@ -346,7 +345,6 @@ function initCostCalculator() {
       }
     }
 
-    // Add-on Accessories
     let addonsTotalMin = 0;
     let addonsTotalMax = 0;
     const selectedAddons = [];
@@ -361,20 +359,17 @@ function initCostCalculator() {
       }
     });
 
-    // Total Calculation
     const curtainCostMin = area * baseRateMin;
     const curtainCostMax = area * baseRateMax;
 
     const totalEstimateMin = Math.round(curtainCostMin + motorCostMin + addonsTotalMin);
     const totalEstimateMax = Math.round(curtainCostMax + motorCostMax + addonsTotalMax);
 
-    // Update UI elements
     if (areaDisplay) areaDisplay.textContent = `${area} sq. ft. (${width} ft × ${height} ft)`;
     if (ratePerSqFtDisplay) ratePerSqFtDisplay.textContent = `₹${baseRateMin} - ₹${baseRateMax} / sq.ft`;
     if (minPriceDisplay) minPriceDisplay.textContent = `₹${totalEstimateMin.toLocaleString('en-IN')}`;
     if (maxPriceDisplay) maxPriceDisplay.textContent = `₹${totalEstimateMax.toLocaleString('en-IN')}`;
 
-    // Update WhatsApp link
     if (whatsappQuoteBtn) {
       const addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'None';
       const rawMsg = `*RAM DOOR SHUTTER - NEW ESTIMATE INQUIRY*
@@ -388,19 +383,16 @@ function initCostCalculator() {
 _Please send final quotation with installation & warranty details for my site._`;
 
       const encodedMsg = encodeURIComponent(rawMsg);
-      // Factory WhatsApp Number placeholder (Indian standard format)
       whatsappQuoteBtn.href = `https://wa.me/919876543210?text=${encodedMsg}`;
     }
   }
 
-  // Print quotation feature
   if (printQuoteBtn) {
     printQuoteBtn.addEventListener('click', () => {
       window.print();
     });
   }
 
-  // Initial Calculation
   calculateEstimate();
 }
 
@@ -430,7 +422,7 @@ const productsData = [
     name: 'Perforated Showroom Shutter',
     category: 'commercial',
     tag: 'Retail Grade',
-    tagColor: 'bg-zinc-800',
+    tagColor: 'bg-slate-800',
     shortDesc: 'Precision micro-punched interlocking slats allowing after-hours shop window display with full security.',
     image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=800&q=80',
     features: ['High ventilation & visibility', 'Powder coated custom RAL shades', 'Anti-rust zinc galvanization', 'Deterrent against burglary & vandalism'],
@@ -464,7 +456,7 @@ const productsData = [
     name: 'Industrial Heavy Duty Shutter',
     category: 'industrial',
     tag: 'Heavy Industrial',
-    tagColor: 'bg-black',
+    tagColor: 'bg-slate-900',
     shortDesc: 'Designed for logistics hubs, factories, and warehouses with extreme wind-load resistance and heavy cycle life.',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
     features: ['Wind-lock guide rail systems', 'Tri-phase industrial side drive', 'Drop-safe centrifugal brake', 'Heavy cold-rolled double rib slats'],
@@ -498,7 +490,7 @@ const productsData = [
     name: 'Insulated Aluminum Shutter',
     category: 'commercial',
     tag: 'Energy Saving',
-    tagColor: 'bg-zinc-800',
+    tagColor: 'bg-slate-800',
     shortDesc: 'Double-walled aluminum profile injected with CFC-free polyurethane foam for thermal and sound insulation.',
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
     features: ['Reduces AC/Heating energy loss up to 40%', 'Sound dampening up to 22dB', 'Rust-proof marine grade alloy', 'Smooth, noiseless operation'],
@@ -532,7 +524,7 @@ const productsData = [
     name: 'Heavy Collapsible Channel Gate',
     category: 'commercial',
     tag: 'Traditional Security',
-    tagColor: 'bg-black',
+    tagColor: 'bg-slate-900',
     shortDesc: 'Double-channel lattice collapsible sliding gates with ball-bearing rollers for shop fronts and factory entrances.',
     image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=800&q=80',
     features: ['Solid mild steel flat and channel lattice', 'Smooth bottom track with brass bearings', 'Heavy padlock hasps & lever locks', 'Zero power required'],
@@ -562,23 +554,23 @@ function initProductCatalog() {
 
     filtered.forEach(p => {
       const card = document.createElement('div');
-      card.className = 'industrial-card bg-white rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group';
+      card.className = 'clean-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 flex flex-col justify-between group';
       card.innerHTML = `
         <div>
-          <div class="relative h-56 bg-zinc-900 overflow-hidden">
-            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100" loading="lazy" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <span class="absolute top-3 right-3 ${p.tagColor} text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded shadow-md">${p.tag}</span>
+          <div class="relative h-56 bg-slate-900 overflow-hidden">
+            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500 opacity-95" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 ${p.tagColor} text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-lg shadow-md">${p.tag}</span>
             <div class="absolute bottom-3 left-3 text-white">
               <span class="text-xs uppercase font-mono tracking-widest text-red-400 font-bold">RAM PRECISION</span>
               <h3 class="text-lg font-bold text-white">${p.name}</h3>
             </div>
           </div>
           <div class="p-5">
-            <p class="text-sm text-zinc-600 mb-4 leading-relaxed">${p.shortDesc}</p>
+            <p class="text-xs text-slate-600 mb-4 leading-relaxed">${p.shortDesc}</p>
             <ul class="space-y-2 mb-5">
               ${p.features.slice(0, 3).map(f => `
-                <li class="text-xs text-zinc-700 flex items-center gap-2">
+                <li class="text-xs text-slate-700 flex items-center gap-2">
                   <i class="fas fa-check-circle text-red-600 shrink-0"></i>
                   <span>${f}</span>
                 </li>
@@ -586,11 +578,11 @@ function initProductCatalog() {
             </ul>
           </div>
         </div>
-        <div class="p-5 pt-0 border-t border-zinc-100 mt-auto flex items-center justify-between gap-3">
-          <button class="view-spec-btn flex-1 py-2.5 px-4 bg-zinc-900 hover:bg-red-600 text-white text-xs font-bold uppercase rounded-lg transition duration-200 text-center tracking-wider" data-id="${p.id}">
+        <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between gap-3">
+          <button class="view-spec-btn flex-1 py-2.5 px-4 bg-slate-900 hover:bg-red-600 text-white text-xs font-bold uppercase rounded-xl transition duration-200 text-center tracking-wider shadow-sm" data-id="${p.id}">
             View Technical Specs
           </button>
-          <a href="https://wa.me/919876543210?text=${encodeURIComponent(`Hi RAM Door Shutter, I am interested in getting a quote for ${p.name}.`)}" target="_blank" class="p-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition text-center" title="Chat on WhatsApp">
+          <a href="https://wa.me/919876543210?text=${encodeURIComponent(`Hi RAM Door Shutter, I am interested in getting a quote for ${p.name}.`)}" target="_blank" class="p-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl transition text-center shadow-sm" title="Chat on WhatsApp">
             <i class="fab fa-whatsapp text-lg"></i>
           </a>
         </div>
@@ -598,7 +590,6 @@ function initProductCatalog() {
       container.appendChild(card);
     });
 
-    // Attach click listeners to view spec buttons
     container.querySelectorAll('.view-spec-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         openProductModal(btn.dataset.id);
@@ -611,15 +602,14 @@ function initProductCatalog() {
     tab.addEventListener('click', () => {
       filterTabs.forEach(t => {
         t.classList.remove('bg-red-600', 'text-white', 'active');
-        t.classList.add('bg-zinc-100', 'text-zinc-700');
+        t.classList.add('bg-white', 'text-slate-700');
       });
       tab.classList.add('bg-red-600', 'text-white', 'active');
-      tab.classList.remove('bg-zinc-100', 'text-zinc-700');
+      tab.classList.remove('bg-white', 'text-slate-700');
       renderProducts(tab.dataset.filter);
     });
   });
 
-  // Modal open/close logic
   function openProductModal(productId) {
     const product = productsData.find(p => p.id === productId);
     if (!product || !modal) return;
@@ -634,14 +624,14 @@ function initProductCatalog() {
     for (const [key, value] of Object.entries(product.specs)) {
       const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
       const row = document.createElement('div');
-      row.className = 'flex justify-between py-2 border-b border-zinc-200 text-xs';
-      row.innerHTML = `<span class="font-bold text-zinc-600 uppercase">${formattedKey}:</span> <span class="font-semibold text-zinc-900 text-right">${value}</span>`;
+      row.className = 'flex justify-between py-2 border-b border-slate-200 text-xs';
+      row.innerHTML = `<span class="font-bold text-slate-600 uppercase">${formattedKey}:</span> <span class="font-semibold text-slate-900 text-right">${value}</span>`;
       specsContainer.appendChild(row);
     }
 
     const featuresContainer = document.getElementById('modal-features-list');
     featuresContainer.innerHTML = product.features.map(f => `
-      <li class="flex items-start gap-2 text-xs text-zinc-700">
+      <li class="flex items-start gap-2 text-xs text-slate-700">
         <i class="fas fa-shield-alt text-red-600 mt-0.5 shrink-0"></i>
         <span>${f}</span>
       </li>
@@ -672,7 +662,6 @@ function initProductCatalog() {
     });
   }
 
-  // Initial render
   renderProducts('all');
 }
 
@@ -761,10 +750,10 @@ function showToast(message, type = 'info') {
     document.body.appendChild(toast);
   }
 
-  const iconClass = type === 'success' ? 'fa-check-circle text-emerald-400' : (type === 'error' ? 'fa-exclamation-triangle text-amber-400' : 'fa-info-circle text-red-400');
+  const iconClass = type === 'success' ? 'fa-check-circle text-emerald-600' : (type === 'error' ? 'fa-exclamation-triangle text-amber-600' : 'fa-info-circle text-red-600');
   const borderClass = type === 'success' ? 'border-emerald-500' : (type === 'error' ? 'border-amber-500' : 'border-red-600');
 
-  toast.className = `fixed bottom-6 left-6 z-50 bg-zinc-950 text-white px-5 py-3.5 rounded-xl border-2 ${borderClass} shadow-2xl flex items-center gap-3 transition-transform duration-300 font-medium text-sm show`;
+  toast.className = `fixed bottom-6 left-6 z-50 bg-white text-slate-900 px-5 py-3.5 rounded-2xl border-2 ${borderClass} shadow-2xl flex items-center gap-3 transition-transform duration-300 font-medium text-sm show`;
   toast.innerHTML = `
     <i class="fas ${iconClass} text-lg"></i>
     <span>${message}</span>

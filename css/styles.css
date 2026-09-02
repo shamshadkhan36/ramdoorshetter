@@ -1,35 +1,33 @@
 /* ==========================================================================
-   RAM DOOR SHUTTER - INDUSTRIAL THEME STYLESHEET
-   Color Theme: Red (#dc2626, #b91c1c), Black (#0a0a0a, #171717), White (#ffffff)
+   RAM DOOR SHUTTER - CLEAN WHITE & PREMIUM INDUSTRIAL THEME
+   Palette: Crisp White (#ffffff, #f8fafc), Ruby Red (#dc2626, #ef4444), Deep Charcoal (#0f172a, #1e293b)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap');
 
 :root {
   --primary-red: #dc2626;
   --primary-red-hover: #b91c1c;
-  --primary-red-light: #fee2e2;
-  --primary-red-dark: #991b1b;
+  --primary-red-light: #fef2f2;
+  --primary-red-border: #fecaca;
   --accent-red: #ef4444;
   
-  --dark-bg: #0a0a0a;
-  --dark-surface: #141414;
-  --dark-surface-2: #1e1e1e;
-  --dark-surface-3: #2a2a2a;
-  --dark-border: #333333;
+  --bg-main: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-hover: #f1f5f9;
   
-  --light-bg: #ffffff;
-  --light-surface: #f8fafc;
-  --light-surface-2: #f1f5f9;
-  --light-border: #e2e8f0;
+  --border-light: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --border-strong: #94a3b8;
   
-  --text-main: #111827;
-  --text-muted: #6b7280;
-  --text-white: #ffffff;
-  --text-white-muted: #9ca3af;
+  --text-heading: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
 
-  --slat-bg: #374151;
-  --slat-dark: #1f2937;
+  --slat-bg: #475569;
+  --slat-dark: #334155;
 }
 
 /* Base Styles */
@@ -41,15 +39,16 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Inter', sans-serif;
-  color: var(--text-main);
-  background-color: var(--light-bg);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-body);
+  background-color: var(--bg-main);
 }
 
 h1, h2, h3, h4, h5, h6, .heading-font {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  color: var(--text-heading);
 }
 
 .industrial-font {
@@ -58,12 +57,12 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   text-transform: uppercase;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Bright & Sleek */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #111827;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--primary-red);
@@ -73,82 +72,76 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   background: var(--primary-red-hover);
 }
 
-/* Glow Effects & Accents */
-.red-glow {
-  box-shadow: 0 0 25px rgba(220, 38, 38, 0.45);
-}
-
-.red-glow-sm {
-  box-shadow: 0 0 12px rgba(220, 38, 38, 0.3);
-}
-
-.industrial-stripes {
-  background: repeating-linear-gradient(
-    -45deg,
-    #dc2626,
-    #dc2626 15px,
-    #0a0a0a 15px,
-    #0a0a0a 30px
-  );
-}
-
-.subtle-grid-pattern {
-  background-image: radial-gradient(rgba(220, 38, 38, 0.12) 1px, transparent 1px);
+/* Clean Accents & Backgrounds */
+.white-hero-pattern {
+  background-color: #ffffff;
+  background-image: radial-gradient(#e2e8f0 1.2px, transparent 1.2px);
   background-size: 24px 24px;
 }
 
-.dark-grid-pattern {
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
+.white-glow-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
 }
 
-/* Shutter Simulator Components */
-.shutter-viewport {
+.red-soft-glow {
+  box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.25);
+}
+
+.red-badge-soft {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+}
+
+/* Shutter Simulator Components - Bright Showroom Style */
+.shutter-viewport-white {
   position: relative;
   overflow: hidden;
-  background: #0f172a;
-  border-radius: 12px;
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9);
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.08);
 }
 
-.shutter-frame {
-  border: 14px solid #1e293b;
-  border-top-width: 24px;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);
+.shutter-frame-white {
+  border: 14px solid #334155;
+  border-top-width: 22px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.15), 0 12px 25px rgba(0, 0, 0, 0.08);
   position: relative;
+  border-radius: 14px;
 }
 
-.shutter-hood {
+.shutter-hood-white {
   background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
   border-bottom: 4px solid var(--primary-red);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   position: relative;
   z-index: 20;
 }
 
-.shutter-hood::after {
-  content: 'RAM HEAVY ROLLER';
+.shutter-hood-white::after {
+  content: 'RAM PRECISION ROLLER';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Oswald', sans-serif;
-  color: #94a3b8;
+  color: #ffffff;
   font-size: 11px;
   letter-spacing: 3px;
   font-weight: 700;
 }
 
-.shutter-curtain-container {
+.shutter-curtain-container-white {
   height: 340px;
   position: relative;
   overflow: hidden;
-  background: #090d16;
+  background: #e2e8f0;
 }
 
-.shutter-interior-view {
+.shutter-interior-view-white {
   position: absolute;
   inset: 0;
   display: flex;
@@ -156,7 +149,7 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(180deg, #1e1e24 0%, #121214 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
   z-index: 1;
 }
 
@@ -178,41 +171,41 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   width: 100%;
   height: 22px;
   min-height: 22px;
-  border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.25), inset 0 -1.5px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   transition: all 0.3s ease;
 }
 
-/* Material Types in Shutter Visualizer */
+/* Material Profiles */
 .slat-solid {
-  background: linear-gradient(180deg, var(--slat-bg, #374151) 0%, var(--slat-dark, #1f2937) 100%);
+  background: linear-gradient(180deg, var(--slat-bg, #475569) 0%, var(--slat-dark, #334155) 100%);
 }
 
 .slat-perforated {
-  background: linear-gradient(180deg, var(--slat-bg, #374151) 0%, var(--slat-dark, #1f2937) 100%);
-  background-image: radial-gradient(circle, #090d16 1.5px, transparent 1.5px);
+  background: linear-gradient(180deg, var(--slat-bg, #475569) 0%, var(--slat-dark, #334155) 100%);
+  background-image: radial-gradient(circle, #0f172a 1.5px, transparent 1.5px);
   background-size: 8px 8px;
 }
 
 .slat-polycarbonate {
-  background: rgba(248, 250, 252, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(2px);
-  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6);
 }
 .slat-polycarbonate::before {
   content: '';
   position: absolute;
   inset: 2px 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .slat-grill {
   background: transparent;
-  border-bottom: 3px solid var(--slat-bg, #dc2626);
-  border-top: 3px solid var(--slat-bg, #dc2626);
+  border-bottom: 3.5px solid var(--slat-bg, #dc2626);
+  border-top: 3.5px solid var(--slat-bg, #dc2626);
   position: relative;
 }
 .slat-grill::after {
@@ -224,21 +217,13 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   background: repeating-linear-gradient(90deg, var(--slat-bg, #dc2626), var(--slat-bg, #dc2626) 4px, transparent 4px, transparent 30px);
 }
 
-.slat-insulated {
-  background: linear-gradient(180deg, var(--slat-bg, #475569) 0%, var(--slat-dark, #334155) 100%);
-  height: 32px !important;
-  min-height: 32px !important;
-  border-radius: 2px;
-  margin-bottom: 1px;
-}
-
 .shutter-bottom-bar {
   width: 100%;
   height: 28px;
   min-height: 28px;
-  background: #111827;
+  background: #1e293b;
   border-top: 3px solid var(--primary-red);
-  border-bottom: 4px solid #000;
+  border-bottom: 3px solid #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,22 +233,21 @@ h1, h2, h3, h4, h5, h6, .heading-font {
 
 .shutter-lock-handle {
   width: 48px;
-  height: 8px;
-  background: #94a3b8;
+  height: 7px;
+  background: #cbd5e1;
   border-radius: 4px;
-  border: 1px solid #475569;
 }
 
-/* Remote Control Keyfob Widget */
-.remote-control-keyfob {
-  background: linear-gradient(145deg, #1f2937, #0f172a);
-  border: 2px solid #374151;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 2px 3px rgba(255, 255, 255, 0.1);
+/* Clean White Remote Control Handset */
+.remote-control-white {
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.1), inset 0 2px 3px rgba(255, 255, 255, 0.8);
   border-radius: 24px;
   position: relative;
 }
 
-.remote-control-keyfob::before {
+.remote-control-white::before {
   content: '';
   position: absolute;
   top: -12px;
@@ -271,7 +255,7 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   transform: translateX(-50%);
   width: 8px;
   height: 14px;
-  background: #4b5563;
+  background: #94a3b8;
   border-radius: 4px 4px 0 0;
 }
 
@@ -289,56 +273,49 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   box-shadow: 0 0 12px #22c55e, 0 0 20px #22c55e;
 }
 
-.remote-btn {
-  background: linear-gradient(180deg, #374151 0%, #1f2937 100%);
-  border: 1px solid #4b5563;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.2);
+.remote-btn-clean {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: all 0.15s ease;
 }
 
-.remote-btn:hover {
-  background: linear-gradient(180deg, #4b5563 0%, #374151 100%);
+.remote-btn-clean:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
   transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
-.remote-btn:active {
-  transform: translateY(2px);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+.remote-btn-clean:active {
+  transform: translateY(1px);
 }
 
 .remote-btn-red {
-  background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%);
-  border-color: #ef4444;
+  background: linear-gradient(180deg, #dc2626 0%, #b91c1c 100%);
+  border-color: #dc2626;
+  color: white !important;
 }
 .remote-btn-red:hover {
   background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
 }
 
-/* Card Hover Enhancements */
-.industrial-card {
+/* Card Elevated Hover */
+.clean-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid var(--light-border);
 }
 
-.industrial-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--primary-red);
-  box-shadow: 0 20px 30px -10px rgba(220, 38, 38, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.dark-industrial-card {
-  background: #141414;
-  border: 1px solid #262626;
-  transition: all 0.3s ease;
-}
-
-.dark-industrial-card:hover {
-  border-color: var(--primary-red);
+.clean-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 15px rgba(220, 38, 38, 0.2);
+  border-color: #fca5a5;
+  box-shadow: 0 20px 35px -10px rgba(220, 38, 38, 0.08), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
-/* Floating Action Button (WhatsApp & Quick Call) */
+/* Floating Action Buttons */
 .whatsapp-float-btn {
   position: fixed;
   bottom: 28px;
@@ -377,7 +354,7 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.45);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
   z-index: 998;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -389,20 +366,7 @@ h1, h2, h3, h4, h5, h6, .heading-font {
   color: white;
 }
 
-/* Interactive Tabs Active State */
-.filter-tab.active {
-  background-color: var(--primary-red);
-  color: white;
-  border-color: var(--primary-red);
-}
-
-/* Color swatch preview buttons */
-.color-swatch-btn.active {
-  ring: 3px solid var(--primary-red);
-  transform: scale(1.15);
-}
-
-/* Toast Notification */
+/* Toast */
 #toast-notification {
   position: fixed;
   bottom: 24px;
